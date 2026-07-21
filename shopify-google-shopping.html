@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopify Google Shopping — Connect Your Store the | Trajekt</title>
+<meta name="description" content="Connect Shopify to Google Shopping via Merchant Center with full metafield access, title optimisation rules, and custom labels.">>
+<meta name="keywords" content="shopify google shopping, shopify google merchant center, shopify google shopping setup, connect shopify to google shopping">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/shopify-google-shopping">
+<meta property="og:title" content="Shopify Google Shopping — Connect Your Store the Right Way"><meta property="og:description" content="Connect Shopify to Google Shopping via Merchant Center with full metafield access, title optimisation rules, and custom labels. Trajekt uses Shopify GraphQL API for a more complete feed than the native app."><meta property="og:url" content="https://trajekt.co.uk/shopify-google-shopping"><meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-shopify-google-shopping.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-shopify-google-shopping.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://trajekt.co.uk/shopify-google-shopping","name":"Shopify Google Shopping — Connect Your Store the Right Way","inLanguage":"en-GB"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Shopify Feeds","item":"https://trajekt.co.uk/shopify-product-feed"},{"@type":"ListItem","position":3,"name":"Shopify Google Shopping","item":""}]},
+{"@type":"SoftwareApplication","name":"Trajekt","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"provider":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I connect Shopify to Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"Connect Shopify to Google Shopping by creating a Google Merchant Center account, verifying your domain, then either using the native Google & YouTube app or a dedicated feed management tool like Trajekt. The native app works for basic setups; Trajekt gives you title optimisation rules, custom labels, and access to channels beyond Google."}},{"@type":"Question","name":"Does Shopify automatically sync with Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"Shopify's native Google & YouTube sales channel syncs products automatically, but with limitations — no rules engine, no custom label management, no metafield access, and no support for ChatGPT Shopping or other channels. Trajekt uses Shopify's Admin GraphQL API to pull a more complete data set and gives you full control over what goes into each channel's feed."}},{"@type":"Question","name":"How long does it take for Shopify products to appear on Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"After connecting your feed to Merchant Center, initial processing takes 24-72 hours for catalogues under 5,000 products. New products added after the initial sync appear within 24 hours of your next scheduled feed refresh. Price and availability changes can take up to 24 hours to propagate if you're on daily updates; twice-daily updates halve this."}},{"@type":"Question","name":"Why are my Shopify products not showing on Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"The most common causes: products disapproved in Merchant Center (check Diagnostics tab), your Shopping campaign paused or budget exhausted, products excluded from the feed by a filter rule, or your Merchant Center account not linked to your Google Ads account. Check Merchant Center Diagnostics first — it shows exactly which products have issues and why."}},{"@type":"Question","name":"What Shopify product data does Trajekt pull for Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"Trajekt pulls: product title, description (HTML-stripped), all variants with individual prices and inventory, images (all images, not just the featured image), collections (up to 5), metafields (including brand, GTIN, material if stored there), tags, SEO title and description, vendor, product type, and published status."}},{"@type":"Question","name":"Can Trajekt send my Shopify products to ChatGPT Shopping as well as Google?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is one of Trajekt's primary differentiators. The same Shopify store connection generates both Google Shopping XML (for Merchant Center) and ChatGPT Shopping JSONL (delivered via SFTP to OpenAI). No second connection or setup needed."}}]}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Connect Shopify to Google Shopping with Trajekt","description":"Five steps to connect your Shopify store to Google Shopping via Trajekt, with full metafield access and title optimisation rules.","step":[{"@type":"HowToStep","name":"Create Shopify API credentials","text":"In Shopify admin go to Settings > Apps and sales channels > Develop apps. Create an app, configure read_products, read_inventory, read_content scopes, install it, and copy the Admin API access token."},{"@type":"HowToStep","name":"Connect your store in Trajekt","text":"In Trajekt click Add Store > Shopify. Enter your myshopify.com URL and paste your API access token. Trajekt syncs your full catalogue within minutes."},{"@type":"HowToStep","name":"Set up feed rules","text":"In Trajekt's rules engine, create rules to optimise titles, map categories, set custom labels, and filter products. Rules run automatically on every feed refresh."},{"@type":"HowToStep","name":"Copy your Trajekt feed URL","text":"Trajekt generates a stable, authenticated feed URL for your Google Shopping output. Copy this from your Trajekt dashboard."},{"@type":"HowToStep","name":"Configure Merchant Center scheduled fetch","text":"In Google Merchant Center Next go to Products > Data sources > Add data source > Scheduled fetch. Paste your Trajekt feed URL and set to daily frequency."}]}</script>
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" style="background:linear-gradient(135deg,#0F1A3A 0%,#1A1A18 100%);padding:96px 24px 80px;color:#fff;overflow:hidden;position:relative">
+  <div style="position:absolute;top:-80px;right:-60px;width:360px;height:360px;border-radius:50%;background:rgba(79,107,205,.1);pointer-events:none"></div>
+  <div style="max-width:var(--max);margin:0 auto;position:relative">
+    <div style="font-size:12px;color:var(--t3);margin-bottom:24px"><a href="/" style="color:var(--t3);text-decoration:none">Home</a> <span style="color:var(--t3)">&#8250;</span> <a href="/shopify-product-feed" style="color:var(--t3);text-decoration:none">Shopify Feeds</a> <span style="color:var(--t3)">&#8250;</span> <span style="color:var(--t2)">Shopify Google Shopping</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div>
+        <div class="badge badge-green" style="margin-bottom:20px">Shopify &#8596; Google Shopping</div>
+        <h1 style="margin-bottom:20px;color:#fff">Connect your Shopify store to Google Shopping — the right way</h1>
+        <p style="font-size:18px;margin-bottom:32px;color:rgba(255,255,255,.75)">Shopify's native Google integration gets you live but leaves performance on the table. Trajekt pulls your complete Shopify catalogue via GraphQL — metafields, variants, collections — and generates an optimised feed that Merchant Center actually rewards.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Connect Shopify free</a>
+          <a href="/shopify-product-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Full Shopify guide</a>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);padding:20px">
+          <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px">Shopify native Google app</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.7)"><span style="color:#EF9F27">&#9711;</span> Basic product sync</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.7)"><span style="color:#EF9F27">&#9711;</span> Limited metafield access</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.5)"><span style="color:var(--red)">&#10007;</span> No title optimisation rules</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.5)"><span style="color:var(--red)">&#10007;</span> No custom labels</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.5)"><span style="color:var(--red)">&#10007;</span> No ChatGPT Shopping</div>
+          </div>
+        </div>
+        <div style="background:rgba(79,107,205,.15);border:1px solid rgba(79,107,205,.3);border-radius:var(--r-lg);padding:20px">
+          <div style="font-size:11px;font-weight:600;color:#7EC8E3;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px">Trajekt &#8212; via Admin GraphQL API</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5">&#10003;</span> Full catalogue including metafields</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5">&#10003;</span> Visual rules engine — no code</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5">&#10003;</span> Custom labels set by rules</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5">&#10003;</span> ChatGPT Shopping from same data</div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5">&#10003;</span> All channels from one connection</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:var(--max);margin:0 auto">
+  <h2 style="margin-bottom:12px;text-align:center">How to connect Shopify to Google Shopping with Trajekt</h2>
+  <p style="text-align:center;font-size:16px;max-width:520px;margin:0 auto 48px">Five steps from zero to a live, optimised Google Shopping feed pulling from your Shopify store.</p>
+  <div style="display:grid;grid-template-columns:1fr;gap:12px;max-width:700px;margin:0 auto">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:flex;gap:20px">
+      <div class="step-num">1</div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:8px">Create your Shopify API credentials</h3>
+        <p style="font-size:14px">In Shopify admin: Settings &#8594; Apps and sales channels &#8594; Develop apps &#8594; Create an app. Name it &#8220;Trajekt Feed&#8221;. Under API credentials, configure Admin API access scopes: <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px">read_products</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px">read_inventory</code>, <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px">read_content</code>. Install the app and copy the Admin API access token — shown once only.</p>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:flex;gap:20px">
+      <div class="step-num">2</div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:8px">Connect your store in Trajekt</h3>
+        <p style="font-size:14px">In Trajekt: Add Store &#8594; Shopify. Enter your <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px">myshopify.com</code> store URL and paste your Admin API access token. Trajekt fetches your first full catalogue sync — including all variants, metafields, collections, and images — within 2&#8211;15 minutes depending on catalogue size.</p>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:flex;gap:20px">
+      <div class="step-num">3</div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:8px">Set up your Google Shopping feed rules</h3>
+        <p style="font-size:14px">In Trajekt&#8217;s rules engine, create rules to optimise your feed: prepend the Shopify vendor field (brand) to titles, append colour and size variant attributes, map your Shopify product type to google_product_category, and set custom labels based on price or collection membership. Rules run automatically on every feed refresh.</p>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:flex;gap:20px">
+      <div class="step-num">4</div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:8px">Copy your Trajekt feed URL</h3>
+        <p style="font-size:14px">Trajekt generates a stable, authenticated feed URL for your Google Shopping output. This URL always returns your latest feed data. Copy it from your Trajekt dashboard — you&#8217;ll paste it into Google Merchant Center in the next step.</p>
+      </div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:flex;gap:20px">
+      <div class="step-num">5</div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:8px">Configure scheduled fetch in Merchant Center</h3>
+        <p style="font-size:14px">In Google Merchant Center Next: Products &#8594; Data sources &#8594; Add data source &#8594; Scheduled fetch. Paste your Trajekt feed URL. Set fetch frequency to Daily or Twice Daily. Merchant Center will automatically pull your updated Shopify data on schedule — no manual uploads ever needed.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="background:var(--card);padding:72px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+  <h2 style="margin-bottom:12px">Why Trajekt outperforms the native Shopify Google app</h2>
+  <p style="font-size:16px;margin-bottom:40px;max-width:560px">Shopify&#8217;s built-in Google integration gets you listed. Trajekt gets you performing.</p>
+  <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr;background:var(--card2);padding:14px 20px;font-size:12px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.05em">
+      <div>Capability</div><div style="text-align:center;color:var(--blue)">Trajekt</div><div style="text-align:center">Shopify native app</div>
+    </div>
+    <div class="vs-row"><div class="vs-feat">Shopify Admin GraphQL API (full data)</div><div class="vs-y">&#10003;</div><div class="vs-n">Partial</div></div>
+    <div class="vs-row"><div class="vs-feat">Metafield access for GTIN, brand, material</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+    <div class="vs-row"><div class="vs-feat">Visual rules engine for title optimisation</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+    <div class="vs-row"><div class="vs-feat">Custom label automation</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+    <div class="vs-row"><div class="vs-feat">ChatGPT Shopping from same connection</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+    <div class="vs-row"><div class="vs-feat">Meta, TikTok, Awin, Pinterest from same data</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+    <div class="vs-row"><div class="vs-feat">AI description enrichment</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+    <div class="vs-row"><div class="vs-feat">Free plan (permanent)</div><div class="vs-y">&#10003;</div><div class="vs-n">&#10007;</div></div>
+  </div>
+</div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:780px;margin:0 auto">
+  <h2 style="margin-bottom:40px">Frequently asked questions</h2>
+  <div class="faq-item open"><button class="faq-q">How do I connect Shopify to Google Shopping?</button><div class="faq-a">Connect Shopify to Google Shopping by creating a Google Merchant Center account, verifying your domain, then either using the native Google & YouTube app or a dedicated feed management tool like Trajekt. The native app works for basic setups; Trajekt gives you title optimisation rules, custom labels, and access to channels beyond Google.</div></div>
+<div class="faq-item"><button class="faq-q">Does Shopify automatically sync with Google Shopping?</button><div class="faq-a">Shopify's native Google & YouTube sales channel syncs products automatically, but with limitations — no rules engine, no custom label management, no metafield access, and no support for ChatGPT Shopping or other channels. Trajekt uses Shopify's Admin GraphQL API to pull a more complete data set and gives you full control over what goes into each channel's feed.</div></div>
+<div class="faq-item"><button class="faq-q">How long does it take for Shopify products to appear on Google Shopping?</button><div class="faq-a">After connecting your feed to Merchant Center, initial processing takes 24-72 hours for catalogues under 5,000 products. New products added after the initial sync appear within 24 hours of your next scheduled feed refresh. Price and availability changes can take up to 24 hours to propagate if you're on daily updates; twice-daily updates halve this.</div></div>
+<div class="faq-item"><button class="faq-q">Why are my Shopify products not showing on Google Shopping?</button><div class="faq-a">The most common causes: products disapproved in Merchant Center (check Diagnostics tab), your Shopping campaign paused or budget exhausted, products excluded from the feed by a filter rule, or your Merchant Center account not linked to your Google Ads account. Check Merchant Center Diagnostics first — it shows exactly which products have issues and why.</div></div>
+<div class="faq-item"><button class="faq-q">What Shopify product data does Trajekt pull for Google Shopping?</button><div class="faq-a">Trajekt pulls: product title, description (HTML-stripped), all variants with individual prices and inventory, images (all images, not just the featured image), collections (up to 5), metafields (including brand, GTIN, material if stored there), tags, SEO title and description, vendor, product type, and published status.</div></div>
+<div class="faq-item"><button class="faq-q">Can Trajekt send my Shopify products to ChatGPT Shopping as well as Google?</button><div class="faq-a">Yes — this is one of Trajekt's primary differentiators. The same Shopify store connection generates both Google Shopping XML (for Merchant Center) and ChatGPT Shopping JSONL (delivered via SFTP to OpenAI). No second connection or setup needed.</div></div>
+<div class="faq-item"><button class="faq-q">Does Trajekt require a Shopify app installation?</button><div class="faq-a">No. Trajekt uses a direct Admin API connection — you create API credentials in your Shopify admin, copy them into Trajekt, and the connection is established. No app store listing, no partner account, no ongoing Shopify app fees on top of Trajekt's own pricing.</div></div>
+<div class="faq-item"><button class="faq-q">What's the best way to optimise Shopify product titles for Google Shopping?</button><div class="faq-a">Don't change your Shopify product titles on-site — use feed rules to restructure them specifically for Shopping. A Trajekt rule can prepend the vendor (brand), append colour and size variant attributes, and remove promotional language — all without touching your Shopify store. Your website titles stay as written; your Shopping titles are optimised automatically.</div></div>
+<div class="faq-item"><button class="faq-q">How do I stop out-of-stock Shopify products showing in Google Shopping?</button><div class="faq-a">With daily or twice-daily feed refreshes, out-of-stock products are automatically marked availability: out_of_stock in your feed, preventing them from showing in Shopping. Trajekt also supports filtering rules that completely exclude out-of-stock products from the feed if you prefer they don't appear at all.</div></div>
+<div class="faq-item"><button class="faq-q">How many Shopify products can Trajekt handle?</button><div class="faq-a">Trajekt's Growth plan handles up to 25,000 products; the Pro plan up to 75,000. For larger catalogues, Agency pricing is available on request. All plans use Shopify's Admin GraphQL API with cursor-based pagination, so very large catalogues are fetched completely without timeout issues.</div></div>
+
+</div>
+</section>
+
+
+<section style="background:var(--card);padding:56px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div>
+      <h2 style="font-size:22px;margin-bottom:24px">Related guides</h2>
+      <a href="/shopify-product-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Full Shopify feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/google-merchant-center" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Merchant Center setup <span style="color:var(--t3)">&#8594;</span></a><a href="/google-shopping-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Shopping feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/chatgpt-product-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">ChatGPT Shopping from Shopify <span style="color:var(--t3)">&#8594;</span></a><a href="/product-feed-optimisation" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Feed optimisation <span style="color:var(--t3)">&#8594;</span></a><a href="/google-product-category" style="display:block;padding:10px 0;font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google product category mapping <span style="color:var(--t3)">&#8594;</span></a>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px">
+      <div style="font-size:15px;font-weight:700;margin-bottom:8px;color:var(--ink)">Ready to automate your feeds?</div>
+      <p style="font-size:14px;margin-bottom:20px">Connect your store and generate feeds for every channel automatically. Free plan available &#8212; no credit card needed.</p>
+      <a href="https://app.trajekt.co.uk/signup" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:14px;font-weight:600;text-decoration:none">Start free &#8594;</a>
+    </div>
+  </div>
+</div>
+</section>
+<section style="padding:0 24px 80px"><div style="max-width:var(--max);margin:0 auto">
+<div class="cta-banner">
+  <h2>Connect your Shopify store to Google Shopping today</h2>
+  <p>And ChatGPT, Meta, TikTok, and 9 more channels from the same connection. Free plan, no credit card.</p>
+  <div class="cta-actions">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="/chatgpt-product-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">ChatGPT feed guide</a>
+  </div>
+</div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')})});</script>
+</body></html>

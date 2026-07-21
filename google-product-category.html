@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Product Category — Mapping Guide for UK | Trajekt</title>
+<meta name="description" content="How to correctly map google_product_category in your Shopping feed. Numeric IDs, text paths, common UK categories.">>
+<meta name="keywords" content="google product category UK, google product category mapping, google_product_category, google product taxonomy UK">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/google-product-category">
+<meta property="og:title" content="Google Product Category — Mapping Guide for UK Merchants | Trajekt"><meta property="og:description" content="How to correctly map google_product_category in your Shopping feed. Numeric IDs, text paths, common UK categories, and how to automate GPC mapping across thousands of products with Trajekt rules."><meta property="og:url" content="https://trajekt.co.uk/google-product-category"><meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-google-product-category.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-google-product-category.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://trajekt.co.uk/google-product-category","name":"Google Product Category — Mapping Guide for UK Merchants | Trajekt","inLanguage":"en-GB"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Google Shopping","item":"https://trajekt.co.uk/google-shopping-feed"},{"@type":"ListItem","position":3,"name":"Google Product Category","item":""}]},
+{"@type":"SoftwareApplication","name":"Trajekt","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"provider":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the google_product_category attribute?","acceptedAnswer":{"@type":"Answer","text":"The google_product_category (GPC) attribute is a field in your Google Shopping feed that classifies your product according to Google's official product taxonomy — a hierarchical list of over 6,000 product categories. You can submit the category as either a numeric ID (e.g. 1604) or the full text path (e.g. Apparel & Accessories > Clothing > Outerwear > Coats & Jackets). Google strongly recommends using numeric IDs for stability, as text paths can change when Google updates its taxonomy."}},{"@type":"Question","name":"Is google_product_category required?","acceptedAnswer":{"@type":"Answer","text":"Technically optional, but practically essential. Without it, Google automatically assigns a category to your products based on its own interpretation of your title and description. Google's auto-assignment is often wrong or too broad. Correct, specific manual assignment improves impression share, reduces wasted clicks, and unlocks category-specific attributes (like size_system for apparel or fuel_type for vehicles) that only appear for products in the right category."}},{"@type":"Question","name":"How specific should my google_product_category be?","acceptedAnswer":{"@type":"Answer","text":"Use the most specific category that accurately describes your product. Google's taxonomy goes up to 7 levels deep. A jacket should be Apparel & Accessories > Clothing > Outerwear > Coats & Jackets, not just Apparel & Accessories. More specific categories give Google a stronger relevance signal. However, don't force a product into a more specific category if it doesn't accurately fit."}},{"@type":"Question","name":"How do I find the right Google product category for my products?","acceptedAnswer":{"@type":"Answer","text":"Three approaches: (1) Download Google's taxonomy file from support.google.com/merchants and search it with Ctrl+F for keywords. (2) Use the Google Merchant Center product editor which suggests categories as you type. (3) Check what category Google automatically assigns your products in the Products tab and evaluate whether it's appropriate. For large catalogues, Trajekt's rules engine lets you map your own product types to the correct GPC IDs automatically."}},{"@type":"Question","name":"What's the difference between google_product_category and product_type?","acceptedAnswer":{"@type":"Answer","text":"They serve different purposes. google_product_category uses Google's fixed taxonomy and signals what kind of product it is to Google's algorithm. product_type is your own category hierarchy — you set the values yourself (e.g. Mens > Jackets > Waxed Jackets). Both should be populated: GPC helps Google match your product to queries, while product_type gives you a clean hierarchy for Shopping campaign product group segmentation."}},{"@type":"Question","name":"Does the Google product category affect Shopping Ad performance?","acceptedAnswer":{"@type":"Answer","text":"Yes, in two ways. First, it influences query matching — products in the correct category are more likely to surface for relevant category-intent queries. Second, some category-specific attributes only become available when GPC is set correctly — for example, you can only use the pattern attribute for Apparel, or the mpn attribute for Electronics. Missing these attributes means missing match opportunities."}}]}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" style="background:var(--card);border-bottom:1px solid var(--border);padding:80px 24px 64px">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="font-size:12px;color:var(--t3);margin-bottom:24px"><a href="/" style="color:var(--t3);text-decoration:none">Home</a> <span style="color:var(--t3)">&#8250;</span> <a href="/google-shopping-feed" style="color:var(--t3);text-decoration:none">Google Shopping</a> <span style="color:var(--t3)">&#8250;</span> <span style="color:var(--t2)">Google Product Category</span></div>
+  <div style="display:grid;grid-template-columns:3fr 2fr;gap:64px;align-items:start">
+    <div>
+      <div class="badge badge-green" style="margin-bottom:16px">Reference guide</div>
+      <h1 style="margin-bottom:16px">Google Product Category — mapping guide for UK merchants</h1>
+      <p style="font-size:18px;margin-bottom:24px">The google_product_category field is optional in Google&#8217;s spec but essential in practice. Correct, specific category mapping improves Shopping impression share, unlocks category-specific attributes, and helps Google match your products to the right buyer queries.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Map categories with Trajekt &#8594;</a>
+        <a href="/google-shopping-feed" class="btn btn-outline">Google Shopping guide</a>
+      </div>
+    </div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px">
+      <div style="font-size:12px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px">Quick reference</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t2)">Total categories</span><span style="font-weight:600">6,000+</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t2)">Maximum hierarchy depth</span><span style="font-weight:600">7 levels</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t2)">Required?</span><span style="font-weight:600">Strongly recommended</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t2)">Field name</span><span style="font-weight:600;font-family:monospace">google_product_category</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t2)">Format</span><span style="font-weight:600">Numeric ID or text path</span></div>
+        <div style="display:flex;justify-content:space-between;font-size:13px"><span style="color:var(--t2)">Updated</span><span style="font-weight:600">Quarterly by Google</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:var(--max);margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:60px;align-items:start">
+<div>
+<h2 style="margin-bottom:16px">Why category mapping matters more than most merchants realise</h2>
+<p style="margin-bottom:16px">Two products with identical titles, descriptions, and prices can have very different Shopping performance based solely on their GPC assignment. Here&#8217;s why:</p>
+
+<div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px">
+    <h3 style="font-size:16px;margin-bottom:6px">1. Query matching signal</h3>
+    <p style="font-size:14px">A product assigned to &#8220;Apparel &amp; Accessories&#8221; (level 1) competes for all apparel queries. A product assigned to &#8220;Apparel &amp; Accessories &gt; Clothing &gt; Outerwear &gt; Coats &amp; Jackets&#8221; (level 4) receives a stronger relevance signal for jacket-specific queries. More specific = better match quality.</p>
+  </div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px">
+    <h3 style="font-size:16px;margin-bottom:6px">2. Unlocks category-specific attributes</h3>
+    <p style="font-size:14px">Certain feed attributes only activate for products in the correct GPC category. Apparel products need <code style="background:var(--bg);padding:1px 4px;border-radius:3px">gender</code>, <code style="background:var(--bg);padding:1px 4px;border-radius:3px">age_group</code>, <code style="background:var(--bg);padding:1px 4px;border-radius:3px">size</code>, and <code style="background:var(--bg);padding:1px 4px;border-radius:3px">color</code> to qualify for apparel Shopping filters. Without correct GPC, these attributes are ignored even if present in your feed.</p>
+  </div>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:18px 20px">
+    <h3 style="font-size:16px;margin-bottom:6px">3. Shopping campaign segmentation</h3>
+    <p style="font-size:14px">Performance Max and Standard Shopping campaigns use GPC to group products. Clean category assignment makes bid-by-category segmentation straightforward. Incorrect categories make it impossible to build sensible product group structures.</p>
+  </div>
+</div>
+
+<h2 style="margin-bottom:16px">How to find the right category</h2>
+<p style="margin-bottom:8px">Three methods, in order of reliability:</p>
+<ol style="margin-left:20px;display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+  <li style="font-size:15px;color:var(--t2)"><strong style="color:var(--t1)">Download Google&#8217;s taxonomy file</strong> &#8212; available at support.google.com/merchants/answer/6324436. Open in Excel or Google Sheets, use Find (Ctrl+F) to search for keywords from your product type. The left column is the text path, the right column is the numeric ID you&#8217;ll use in your feed.</li>
+  <li style="font-size:15px;color:var(--t2)"><strong style="color:var(--t1)">Merchant Center auto-suggest</strong> &#8212; when editing a product in Merchant Center Next, the google_product_category field auto-suggests categories as you type. Start with your product type keyword and work down to the most specific match.</li>
+  <li style="font-size:15px;color:var(--t2)"><strong style="color:var(--t1)">Check Google&#8217;s automatic assignment</strong> &#8212; in Merchant Center Next, Google shows what category it automatically assigned each product. This tells you what Google thinks your product is &#8212; and whether its interpretation matches your own.</li>
+</ol>
+
+<h2 style="margin-bottom:16px">Common UK GPC values — quick reference</h2>
+<div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:40px">
+  <div style="background:var(--card2);padding:12px 16px;font-size:12px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;display:grid;grid-template-columns:1fr 80px"><span>Category path</span><span>Numeric ID</span></div>
+  <table style="width:100%;border-collapse:collapse">
+    <tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Apparel & Accessories</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">1</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Apparel & Accessories > Clothing</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">1604</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Apparel & Accessories > Clothing > Outerwear > Coats & Jackets</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">5697</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Apparel & Accessories > Shoes</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">187</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Apparel & Accessories > Handbags, Wallets & Cases</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">171</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Electronics</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">222</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Electronics > Computers</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">328</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Electronics > Audio</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">31</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Home & Garden</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">536</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Home & Garden > Furniture</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">436</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Home & Garden > Kitchen & Dining</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">638</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Sporting Goods</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">499</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Sporting Goods > Exercise & Fitness</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">990</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Toys & Games</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">1239</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Baby & Toddler</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">537</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Health & Beauty</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">491</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Health & Beauty > Health Care</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">491</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Food, Beverages & Tobacco</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">422</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Pet Supplies</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">1</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Vehicles & Parts</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">888</td></tr><tr><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border)">Vehicles & Parts > Vehicle Parts & Accessories</td><td style="font-size:13px;padding:10px 16px;border-bottom:1px solid var(--border);font-family:monospace;color:var(--blue)">913</td></tr>
+  </table>
+  <div style="padding:12px 16px;font-size:12px;color:var(--t3)">IDs are illustrative examples — always verify current IDs in Google&#8217;s official taxonomy file as these are updated quarterly.</div>
+</div>
+
+<h2 style="margin-bottom:16px">Automating GPC mapping with Trajekt</h2>
+<p style="margin-bottom:16px">For catalogues with thousands of products across many categories, manually assigning GPC IDs to each product isn&#8217;t feasible. Trajekt&#8217;s rules engine lets you map categories automatically:</p>
+
+<div style="background:var(--ink);border-radius:var(--r-lg);padding:20px 24px;font-family:monospace;font-size:13px;color:rgba(255,255,255,.75);line-height:2;margin-bottom:32px">
+  <div style="color:rgba(255,255,255,.35);margin-bottom:8px;font-family:Inter,sans-serif;font-size:11px">Example Trajekt rule — IF/THEN category mapping</div>
+  <div><span style="color:#B8A9E8">IF</span> product_type <span style="color:#5DCAA5">CONTAINS</span> <span style="color:#EF9F27">"Jackets"</span></div>
+  <div><span style="color:#B8A9E8">THEN</span> google_product_category = <span style="color:#7EC8E3">5697</span></div>
+  <div style="margin-top:8px"><span style="color:#B8A9E8">IF</span> product_type <span style="color:#5DCAA5">CONTAINS</span> <span style="color:#EF9F27">"Running Shoes"</span></div>
+  <div><span style="color:#B8A9E8">THEN</span> google_product_category = <span style="color:#7EC8E3">187</span></div>
+</div>
+
+<p style="margin-bottom:32px">Rules run on every feed refresh — when you update your category mapping, all affected products update automatically without touching your Shopify or WooCommerce store.</p>
+
+<h2 style="margin-bottom:32px">Frequently asked questions</h2>
+<div class="faq-item open"><button class="faq-q">What is the google_product_category attribute?</button><div class="faq-a">The google_product_category (GPC) attribute is a field in your Google Shopping feed that classifies your product according to Google's official product taxonomy — a hierarchical list of over 6,000 product categories. You can submit the category as either a numeric ID (e.g. 1604) or the full text path (e.g. Apparel & Accessories > Clothing > Outerwear > Coats & Jackets). Google strongly recommends using numeric IDs for stability, as text paths can change when Google updates its taxonomy.</div></div>
+<div class="faq-item"><button class="faq-q">Is google_product_category required?</button><div class="faq-a">Technically optional, but practically essential. Without it, Google automatically assigns a category to your products based on its own interpretation of your title and description. Google's auto-assignment is often wrong or too broad. Correct, specific manual assignment improves impression share, reduces wasted clicks, and unlocks category-specific attributes (like size_system for apparel or fuel_type for vehicles) that only appear for products in the right category.</div></div>
+<div class="faq-item"><button class="faq-q">How specific should my google_product_category be?</button><div class="faq-a">Use the most specific category that accurately describes your product. Google's taxonomy goes up to 7 levels deep. A jacket should be Apparel & Accessories > Clothing > Outerwear > Coats & Jackets, not just Apparel & Accessories. More specific categories give Google a stronger relevance signal. However, don't force a product into a more specific category if it doesn't accurately fit.</div></div>
+<div class="faq-item"><button class="faq-q">How do I find the right Google product category for my products?</button><div class="faq-a">Three approaches: (1) Download Google's taxonomy file from support.google.com/merchants and search it with Ctrl+F for keywords. (2) Use the Google Merchant Center product editor which suggests categories as you type. (3) Check what category Google automatically assigns your products in the Products tab and evaluate whether it's appropriate. For large catalogues, Trajekt's rules engine lets you map your own product types to the correct GPC IDs automatically.</div></div>
+<div class="faq-item"><button class="faq-q">What's the difference between google_product_category and product_type?</button><div class="faq-a">They serve different purposes. google_product_category uses Google's fixed taxonomy and signals what kind of product it is to Google's algorithm. product_type is your own category hierarchy — you set the values yourself (e.g. Mens > Jackets > Waxed Jackets). Both should be populated: GPC helps Google match your product to queries, while product_type gives you a clean hierarchy for Shopping campaign product group segmentation.</div></div>
+<div class="faq-item"><button class="faq-q">Does the Google product category affect Shopping Ad performance?</button><div class="faq-a">Yes, in two ways. First, it influences query matching — products in the correct category are more likely to surface for relevant category-intent queries. Second, some category-specific attributes only become available when GPC is set correctly — for example, you can only use the pattern attribute for Apparel, or the mpn attribute for Electronics. Missing these attributes means missing match opportunities.</div></div>
+<div class="faq-item"><button class="faq-q">How often does Google update its product taxonomy?</button><div class="faq-a">Google updates its taxonomy quarterly, adding new categories for emerging product types and reorganising existing ones. The taxonomy file includes a version date. If you hardcode GPC values in your feed, check quarterly that your mappings are still current. Trajekt's rules engine makes this easy to update across your full catalogue at once.</div></div>
+<div class="faq-item"><button class="faq-q">Can I use the same category for all products?</button><div class="faq-a">Only if all your products genuinely belong to the same category. Assigning all products to a broad catch-all category (like Apparel & Accessories) when they span multiple specific categories will hurt Shopping performance — Google can't match products to category-specific queries, and your Shopping campaigns lose the ability to segment products by category.</div></div>
+
+</div>
+<aside style="position:sticky;top:80px">
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;margin-bottom:16px">
+    <div style="font-size:13px;font-weight:600;margin-bottom:14px">Related pages</div><a href="/google-shopping-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none">Google Shopping feed &#8594;</a><a href="/google-merchant-center" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none">Google Merchant Center setup &#8594;</a><a href="/custom-labels-guide" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none">Custom labels guide &#8594;</a><a href="/product-title-optimisation" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none">Title optimisation &#8594;</a><a href="/feed-disapprovals" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none">Fix disapprovals &#8594;</a><a href="/product-feed-optimisation" style="display:block;padding:10px 0;font-size:14px;color:var(--t1);text-decoration:none">Feed optimisation &#8594;</a>
+  </div>
+  <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:20px">
+    <div style="font-size:14px;font-weight:600;margin-bottom:8px;color:var(--ink)">Automate your feeds</div>
+    <p style="font-size:13px;margin-bottom:14px">Connect your store and start generating feeds free.</p>
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue" style="font-size:13px;padding:8px 16px;width:100%;justify-content:center">Start free &#8594;</a>
+  </div></aside>
+</div>
+</section>
+
+<section style="padding:0 24px 80px"><div style="max-width:var(--max);margin:0 auto">
+<div class="cta-banner">
+  <h2>Automate your Google product category mapping</h2>
+  <p>Trajekt&#8217;s rules engine maps your product types to GPC IDs automatically &#8212; across your full catalogue, on every feed refresh.</p>
+  <div class="cta-actions">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="/google-shopping-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Google Shopping guide</a>
+  </div>
+</div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')})});</script>
+</body></html>

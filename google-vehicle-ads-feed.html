@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Vehicle Ads Feed — Automotive Inventory Ads UK | Trajekt</title>
+<meta name="description" content="Set up Google Vehicle Ads for your dealership with the correct XML feed format. Trajekt converts your vehicle inventory to Google's vehicle ads.">>
+<meta name="keywords" content="Google vehicle ads feed, automotive inventory ads UK, car dealer product feed, Google vehicle ads XML, dealership feed management, caravan ads Google Shopping">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/google-vehicle-ads-feed">
+<meta property="og:title" content="Google Vehicle Ads Feed — Automotive Inventory Ads UK | Trajekt">
+<meta property="og:description" content="Convert your vehicle inventory to Google Vehicle Ads format. Trajekt handles the XML feed, field mapping, and automatic updates for UK dealerships.">
+<meta property="og:url" content="https://trajekt.co.uk/google-vehicle-ads-feed">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-vehicle-ads.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-vehicle-ads.svg">
+<meta name="twitter:title" content="Google Vehicle Ads Feed | Trajekt">
+<meta name="twitter:description" content="Automotive inventory ads for UK dealerships. Trajekt converts your vehicle data to Google's XML spec automatically.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://trajekt.co.uk/google-vehicle-ads-feed",
+      "url": "https://trajekt.co.uk/google-vehicle-ads-feed",
+      "name": "Google Vehicle Ads Feed — Automotive Inventory Ads UK",
+      "description": "Convert your vehicle inventory to Google Vehicle Ads XML format. Trajekt handles field mapping and automatic updates for UK dealerships.",
+      "inLanguage": "en-GB",
+      "breadcrumb": { "@id": "https://trajekt.co.uk/google-vehicle-ads-feed#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://trajekt.co.uk/google-vehicle-ads-feed#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trajekt.co.uk" },
+        { "@type": "ListItem", "position": 2, "name": "Channels", "item": "https://trajekt.co.uk/channels" },
+        { "@type": "ListItem", "position": 3, "name": "Google Vehicle Ads Feed", "item": "https://trajekt.co.uk/google-vehicle-ads-feed" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Google Vehicle Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Google Vehicle Ads (also called Automotive Inventory Ads) is a Google Shopping format specifically designed for vehicle retailers. Unlike standard Shopping ads, Vehicle Ads show your actual inventory — specific makes, models, years, and prices — to car shoppers on Google Search and the Shopping tab. They use a special XML feed format submitted through Google Merchant Center." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is VIN required for Google Vehicle Ads in the UK?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In the UK, VIN (Vehicle Identification Number) is considered Personally Identifiable Information (PII) and is therefore optional for Google Vehicle Ads. Instead, you should submit a unique internal ID [id] attribute as the alternative identifier. This ID must also appear on the vehicle's landing page. Trajekt handles this UK-specific requirement automatically." }
+        },
+        {
+          "@type": "Question",
+          "name": "What format does the Google Vehicle Ads feed use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Google Vehicle Ads uses a primary feed in XML or CSV (delimited text) format. Google's documentation recommends a CSV/TSV file for ease of creation. The feed is uploaded to Google Merchant Center as a new data source with Vehicle Ads as the destination. Required fields include id, title, description, price, image_link, link, availability, make, model, year, condition, and store_code." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the required fields for Google Vehicle Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Required fields for Google Vehicle Ads include: id (unique vehicle identifier), title (e.g. 'Used 2024 Coachman Laser Caravan'), description, price, image_link, link (vehicle landing page URL), availability, make, model, year, condition (new/used), store_code (must match your Google Business Profile). Additional fields like mileage, exterior_color, body_style, transmission, fuel_type, and trim are strongly recommended for performance." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does each vehicle need a separate landing page?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Each vehicle in your Google Vehicle Ads feed must have its own unique landing page URL that shows the specific vehicle being advertised, with a price on the page that matches your feed exactly. Google crawls these pages to verify consistency. If you use link templates, ensure they include the store_code parameter." }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the store_code work in vehicle ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The store_code must match exactly the store code in your Google Business Profile. This is how Google matches your vehicle inventory to your physical dealership location. If you have multiple dealerships, each has its own store_code and you can specify fulfillment options with repeated vehicle_fulfillment attributes. Trajekt sets store codes from your feed settings." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I advertise caravans and motorhomes with Google Vehicle Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Google Vehicle Ads supports all types of vehicle inventory including caravans, motorhomes, campervans, and other recreational vehicles. The format is not limited to cars and trucks — any motorised or towable vehicle can be advertised. Trajekt has been specifically tested with caravan and motorhome dealer feeds in the UK." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I update my vehicle feed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Google recommends updating your vehicle feed at least daily, and ideally twice daily for dealers with frequently changing inventory. After submitting your feed or making updates, allow 24-48 hours for the changes to sync and the review process to complete. Trajekt supports up to twice-daily scheduled updates automatically." }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if my feed price doesn't match my website?",
+          "acceptedAnswer": { "@type": "Answer", "text": "If the price in your vehicle feed does not exactly match the price displayed on your vehicle's landing page, Google will disapprove that vehicle listing. This is one of the most common causes of vehicle ad disapprovals. Always ensure your feed prices are updated in sync with your website, and avoid displaying prices differently across your site (e.g., ex-VAT vs inc-VAT)." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need a Google Business Profile to run Vehicle Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Google Vehicle Ads require a linked Google Business Profile account with verified dealership locations. The store_code in your feed must match the store codes in your Business Profile. If you don't have access to your Business Profile, Google allows an alternative Store Feed submission — contact Google support to request this access." }
+        },
+        {
+          "@type": "Question",
+          "name": "How are Google Vehicle Ads different from standard Google Shopping ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Unlike standard Shopping ads, Vehicle Ads do not require vehicles to be available for direct online purchase — they can lead users to complete the purchase in person at a dealership. They also use vehicle-specific attributes (make, model, year, mileage, VIN, store_code) not found in standard Shopping feeds, and they link to individual vehicle landing pages rather than general category pages." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/google-shopping-feed">Channels</a> <span>›</span> Google Vehicle Ads Feed</div>
+    <div style="margin-top:32px;max-width:760px">
+      <span class="badge badge-amber">🚗 Google Vehicle Ads</span>
+      <h1>Google Vehicle Ads — get your <em>exact inventory</em> in front of car buyers</h1>
+      <p class="hero-sub">Google Vehicle Ads show your specific vehicles — make, model, year, price — to shoppers actively searching on Google. Trajekt converts your inventory data to Google's XML spec and keeps it updated automatically for UK dealerships.</p>
+      <div class="hero-actions">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-amber btn-lg">Start free &#8594;</a>
+        <a href="#field-spec" class="btn btn-outline btn-lg">View field requirements</a>
+      </div>
+      <div class="hero-meta">
+        <span>UK dealerships supported</span>
+        <span>VIN optional in UK</span>
+        <span>Caravans &amp; motorhomes included</span>
+        <span>Twice-daily updates</span>
+      </div>
+      <div class="uk-box">
+        <h4>🇬🇧 Important for UK dealers</h4>
+        <p style="font-size:14px;margin-bottom:0">In the UK, VIN (Vehicle Identification Number) is classified as Personally Identifiable Information (PII) and is <strong>optional</strong> for Google Vehicle Ads. Instead, submit a unique internal ID attribute. Trajekt handles this UK-specific requirement automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num"><span class="hi">73%</span></div>
+      <div class="stat-lbl">of car buyers use Google to research their next vehicle purchase</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="hi">24–48h</span></div>
+      <div class="stat-lbl">review time after submitting or updating your vehicle feed</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="hi">£286B</span></div>
+      <div class="stat-lbl">UK ecommerce market — automotive is one of the fastest-growing segments</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="hi">1×</span></div>
+      <div class="stat-lbl">each VIN should only appear once in your feed — duplicates are disapproved</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title" id="how-it-works">From your vehicle inventory to Google Shopping</h2>
+    <p class="section-sub">Trajekt pulls data from your DMS, website feed, or inventory CSV and converts it to the exact XML format Google requires for Vehicle Ads.</p>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num">Step 1</div>
+        <h3>Connect your inventory</h3>
+        <p>Paste your vehicle inventory feed URL (XML or CSV from your DMS or website provider). Trajekt fetches and parses the data automatically.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">Step 2</div>
+        <h3>Map your fields</h3>
+        <p>Trajekt extracts make, model, year, condition, price, mileage, colour, and images from your source data. Missing fields can be set via rules.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">Step 3</div>
+        <h3>Generate the XML</h3>
+        <p>Your inventory is converted to Google's Vehicle Ads XML spec with the correct g: namespace attributes, store_code, and all required fields validated.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">Step 4</div>
+        <h3>Upload to Merchant Center</h3>
+        <p>Download the XML or use Trajekt's direct upload to Google Merchant Center. Set up twice-daily updates to keep your live inventory accurate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="field-spec">
+  <div class="container">
+    <p class="section-label">Field specification</p>
+    <h2 class="section-title">Google Vehicle Ads — required &amp; recommended fields</h2>
+    <p class="section-sub">Based on the official Google Vehicle Ads data specification. All required fields must be present or your vehicle listings will be disapproved. UK-specific notes included.</p>
+
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr><th>Field</th><th>Status</th><th>Description</th><th>UK Note</th><th>Trajekt</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="field-name">id</span></td><td><span class="req">Required</span></td><td>Unique vehicle identifier. Must appear on the vehicle landing page.</td><td>Use internal stock number instead of VIN</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">title</span></td><td><span class="req">Required</span></td><td>Vehicle title. Include condition, year, make, model: "Used 2024 Coachman Laser 575"</td><td>—</td><td>✓ Auto-built</td></tr>
+          <tr><td><span class="field-name">description</span></td><td><span class="req">Required</span></td><td>Vehicle description. Plain text. Mention key specs and features.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">link</span></td><td><span class="req">Required</span></td><td>URL of the specific vehicle landing page. Must be accessible.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">image_link</span></td><td><span class="req">Required</span></td><td>Primary vehicle image URL. HTTPS. High quality recommended.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">price</span></td><td><span class="req">Required</span></td><td>Vehicle price with currency. Must match website price exactly.</td><td>Use GBP. Inc VAT.</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">availability</span></td><td><span class="req">Required</span></td><td>in stock / out of stock / preorder / backorder</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">make</span></td><td><span class="req">Required</span></td><td>Vehicle manufacturer / brand name.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">model</span></td><td><span class="req">Required</span></td><td>Vehicle model name.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">year</span></td><td><span class="req">Required</span></td><td>Model year. 4-digit format.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">condition</span></td><td><span class="req">Required</span></td><td>new / used / refurbished</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">store_code</span></td><td><span class="req">Required</span></td><td>Must match store code in Google Business Profile exactly.</td><td>Critical for UK dealer matching</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">vin</span></td><td><span class="opt">Optional (UK)</span></td><td>Vehicle Identification Number. PII in UK — optional.</td><td>Optional in UK only</td><td>✓ Configurable</td></tr>
+          <tr><td><span class="field-name">mileage</span></td><td><span class="rec">Recommended</span></td><td>Odometer reading. Include unit: "45000 miles" or "72500 km"</td><td>Use miles for UK</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">exterior_color</span></td><td><span class="rec">Recommended</span></td><td>Exterior colour of the vehicle.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">body_style</span></td><td><span class="rec">Recommended</span></td><td>Body type: saloon / estate / SUV / hatchback / caravan etc.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">fuel</span></td><td><span class="rec">Recommended</span></td><td>Fuel type: petrol / diesel / electric / hybrid</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">transmission</span></td><td><span class="rec">Recommended</span></td><td>Automatic or Manual</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">trim</span></td><td><span class="rec">Recommended</span></td><td>Trim level or specification grade.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">additional_image_link</span></td><td><span class="rec">Recommended</span></td><td>Additional vehicle image URLs. Multiple images improve CTR.</td><td>—</td><td>✓ Auto (up to 10)</td></tr>
+          <tr><td><span class="field-name">date_in_stock</span></td><td><span class="opt">Optional</span></td><td>ISO 8601 date vehicle arrived on site.</td><td>—</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">vehicle_fulfillment</span></td><td><span class="opt">Optional</span></td><td>Fulfillment method: IN_STORE / SHIP_TO_STORE / ONLINE</td><td>—</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">maps_url</span></td><td><span class="opt">Optional</span></td><td>Google Maps URL of dealership.</td><td>—</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">tracking_phone_number</span></td><td><span class="opt">Optional</span></td><td>Call tracking number for vehicle listings.</td><td>—</td><td>✓ From settings</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--t3);margin-top:12px">Source: <a href="https://support.google.com/google-ads/answer/11192663" target="_blank" rel="noopener noreferrer">Google Vehicle Ads data specification ↗</a> and <a href="https://support.google.com/google-ads/answer/11544533" target="_blank" rel="noopener noreferrer">UK vehicle ads policies ↗</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Built for UK vehicle retailers</h2>
+    <p class="section-sub">Trajekt has been built and tested with UK caravan dealers, motorhome retailers, and car dealerships. We know the quirks of UK automotive inventory data.</p>
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon fi-amber">🚐</div>
+        <h3>Caravans &amp; motorhomes</h3>
+        <p>Google Vehicle Ads supports all types of vehicle inventory — not just cars. Trajekt has been tested with UK caravan dealers and recreational vehicle retailers.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon fi-blue">🔑</div>
+        <h3>VIN handling for UK</h3>
+        <p>In the UK, VIN is PII and optional. Trajekt automatically uses your internal stock ID as the primary identifier and omits VIN unless you explicitly provide it.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon fi-purple">🏷️</div>
+        <h3>Price consistency checking</h3>
+        <p>Price mismatches between feed and website are the number one cause of Vehicle Ad disapprovals. Trajekt logs warnings when feed prices may not match live pages.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon fi-green">📍</div>
+        <h3>Multi-dealership support</h3>
+        <p>Running multiple locations? Trajekt supports multiple store_codes and can split your inventory by location for separate Merchant Center uploads.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon fi-blue">🔄</div>
+        <h3>Twice-daily updates</h3>
+        <p>Vehicle inventory changes daily. Trajekt supports up to twice-daily scheduled feed refreshes to keep your Google listings accurate with your live stock.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon fi-amber">🛠️</div>
+        <h3>Rules engine</h3>
+        <p>Extract make and model from title, map condition to correct values, set default store_code, add dealership address — all via Trajekt's no-code rules engine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title" style="text-align:center;max-width:600px;margin:0 auto 48px">Frequently asked questions about Google Vehicle Ads</h2>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">What is Google Vehicle Ads?</button>
+        <div class="faq-a">Google Vehicle Ads (also called Automotive Inventory Ads) is a Google Shopping format specifically designed for vehicle retailers. Unlike standard Shopping ads, Vehicle Ads show your actual inventory — specific makes, models, years, and prices — to car shoppers on Google Search and the Shopping tab. They use a special XML feed format submitted through Google Merchant Center and require a linked Google Business Profile.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is VIN required for Google Vehicle Ads in the UK?</button>
+        <div class="faq-a">In the UK, VIN (Vehicle Identification Number) is classified as Personally Identifiable Information (PII) and is therefore optional for Google Vehicle Ads. Instead, you must submit a unique internal stock ID [id] attribute as the alternative identifier. This ID must appear on the vehicle's landing page. Trajekt handles this UK-specific requirement automatically, using your internal stock number as the primary identifier.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What format does the Google Vehicle Ads feed use?</button>
+        <div class="faq-a">Google Vehicle Ads accepts a primary feed in XML or CSV (delimited text) format. The XML format uses the standard Google Shopping RSS namespace (xmlns:g="http://base.google.com/ns/1.0") with vehicle-specific attributes. The feed is uploaded to Google Merchant Center as a new data source with "Vehicle Ads" as the destination. Trajekt generates XML format by default as it handles nested attributes more reliably.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does each vehicle need a separate landing page?</button>
+        <div class="faq-a">Yes. Each vehicle in your Google Vehicle Ads feed must have its own unique landing page URL that shows the specific vehicle being advertised, with a price on the page matching your feed exactly. Google crawls these pages to verify data consistency. If you use link templates, ensure they include the store_code parameter (e.g. ?store={store_code}).</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does store_code work in vehicle ads?</button>
+        <div class="faq-a">The store_code must exactly match the store code in your Google Business Profile. This is how Google matches your vehicle inventory to your physical dealership location for local inventory purposes. If you have multiple dealerships, each has its own store_code. If a store_code in your feed doesn't match a Business Profile location, those vehicles will be disapproved.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I advertise caravans and motorhomes with Google Vehicle Ads?</button>
+        <div class="faq-a">Yes. Google Vehicle Ads supports all types of vehicle inventory including caravans, motorhomes, campervans, and other recreational vehicles. The format is not restricted to cars and trucks. Trajekt has been specifically tested with UK caravan and motorhome dealer feeds and handles the specific data structure used by UK recreational vehicle inventory providers.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How often should I update my vehicle feed?</button>
+        <div class="faq-a">Google recommends updating your vehicle feed at least daily, and ideally twice daily for dealers with frequently changing inventory. After submitting updates, allow 24-48 hours for changes to sync and the review process to complete. For best results, time your feed updates to capture overnight price changes and morning stock updates before peak shopping hours.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What happens if my feed price doesn't match my website?</button>
+        <div class="faq-a">If the price in your vehicle feed does not exactly match the price displayed on your vehicle's landing page, Google will disapprove that vehicle listing. This is the most common cause of Vehicle Ad disapprovals in the UK. Ensure your feed and website prices are always in sync and consistently include or exclude VAT. Trajekt logs warnings when potential price inconsistencies are detected.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do I need a Google Business Profile to run Vehicle Ads?</button>
+        <div class="faq-a">Yes. Google Vehicle Ads require a linked Google Business Profile account with verified dealership locations. The store_code in your feed must match the store codes in your Business Profile. If you don't have access to your dealership's Business Profile, Google offers an alternative Store Feed submission route — contact Google support to request access.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How are Google Vehicle Ads different from standard Google Shopping?</button>
+        <div class="faq-a">Unlike standard Shopping ads, Vehicle Ads do not require vehicles to be purchasable online — they can lead users to complete the purchase in person. They use vehicle-specific attributes (make, model, year, mileage, VIN, store_code) not found in standard Shopping feeds. The google_product_category is typically "920" (Vehicles). Standard disapproval policies around direct purchase don't apply to vehicle ads.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I also run Meta Vehicle Ads with the same data?</button>
+        <div class="faq-a">The underlying vehicle data is the same, but Meta Vehicle Ads use a different CSV format with different field names. Trajekt can generate both Google Vehicle Ads XML and Meta Vehicle Ads CSV from the same inventory source — connect your feed once and output to both platforms. See our <a href="/meta-vehicle-ads-feed">Meta Vehicle Ads page</a> for full details.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="related-box">
+      <h4>Also on Trajekt</h4>
+      <div class="related-links">
+        <a href="/meta-vehicle-ads-feed">Meta Vehicle Ads</a>
+        <a href="/google-shopping-feed">Google Shopping Feed</a>
+        <a href="/chatgpt-product-feed">ChatGPT Product Feed</a>
+        <a href="/meta-shopping-feed">Meta Shopping Feed</a>
+        <a href="/microsoft-vehicle-ads">Microsoft Automotive Ads</a>
+        <a href="/vehicle-ads-guide">Vehicle Ads Complete Guide</a>
+        <a href="/for-automotive">Trajekt for Automotive</a>
+        <a href="/product-feed-optimisation">Feed Optimisation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Get your vehicle inventory live on Google today</h2>
+      <p>Connect your inventory feed, map your fields, and Trajekt generates your Google Vehicle Ads XML automatically. UK dealerships, caravan retailers, and motorhome dealers welcome.</p>
+      <div class="cta-actions">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-amber btn-lg">Start free — no credit card</a>
+        <a href="/meta-vehicle-ads-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Also need Meta Vehicle Ads?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+
+<script>
+document.querySelectorAll('.faq-q').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const item=btn.parentElement;
+    const wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+    if(!wasOpen)item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

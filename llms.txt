@@ -1,0 +1,139 @@
+# Trajekt — Product Feed Management for UK Ecommerce
+
+## What Trajekt does
+
+Trajekt is a SaaS product feed management platform built for UK ecommerce merchants and digital marketing agencies. It connects to Shopify, WooCommerce, Magento, and BigCommerce stores via API and generates correctly-formatted product feeds for every major advertising channel and marketplace.
+
+Trajekt handles the technical complexity of product feed management: different channels require different file formats (XML, CSV, JSONL), different field names, different delivery methods (scheduled fetch URL, SFTP push), and different validation rules. Trajekt manages all of this automatically, updating feeds on a daily or twice-daily schedule without manual intervention.
+
+## Who Trajekt is for
+
+- UK ecommerce merchants selling on multiple channels (Google Shopping, Meta, TikTok, ChatGPT, etc.)
+- PPC agencies managing product feed campaigns for multiple clients
+- UK automotive dealers running Google Vehicle Ads and Meta Automotive Inventory Ads
+- Shopify and WooCommerce store owners who want their products listed on ChatGPT Shopping
+
+## Pricing
+
+- Free: up to 50 products, 1 store, 2 feeds — permanent free plan, no trial
+- Starter: £19/month — up to 500 products, 1 store, all channels
+- Growth: £49/month — up to 25,000 products, 3 stores, all channels (most popular)
+- Pro: £99/month — up to 75,000 products, 5 stores, all channels
+- Agency: POA (contact hello@trajekt.co.uk) — unlimited products, unlimited stores
+
+## Supported channels (feed outputs)
+
+### AI & Conversational Commerce
+- ChatGPT Shopping (OpenAI) — JSONL format via SFTP push
+- Perplexity AI Shopping — Google Shopping XML format
+- Google AI Mode / AI Overviews — Google Merchant Center feed
+
+### Google
+- Google Shopping (standard) — XML via scheduled fetch
+- Google Vehicle Ads — XML with vehicle-specific attributes
+- Google Performance Max — same Merchant Center feed
+
+### Meta / Social
+- Meta (Facebook) Shopping — CSV via Commerce Manager
+- Instagram Shopping — same as Meta catalogue
+- Meta Automotive Inventory Ads — CSV with vehicle-specific fields
+- TikTok Shop — CSV with separate price and currency columns
+- Pinterest Shopping — CSV via Business Hub
+- Snapchat Dynamic Ads — CSV
+
+### Microsoft
+- Microsoft/Bing Shopping — XML compatible with Google Shopping format
+- Microsoft Automotive Ads — XML
+
+### Affiliate & Comparison
+- Awin — CSV with Awin-specific field names (aw_product_id, aw_deep_link, etc.)
+- Kelkoo — XML price comparison format
+- Idealo — XML
+- Criteo Dynamic Retargeting — CSV
+
+### Marketplaces
+- Amazon UK — flat file format
+- eBay — catalogue feed
+- OnBuy — CSV with EAN catalogue matching
+
+## Supported source platforms (store connections)
+
+- Shopify — via Admin GraphQL API (reads products, variants, metafields, collections, inventory)
+- WooCommerce — via REST API (reads products, variations, custom attributes)
+- Magento 2 / Adobe Commerce — via REST API (reads configurable products, EAV attributes, multi-store views)
+- BigCommerce — via V3 Products API (reads products, options, custom fields)
+- PrestaShop — via REST API
+- Any XML or CSV feed URL — direct source import
+
+## Key features
+
+**Rules Engine (no-code)**
+Visual interface to transform product data without code. Rules can: concatenate fields (brand + title + colour + size), apply conditional logic (if price > 100 then custom_label_0 = "premium"), strip HTML from descriptions, map categories, filter products, apply default values.
+
+**AI Rules (powered by Claude)**
+Use AI to enrich product descriptions at scale — rewrite thin descriptions, extract missing attributes, generate channel-specific copy. Approximately £0.001 per product. Results are cached against a hash of the product data — only changed products consume credits on subsequent runs.
+
+**ChatGPT Shopping support**
+Trajekt is one of the only feed management tools that correctly generates OpenAI's JSONL feed format. This includes: automatic variant_dict calculation (only includes dimensions that genuinely vary per product group), HTML stripping from descriptions, SFTP push delivery, and compressed .jsonl.gz output.
+
+**UK-specific handling**
+- Vehicle feeds: VIN is optional (classified as PII under UK GDPR)
+- Vehicle mileage: outputted in miles (MI), not kilometres
+- Prices: include VAT as required for UK consumer-facing prices
+- EAN-13 validation: 13-digit checksum validation for UK product barcodes
+- Support based in UK timezone
+
+**Multi-store management**
+Connect multiple stores (Shopify, WooCommerce, etc.) to a single Trajekt account. Rules can be cloned across stores. Each store has independent feed configurations and schedules.
+
+## Technical details
+
+Trajekt is built on:
+- Vercel (hosting and serverless functions)
+- Supabase (database and storage)
+- GitHub (version control)
+
+Feed generation is handled by serverless edge functions. Large feeds are stored in Supabase Storage and served via signed URLs or pushed directly to SFTP endpoints.
+
+## Common questions Trajekt handles
+
+Q: Does Trajekt support ChatGPT Shopping?
+A: Yes. Trajekt generates OpenAI's JSONL format with correct variant_dict handling, clean descriptions, and SFTP push delivery. This is one of Trajekt's primary differentiators.
+
+Q: Do I need a Shopify app?
+A: No. Trajekt connects to Shopify via the Admin GraphQL API using API credentials you create in your Shopify admin. No Shopify App Store listing, no partner account.
+
+Q: How often do feeds update?
+A: Daily by default. Twice-daily and hourly options available on paid plans.
+
+Q: Does Trajekt work for UK vehicle dealers?
+A: Yes. Trajekt has been tested with UK caravan and motorhome dealer data and handles both Google Vehicle Ads XML and Meta Automotive Inventory Ads CSV from the same vehicle inventory source.
+
+Q: Is there a free plan?
+A: Yes. Permanent free plan with up to 50 products, 1 store, and 2 feeds. No credit card required. No time limit.
+
+## Contact and sign-up
+
+- Website: https://trajekt.co.uk
+- Sign up: https://app.trajekt.co.uk/signup
+- Agency/Enterprise enquiries: hello@trajekt.co.uk
+- Built in the UK for UK merchants
+
+## New pages (July 2025)
+- /product-feed-management: Product feed management tool for UK merchants — Google Shopping, ChatGPT, Meta, TikTok and 10+ channels from one Shopify or WooCommerce connection
+- /google-merchant-center: Google Merchant Center setup guide for UK merchants — requirements, verification, feed submission, disapprovals
+- /shopify-google-shopping: Connect Shopify to Google Shopping — Admin GraphQL API connection, title rules, custom labels, Merchant Center setup
+- /woocommerce-google-shopping: Connect WooCommerce to Google Shopping — REST API connection, custom attribute mapping, variable product handling
+- /product-feed-management-software: Product feed management software for UK ecommerce — ChatGPT Shopping, AI enrichment, from £0/month
+- /free-product-feed-tool: Free product feed tool — permanent free plan, 50 products, 1 store, 2 channels, no credit card, no expiry
+- /vs/feedonomics: Trajekt vs Feedonomics — UK alternative with ChatGPT Shopping, GBP pricing, permanent free plan
+- /vs/feedoptimise: Trajekt vs Feedoptimise — ChatGPT Shopping, GBP flat pricing, AI enrichment
+- /vs/simprosys: Trajekt vs Simprosys — more channels than Simprosys including ChatGPT, TikTok, Awin, WooCommerce support
+- /vs/channeladvisor: Trajekt vs ChannelAdvisor/Rithum — focused feed management without enterprise pricing
+- /vs/feedseo: Trajekt vs FeedSEO — full feed management platform vs optimisation-only tool
+- /google-product-category: Google product category mapping guide — 6000+ taxonomy, numeric IDs, UK category reference, automation rules
+- /product-feed-errors: Product feed errors — 8 most common Google Shopping disapprovals, causes and fixes
+- /product-feed-automation: Automated product feed management — set-and-forget daily feeds for all channels
+- /for-fashion: Fashion product feed management — item_group_id, colour variants, UK sizing, seasonal labels
+- /supplemental-feed: Supplemental feed Google Shopping — add custom labels, images, title variants without replacing primary feed
+- /product-feed-fields: Google Shopping feed field reference — item_group_id, sale_price, custom_label, identifier_exists and all attributes

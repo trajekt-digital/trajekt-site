@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Shopping Feed Fields — Complete Attribute | Trajekt</title>
+<meta name="description" content="Every Google Shopping feed attribute explained — item_group_id, sale_price, product_type, custom labels, identifier_exists, and more.">>
+<meta name="keywords" content="google shopping feed fields, item_group_id google shopping, google shopping sale_price, product_type google shopping, google shopping feed attributes">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/product-feed-fields">
+<meta property="og:title" content="Google Shopping Feed Fields — Complete Attribute Reference | Trajekt"><meta property="og:description" content="Every Google Shopping feed attribute explained — item_group_id, sale_price, product_type, custom labels, identifier_exists, and more. Required vs recommended, UK format examples, common mistakes."><meta property="og:url" content="https://trajekt.co.uk/product-feed-fields"><meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-product-feed-fields.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-product-feed-fields.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://trajekt.co.uk/product-feed-fields","name":"Google Shopping Feed Fields — Complete Attribute Reference | Trajekt","inLanguage":"en-GB"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Google Shopping","item":"https://trajekt.co.uk/google-shopping-feed"},{"@type":"ListItem","position":3,"name":"Feed Field Reference","item":""}]},
+{"@type":"SoftwareApplication","name":"Trajekt","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"provider":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is item_group_id in Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"item_group_id is the attribute that groups product variants (different sizes, colours, or materials of the same product) together in Google Shopping. All variants of the same product should share the same item_group_id value, typically the parent product's ID. Without item_group_id, each variant appears as a completely separate product in Shopping results instead of as a grouped listing with selectors."}},{"@type":"Question","name":"What is the difference between id and item_group_id?","acceptedAnswer":{"@type":"Answer","text":"The id attribute is the unique identifier for each individual product row in your feed — each variant needs a different id. The item_group_id is the shared identifier that tells Google which ids belong to the same parent product. For a t-shirt with 3 colours x 4 sizes, you'd have 12 rows each with a unique id, all sharing the same item_group_id."}},{"@type":"Question","name":"How should I format the sale_price attribute?","acceptedAnswer":{"@type":"Answer","text":"Format sale_price exactly like price: a numeric value followed by a space and the ISO 4217 currency code. For UK merchants: '24.99 GBP'. Do not use currency symbols (not '£24.99'). The sale_price must be lower than the price attribute, and the product page must show the same sale price. You can also use sale_price_effective_date to schedule when the sale price is active."}},{"@type":"Question","name":"What is the product_type attribute and how is it different from google_product_category?","acceptedAnswer":{"@type":"Answer","text":"product_type is your own categorisation of your products — you define the values yourself (e.g. 'Mens > Jackets > Waxed Jackets'). google_product_category uses Google's fixed taxonomy (e.g. 'Apparel & Accessories > Clothing > Outerwear > Coats & Jackets'). Both should be populated. product_type is used for Shopping campaign product group segmentation; google_product_category improves query matching."}},{"@type":"Question","name":"Does the shipping attribute in Google Shopping affect ranking?","acceptedAnswer":{"@type":"Answer","text":"Yes. Google factors shipping speed and cost into Shopping ad quality. Products with free shipping or fast shipping (next day, 2-day) tend to show more prominently than products with slow or expensive shipping. Include the shipping attribute with accurate carrier, country, and cost values. For Shopify merchants with multiple shipping zones, this can be complex — Trajekt supports shipping attribute rules for common UK shipping configurations."}},{"@type":"Question","name":"What is the identifier_exists attribute for?","acceptedAnswer":{"@type":"Answer","text":"identifier_exists: no tells Google that your product genuinely has no GTIN, MPN, or brand identifier — typically for handmade, custom, vintage, or own-brand products where no barcode was ever assigned. Without this attribute, Google expects your product to have identifiers and may flag it for missing GTIN. Never use identifier_exists: no for branded products that do have manufacturer barcodes."}}]}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" style="background:var(--card);border-bottom:1px solid var(--border);padding:80px 24px 64px">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="font-size:12px;color:var(--t3);margin-bottom:24px"><a href="/" style="color:var(--t3);text-decoration:none">Home</a> <span style="color:var(--t3)">&#8250;</span> <a href="/google-shopping-feed" style="color:var(--t3);text-decoration:none">Google Shopping</a> <span style="color:var(--t3)">&#8250;</span> <span style="color:var(--t2)">Feed Field Reference</span></div>
+  <div style="max-width:720px">
+    <div class="badge badge-green" style="margin-bottom:16px">Field reference</div>
+    <h1 style="margin-bottom:16px">Google Shopping feed field reference</h1>
+    <p style="font-size:18px;margin-bottom:24px">Every attribute in the Google Shopping feed spec &#8212; what it does, when it&#8217;s required, the correct UK format, and a practical example. The fields most practitioners get wrong are highlighted.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Map fields with Trajekt</a>
+      <a href="/google-shopping-feed" class="btn btn-outline">Google Shopping guide</a>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:var(--max);margin:0 auto">
+
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px">
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span> Must be present on every product</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span> Strongly impacts performance</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Conditional</span> Required when applicable</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--green-lt);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span> Improves targeting and segmentation</span>
+  </div>
+
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;overflow-x:auto;margin-bottom:48px">
+    <div style="display:grid;grid-template-columns:150px 120px 1fr 180px;background:var(--card2);padding:12px 16px;font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.05em">
+      <div>Attribute</div><div>Status</div><div>What it does</div><div>UK example</div>
+    </div>
+    <table style="width:100%;border-collapse:collapse;min-width:700px">
+      <tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">id</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Your unique product or variant identifier. For variable products, use the variant-level ID (Shopify variant ID, WooCommerce variation ID) not the parent product ID. Max 50 characters. Must be stable — changing a product's id creates a new listing and deletes the old one.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">shopify_GB_12345_67890</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">item_group_id</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required for variants</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Groups product variants together. All sizes and colours of the same product share this value. Typically the parent product ID. Without this, variants appear as separate products instead of a grouped listing.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">shopify_GB_12345</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">title</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product title — primary Shopping query matching signal. Max 150 chars. Include brand, product name, and key variant attributes (colour, size). First 70 chars visible on mobile before truncation.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Barbour Beaufort Jacket Men Navy XL</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">description</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Plain text product description. No HTML. Max 5,000 chars. For ChatGPT, must also be free of non-ASCII characters (curly quotes, em dashes). Google: keyword-rich. ChatGPT: factual and specific.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Heavyweight waxed cotton jacket. 100% waxed cotton outer. Corduroy collar. Zip-out inner lining...</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">link</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product page URL. Must return HTTP 200. Must exactly match the canonical URL on your website. Redirects (301) are followed but flagged.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">https://example.com/products/barbour-beaufort</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">image_link</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Primary product image URL. HTTPS only. Minimum 100x100px (250x250 for apparel). Recommended 800x800px. No promotional overlays, watermarks, or borders.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">https://cdn.example.com/images/barbour-beaufort-navy.jpg</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">price</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">VAT-inclusive selling price for UK merchants. Format: numeric value + space + GBP. Never use £ symbol.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">279.00 GBP</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">sale_price</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--green-lt);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Active sale price when lower than regular price. Same format as price. Must match website sale price exactly.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">209.00 GBP</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">availability</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">in_stock / out_of_stock / preorder / backorder. Must match website availability. Most common disapproval cause after price mismatch.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">in_stock</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">brand</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (branded)</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Manufacturer or brand name. Required for all branded products. Set identifier_exists: no and omit brand only for genuinely unbranded products.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Barbour</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">gtin</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">EAN-13 barcode (13 digits) for UK products. UPC-A (12 digits) also accepted. ISBN-13 for books. Required for branded products. Use identifier_exists: no for own-brand.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">5055329871234</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">google_product_category</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Google's product taxonomy ID or text path. Use most specific applicable category. Numeric IDs are preferred (more stable across taxonomy updates).</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">5697</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">product_type</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Your own category hierarchy. Pipe-separated levels. Used for Shopping campaign product group segmentation.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Mens > Jackets > Waxed Jackets</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">color</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product colour. Must exactly match colour shown on product page. Each colour variant = separate feed row with unique id sharing item_group_id.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Navy</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">size</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product size in UK notation. Include size_type and size_system for best results.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">UK 12</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">gender</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">male / female / unisex</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">male</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">age_group</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">adult / kids / infant / toddler / newborn</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">adult</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">custom_label_0</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--green-lt);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Free-format label for Shopping campaign segmentation. Five available (0-4). Set via feed rules in Trajekt.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">high-margin</td>
+</tr><tr>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">identifier_exists</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Conditional</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Set to 'no' for products with no GTIN, MPN, or brand. Required when these identifiers genuinely don't exist (handmade, custom, vintage). Never use for branded products.</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">no</td>
+</tr>
+    </table>
+  </div>
+
+  <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px;margin-bottom:48px;text-align:center">
+    <h3 style="margin-bottom:8px">Map these fields automatically with Trajekt</h3>
+    <p style="font-size:14px;margin-bottom:20px">Trajekt maps your Shopify or WooCommerce data to all these fields via a visual rules interface &#8212; no code, no manual mapping spreadsheets.</p>
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Start free &#8594;</a>
+  </div>
+
+  <h2 style="margin-bottom:32px">Frequently asked questions</h2>
+  <div class="faq-item open"><button class="faq-q">What is item_group_id in Google Shopping?</button><div class="faq-a">item_group_id is the attribute that groups product variants (different sizes, colours, or materials of the same product) together in Google Shopping. All variants of the same product should share the same item_group_id value, typically the parent product's ID. Without item_group_id, each variant appears as a completely separate product in Shopping results instead of as a grouped listing with selectors.</div></div>
+<div class="faq-item"><button class="faq-q">What is the difference between id and item_group_id?</button><div class="faq-a">The id attribute is the unique identifier for each individual product row in your feed — each variant needs a different id. The item_group_id is the shared identifier that tells Google which ids belong to the same parent product. For a t-shirt with 3 colours x 4 sizes, you'd have 12 rows each with a unique id, all sharing the same item_group_id.</div></div>
+<div class="faq-item"><button class="faq-q">How should I format the sale_price attribute?</button><div class="faq-a">Format sale_price exactly like price: a numeric value followed by a space and the ISO 4217 currency code. For UK merchants: '24.99 GBP'. Do not use currency symbols (not '£24.99'). The sale_price must be lower than the price attribute, and the product page must show the same sale price. You can also use sale_price_effective_date to schedule when the sale price is active.</div></div>
+<div class="faq-item"><button class="faq-q">What is the product_type attribute and how is it different from google_product_category?</button><div class="faq-a">product_type is your own categorisation of your products — you define the values yourself (e.g. 'Mens > Jackets > Waxed Jackets'). google_product_category uses Google's fixed taxonomy (e.g. 'Apparel & Accessories > Clothing > Outerwear > Coats & Jackets'). Both should be populated. product_type is used for Shopping campaign product group segmentation; google_product_category improves query matching.</div></div>
+<div class="faq-item"><button class="faq-q">Does the shipping attribute in Google Shopping affect ranking?</button><div class="faq-a">Yes. Google factors shipping speed and cost into Shopping ad quality. Products with free shipping or fast shipping (next day, 2-day) tend to show more prominently than products with slow or expensive shipping. Include the shipping attribute with accurate carrier, country, and cost values. For Shopify merchants with multiple shipping zones, this can be complex — Trajekt supports shipping attribute rules for common UK shipping configurations.</div></div>
+<div class="faq-item"><button class="faq-q">What is the identifier_exists attribute for?</button><div class="faq-a">identifier_exists: no tells Google that your product genuinely has no GTIN, MPN, or brand identifier — typically for handmade, custom, vintage, or own-brand products where no barcode was ever assigned. Without this attribute, Google expects your product to have identifiers and may flag it for missing GTIN. Never use identifier_exists: no for branded products that do have manufacturer barcodes.</div></div>
+<div class="faq-item"><button class="faq-q">How do I use the custom_label attributes?</button><div class="faq-a">custom_label_0 through custom_label_4 are five free-format fields you can use to add any classification data you want to use for Shopping campaign segmentation. Common uses: margin tier (high/medium/low), seasonality (autumn-winter/spring-summer), stock velocity (fast-mover/slow-mover), promotional status (on-sale/full-price), product lifecycle (new-arrival/bestseller). Values are set via feed rules in Trajekt.</div></div>
+<div class="faq-item"><button class="faq-q">What image attributes are available in Google Shopping?</button><div class="faq-a">image_link is the required primary product image. additional_image_link allows up to 10 additional images (showing different angles, colours, lifestyle shots). lifestyle_image_link is specifically for lifestyle images used in Performance Max creative. All image URLs must be HTTPS and return accessible images. Recommended minimum: 800x800px for standard Shopping, 1200x1200px for PMax display placements.</div></div>
+
+</div>
+</section>
+
+
+<section style="background:var(--card);padding:56px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div>
+      <h2 style="font-size:22px;margin-bottom:24px">Related guides</h2>
+      <a href="/google-shopping-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Shopping feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/google-product-category" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google product category mapping <span style="color:var(--t3)">&#8594;</span></a><a href="/product-feed-optimisation" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Feed optimisation <span style="color:var(--t3)">&#8594;</span></a><a href="/supplemental-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Supplemental feeds <span style="color:var(--t3)">&#8594;</span></a><a href="/gtin-mpn-ean-guide" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">GTIN and EAN guide <span style="color:var(--t3)">&#8594;</span></a><a href="/custom-labels-guide" style="display:block;padding:10px 0;font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Custom labels guide <span style="color:var(--t3)">&#8594;</span></a>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px">
+      <div style="font-size:15px;font-weight:700;margin-bottom:8px;color:var(--ink)">Ready to automate your feeds?</div>
+      <p style="font-size:14px;margin-bottom:20px">Connect your store and generate feeds for every channel automatically. Free plan available &#8212; no credit card needed.</p>
+      <a href="https://app.trajekt.co.uk/signup" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:14px;font-weight:600;text-decoration:none">Start free &#8594;</a>
+    </div>
+  </div>
+</div>
+</section>
+<section style="padding:0 24px 80px"><div style="max-width:var(--max);margin:0 auto">
+<div class="cta-banner">
+  <h2>Get every field right, automatically</h2>
+  <p>Trajekt maps your product data to all Google Shopping attributes, validates required fields, and generates feeds for 12+ channels from one store connection.</p>
+  <div class="cta-actions">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="/google-shopping-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Google Shopping guide</a>
+  </div>
+</div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')})});</script>
+</body></html>

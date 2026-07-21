@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Shopping Feed — Product Feed Management | Trajekt</title>
+<meta name="description" content="Create and optimise your Google Shopping feed with Trajekt. Automatic XML feed generation from Shopify, WooCommerce, Magento or XML sources.">>
+<meta name="keywords" content="Google Shopping feed, Google Merchant Center feed UK, product feed Google Shopping, Google Shopping XML feed, shopping feed optimisation UK">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/google-shopping-feed">
+<meta property="og:title" content="Google Shopping Feed — Product Feed Management UK | Trajekt">
+<meta property="og:description" content="Create, optimise and automate your Google Shopping XML feed. Connect Shopify or WooCommerce and go live in minutes. UK-focused feed management.">
+<meta property="og:url" content="https://trajekt.co.uk/google-shopping-feed">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-google-shopping.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://trajekt.co.uk/google-shopping-feed","url":"https://trajekt.co.uk/google-shopping-feed","name":"Google Shopping Feed — Product Feed Management & Optimisation UK","description":"Create, optimise and automate your Google Shopping XML feed from Shopify, WooCommerce or XML sources.","inLanguage":"en-GB","breadcrumb":{"@id":"https://trajekt.co.uk/google-shopping-feed#breadcrumb"}},{"@type":"BreadcrumbList","@id":"https://trajekt.co.uk/google-shopping-feed#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Channels","item":"https://trajekt.co.uk/channels"},{"@type":"ListItem","position":3,"name":"Google Shopping Feed","item":"https://trajekt.co.uk/google-shopping-feed"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a Google Shopping feed?","acceptedAnswer":{"@type":"Answer","text":"A Google Shopping feed (also called a product data feed or Merchant Center feed) is a file containing structured product information that you submit to Google Merchant Center. Google uses this data to display your products in Google Shopping ads, Shopping tab results, and Performance Max campaigns. The feed includes product titles, descriptions, prices, images, availability, and identifiers like GTINs."}},{"@type":"Question","name":"What format does Google Shopping use?","acceptedAnswer":{"@type":"Answer","text":"Google Shopping accepts XML (RSS or Atom format) or delimited text files (CSV or TSV). XML is most common for most retailers as it's more structured and handles special characters reliably. For catalogues over 20,000 products, a compressed CSV is more efficient. Google also accepts feeds via the Content API for very large catalogues."}},{"@type":"Question","name":"What are the required fields for Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"Required fields include: id, title, description, link, image_link, price, availability, brand, and condition. For products with barcodes, gtin is also effectively required. Additional required fields depend on the product category — apparel requires size and gender, for example. Missing required fields cause product disapprovals in Merchant Center."}},{"@type":"Question","name":"How often should I update my Google Shopping feed?","acceptedAnswer":{"@type":"Answer","text":"Google recommends updating your feed at least every 30 days to prevent products from expiring. For e-commerce with changing prices and stock, daily updates are strongly recommended. If you have flash sales or frequent stock changes, twice-daily updates help ensure your listings stay accurate. Trajekt supports up to twice-daily automatic feed refreshes."}},{"@type":"Question","name":"What is a GTIN and do I need one?","acceptedAnswer":{"@type":"Answer","text":"A GTIN (Global Trade Item Number) is a barcode number — for most products in the UK this is an EAN-13 (European Article Number). While not technically mandatory for all products, Google strongly prefers GTINs as they help match products to queries more accurately. Products without GTINs must include identifier_exists: no and may have lower visibility. Trajekt maps GTINs from your product barcodes automatically."}},{"@type":"Question","name":"Why are my products disapproved in Google Merchant Center?","acceptedAnswer":{"@type":"Answer","text":"Common disapproval reasons include: price mismatch between feed and website, missing required fields (especially GTIN for products that should have one), low-quality images (minimum 100x100px, 250x250px recommended), mismatched title or description between feed and landing page, availability mismatch, and policy violations. Trajekt validates your feed against common disapproval causes before submission."}},{"@type":"Question","name":"What is the difference between Google Shopping and Performance Max?","acceptedAnswer":{"@type":"Answer","text":"Standard Shopping campaigns give you manual control over product groups, bids, and targeting. Performance Max (PMax) is Google's AI-driven campaign type that uses your Merchant Center feed across all Google surfaces — Search, Shopping, YouTube, Display, Discover, and Gmail. Both use the same product feed from Merchant Center. A well-optimised feed improves performance in both campaign types."}},{"@type":"Question","name":"Can I use the same feed for Google Shopping and ChatGPT?","acceptedAnswer":{"@type":"Answer","text":"No. Google Shopping uses XML format with g: namespace attributes, submitted to Google Merchant Center. ChatGPT Shopping uses JSONL format with different field names, delivered via SFTP to OpenAI. The two specifications are incompatible. Trajekt can generate both formats from the same source data — connect your Shopify store once and output to both Google and OpenAI."}},{"@type":"Question","name":"What are Google custom labels and should I use them?","acceptedAnswer":{"@type":"Answer","text":"Custom labels (custom_label_0 through custom_label_4) let you add your own segmentation data to products in your Google Shopping feed. Common uses include profit margin tiers, seasonal flags, clearance status, bestseller tags, and new arrivals. You can then use these labels to set different bids per segment in your Shopping campaigns. Trajekt's rules engine can set custom labels based on any field in your product data."}},{"@type":"Question","name":"How do I submit my feed to Google Merchant Center?","acceptedAnswer":{"@type":"Answer","text":"To submit a feed to Google Merchant Center: 1) Create a Google Merchant Center account and verify your website, 2) Go to Products > Feeds > Add Primary Feed, 3) Choose your target country and language, 4) Select fetch (scheduled URL) as the upload method, 5) Enter your feed URL. Trajekt provides a stable, signed URL for your feed that Google fetches on your chosen schedule — you never need to manually upload again."}},{"@type":"Question","name":"What is google_product_category and how do I set it?","acceptedAnswer":{"@type":"Answer","text":"google_product_category is a numeric or text ID from Google's product taxonomy that categorises your products for better targeting. For example, 5672 is 'Apparel & Accessories > Clothing > Shirts & Tops'. Providing accurate categories improves product visibility in category-based Shopping searches. Trajekt includes a rules engine that can map your product_type values to the correct Google product category automatically."}}]}]}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" class="hero"><div class="hero-inner">
+  <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/google-shopping-feed">Channels</a> <span>›</span> Google Shopping Feed</div>
+  <div style="margin-top:32px;max-width:780px">
+    <span class="badge badge-green">🛒 Google Shopping</span>
+    <h1>Google Shopping feed that <em>actually converts</em> — not just one that validates</h1>
+    <p class="hero-sub">Any tool can generate a Google Shopping XML feed. Trajekt generates one that's optimised — clean titles, correct GTINs, proper variant grouping, and product types that match real search queries. Start seeing better ROAS from day one.</p>
+    <div class="hero-actions">
+      <a href="https://app.trajekt.co.uk/signup" class="btn btn-primary btn-lg">Start free &#8594;</a>
+      <a href="#field-spec" class="btn btn-outline btn-lg">View required fields</a>
+    </div>
+    <div class="hero-meta">
+      <span>Shopify &amp; WooCommerce native</span>
+      <span>Twice-daily auto-updates</span>
+      <span>Performance Max compatible</span>
+      <span>25,000+ products on Growth plan</span>
+    </div>
+  </div>
+</div></section>
+
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Complete attribute reference for every Google Shopping field &#8594; <a href="/product-feed-fields">Feed field reference</a></div>
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Fix Merchant Center disapprovals &#8594; <a href="/product-feed-errors">Product feed errors guide</a></div>
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Add custom labels or extra images without replacing your feed &#8594; <a href="/supplemental-feed">Supplemental feeds guide</a></div>
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Also see: <a href="/criteo-product-feed">Criteo retargeting feed guide</a> &#8212; dynamic retargeting from your product catalogue.</div>
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">&#128279; For the complete picture, see our <a href="/product-feed-management" style="color:var(--blue)">product feed management tool</a> &#8212; all channels, automated from one connection.</div>
+<section class="stats-strip"><div class="stats-grid">
+  <div><div class="stat-num"><span class="hi">30%</span></div><div class="stat-lbl">average CTR increase from optimised Google Shopping titles and descriptions</div></div>
+  <div><div class="stat-num"><span class="hi">£906B</span></div><div class="stat-lbl">projected UK ecommerce market by 2030 — Shopping ads drive a huge share</div></div>
+  <div><div class="stat-num"><span class="hi">60%</span></div><div class="stat-lbl">of customers felt misled after encountering incorrect product data online</div></div>
+  <div><div class="stat-num"><span class="hi">2×</span></div><div class="stat-lbl">daily feed refresh to keep prices, stock and promotions accurate</div></div>
+</div></section>
+
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Related: <a href="/blog/ghost-campaigns-google-shopping" style="color:var(--blue)">Ghost campaigns: capturing invisible search demand</a></div>
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Related: <a href="/blog/product-feed-rules-that-improve-roas" style="color:var(--blue)">The 8 feed rules that improve Shopping ROAS</a></div>
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Related: <a href="/blog/google-shopping-title-formula-uk" style="color:var(--blue)">Google Shopping title formula for UK merchants</a></div>
+<section class="section section-alt"><div class="container">
+  <p class="section-label">Features</p>
+  <h2 style="margin-bottom:14px">Everything your Google Shopping feed needs</h2>
+  <p class="section-sub">From basic field mapping to advanced custom label rules — Trajekt gives you the tools to build a feed that outperforms your competitors.</p>
+  <div class="feat-grid">
+    <div class="feat-card"><div class="feat-icon fi-green">📝</div><h3>Title optimisation</h3><p>Product titles are the single biggest factor in Google Shopping match quality. Trajekt's rules engine lets you rewrite titles at scale — add brand, material, colour, and size in the right order for your category.</p></div>
+    <div class="feat-card"><div class="feat-icon fi-blue">🏷️</div><h3>Custom labels</h3><p>Segment your catalogue into bidding tiers using custom_label_0–4. Set labels based on margin, sell-through rate, seasonality, price range, or any other field — then bid differently on each segment in your campaigns.</p></div>
+    <div class="feat-card"><div class="feat-icon fi-purple">🔢</div><h3>GTIN mapping</h3><p>GTINs (EAN/barcodes) dramatically improve match quality in Google Shopping. Trajekt maps your product barcodes to the gtin field automatically and flags products missing identifiers for review.</p></div>
+    <div class="feat-card"><div class="feat-icon fi-green">📂</div><h3>Category mapping</h3><p>Correct google_product_category assignment is critical for query matching. Use Trajekt's lookup rules to map your product types to the right Google taxonomy IDs — improving visibility in category-based Shopping searches.</p></div>
+    <div class="feat-card"><div class="feat-icon fi-blue">🤖</div><h3>AI enrichment</h3><p>Use Trajekt's AI Rules to generate better product descriptions at scale — factual, keyword-rich, and free of marketing fluff. AI-enriched descriptions improve Performance Max creative quality significantly.</p></div>
+    <div class="feat-card"><div class="feat-icon fi-amber">⚡</div><h3>Auto size-switch to CSV</h3><p>Feeds over 20,000 products automatically switch to compressed CSV format — faster to generate, faster for Google to process, and no XML parsing overhead on very large catalogues.</p></div>
+  </div>
+</div></section>
+
+<section class="section" id="field-spec"><div class="container">
+  <p class="section-label">Field specification</p>
+  <h2 style="margin-bottom:14px">Google Shopping feed — required &amp; recommended fields</h2>
+  <p class="section-sub">Based on the official Google Merchant Center product data specification. Missing required fields cause product disapprovals. All fields below are mapped automatically by Trajekt from your source data.</p>
+  <div class="table-wrap"><table class="spec-table"><thead><tr><th>Field</th><th>Status</th><th>Description</th><th>Example</th><th>Trajekt</th></tr></thead><tbody>
+    <tr><td><span class="field-name">id</span></td><td><span class="req">Required</span></td><td>Unique product identifier. Max 50 chars.</td><td>SKU-12345-BLK-M</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">title</span></td><td><span class="req">Required</span></td><td>Product title. Include brand, key attributes. Max 150 chars.</td><td>Barbour Beaufort Wax Jacket — Navy — XL</td><td>✓ Auto + rules</td></tr>
+    <tr><td><span class="field-name">description</span></td><td><span class="req">Required</span></td><td>Product description. Include key features and specs.</td><td>Classic Barbour wax jacket with corduroy collar...</td><td>✓ Auto + AI</td></tr>
+    <tr><td><span class="field-name">link</span></td><td><span class="req">Required</span></td><td>Product landing page URL (must return HTTP 200).</td><td>https://store.com/products/barbour-beaufort</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">image_link</span></td><td><span class="req">Required</span></td><td>Primary product image URL. HTTPS. Min 250×250px.</td><td>https://cdn.store.com/barbour-beaufort.jpg</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">price</span></td><td><span class="req">Required</span></td><td>Product price with ISO currency code.</td><td>279.00 GBP</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">availability</span></td><td><span class="req">Required</span></td><td>in stock / out of stock / preorder / backorder</td><td>in stock</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">brand</span></td><td><span class="req">Required</span></td><td>Product brand / manufacturer. Max 70 chars.</td><td>Barbour</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">condition</span></td><td><span class="req">Required</span></td><td>Product condition: new / refurbished / used</td><td>new</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">gtin</span></td><td><span class="rec">Recommended</span></td><td>Global Trade Item Number (EAN/barcode). Strongly recommended.</td><td>5055975829374</td><td>✓ Auto from barcode</td></tr>
+    <tr><td><span class="field-name">mpn</span></td><td><span class="rec">Recommended</span></td><td>Manufacturer Part Number (use if no GTIN available).</td><td>BC1408NY2</td><td>✓ Auto from SKU</td></tr>
+    <tr><td><span class="field-name">google_product_category</span></td><td><span class="rec">Recommended</span></td><td>Google's product taxonomy category ID or path.</td><td>1604 (Outerwear)</td><td>✓ Via rules</td></tr>
+    <tr><td><span class="field-name">product_type</span></td><td><span class="rec">Recommended</span></td><td>Your own category path. Used for campaign segmentation.</td><td>Mens > Jackets > Waxed</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">item_group_id</span></td><td><span class="rec">Recommended</span></td><td>Groups product variants together under a parent product.</td><td>barbour-beaufort-jacket</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">color</span></td><td><span class="rec">Recommended</span></td><td>Product colour.</td><td>Navy</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">size</span></td><td><span class="rec">Recommended</span></td><td>Product size.</td><td>XL</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">gender</span></td><td><span class="opt">Conditional</span></td><td>Required for apparel: male / female / unisex</td><td>male</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">age_group</span></td><td><span class="opt">Conditional</span></td><td>Required for apparel: newborn / infant / toddler / kids / adult</td><td>adult</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">additional_image_link</span></td><td><span class="opt">Optional</span></td><td>Additional product images (up to 10). Improves ad performance.</td><td>https://cdn.store.com/img2.jpg</td><td>✓ Auto (up to 4)</td></tr>
+    <tr><td><span class="field-name">sale_price</span></td><td><span class="opt">Optional</span></td><td>Reduced price — shows strikethrough in ads.</td><td>199.00 GBP</td><td>✓ Auto</td></tr>
+    <tr><td><span class="field-name">custom_label_0–4</span></td><td><span class="opt">Optional</span></td><td>Your own segmentation labels for campaign bid management.</td><td>high-margin, clearance, bestseller</td><td>✓ Via rules</td></tr>
+    <tr><td><span class="field-name">shipping_weight</span></td><td><span class="opt">Optional</span></td><td>Product weight for shipping cost calculation.</td><td>1.2 kg</td><td>✓ Auto</td></tr>
+  </tbody></table></div>
+  <p style="font-size:13px;color:var(--t3);margin-top:12px">Source: <a href="https://support.google.com/merchants/answer/7052112" target="_blank" rel="noopener noreferrer">Google Merchant Center product data specification ↗</a></p>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <p class="section-label">FAQ</p>
+  <h2 style="text-align:center;max-width:600px;margin:0 auto 48px">Google Shopping feed — frequently asked questions</h2>
+  <div class="faq-list">
+    <div class="faq-item open"><button class="faq-q">What is a Google Shopping feed?</button><div class="faq-a">A Google Shopping feed (product data feed) is a structured file containing your product information submitted to Google Merchant Center. Google uses this data to display your products in Google Shopping ads, the Shopping tab, and Performance Max campaigns. The feed includes product titles, descriptions, prices, images, availability, and identifiers like GTINs.</div></div>
+    <div class="faq-item"><button class="faq-q">What format does Google Shopping use?</button><div class="faq-a">Google Shopping accepts XML (RSS or Atom format) or delimited text files (CSV/TSV). XML is most common as it handles special characters reliably. For catalogues over 20,000 products, compressed CSV is more efficient. Google also accepts feeds via the Content API for large-scale or frequently-updating catalogues. Trajekt generates XML by default and switches to CSV automatically for large feeds.</div></div>
+    <div class="faq-item"><button class="faq-q">What are the required fields for Google Shopping?</button><div class="faq-a">Required fields include: id, title, description, link, image_link, price, availability, brand, and condition. For products with barcodes, gtin is effectively required. Additional required fields depend on the product category — apparel requires size and gender, for example. Missing required fields cause product disapprovals in Merchant Center.</div></div>
+    <div class="faq-item"><button class="faq-q">How often should I update my Google Shopping feed?</button><div class="faq-a">Google requires feed updates at least every 30 days to prevent products from expiring. For e-commerce with changing prices and stock, daily updates are strongly recommended. If you have flash sales or frequent stock changes, twice-daily updates keep your listings accurate. Trajekt supports up to twice-daily automatic feed refreshes with a stable URL for Google to fetch from.</div></div>
+    <div class="faq-item"><button class="faq-q">What is a GTIN and do I need one?</button><div class="faq-a">A GTIN (Global Trade Item Number) is a product barcode — for UK products this is typically an EAN-13. While not technically mandatory, Google strongly prefers GTINs as they improve product matching accuracy. Products without GTINs must include identifier_exists: no and may have lower visibility. Trajekt maps GTINs from your product barcodes automatically.</div></div>
+    <div class="faq-item"><button class="faq-q">Why are my products disapproved in Google Merchant Center?</button><div class="faq-a">Common disapproval reasons: price mismatch between feed and website, missing required fields, low-quality images (minimum 100×100px), mismatched title or description vs landing page, availability mismatch, and policy violations. Trajekt validates your feed against common disapproval causes before submission and logs warnings for potential issues.</div></div>
+    <div class="faq-item"><button class="faq-q">What's the difference between Google Shopping and Performance Max?</button><div class="faq-a">Standard Shopping campaigns give you manual control over product groups, bids, and targeting. Performance Max uses your Merchant Center feed across all Google surfaces — Search, Shopping, YouTube, Display, Discover, Gmail — using Google's AI for targeting and bidding. Both use the same product feed. A well-optimised feed improves performance in both campaign types.</div></div>
+    <div class="faq-item"><button class="faq-q">Can I use the same feed for Google Shopping and ChatGPT?</button><div class="faq-a">No. Google Shopping uses XML with g: namespace attributes, submitted to Merchant Center. ChatGPT Shopping uses JSONL with different field names, delivered via SFTP to OpenAI. They are incompatible formats. Trajekt can generate both from the same source data — connect your store once and output to both platforms simultaneously.</div></div>
+    <div class="faq-item"><button class="faq-q">What are Google custom labels and should I use them?</button><div class="faq-a">Custom labels (custom_label_0 through custom_label_4) let you add your own segmentation data to products. Common uses include profit margin tiers, seasonal flags, clearance status, bestseller tags, and new arrivals. You can then set different bids per segment in Shopping campaigns. Trajekt's rules engine sets custom labels based on any field in your product data.</div></div>
+    <div class="faq-item"><button class="faq-q">How do I submit my feed to Google Merchant Center?</button><div class="faq-a">Steps: 1) Create Google Merchant Center account and verify your website, 2) Go to Products > Feeds > Add Primary Feed, 3) Choose target country (UK) and language, 4) Select 'Scheduled fetch' as upload method, 5) Enter your Trajekt feed URL. Google then fetches your feed on your chosen schedule automatically. You never need to manually upload again.</div></div>
+    <div class="faq-item"><button class="faq-q">What is google_product_category and how do I set it?</button><div class="faq-a">google_product_category is a numeric ID from Google's product taxonomy that categorises your products for better targeting. For example, 1604 covers outerwear, 5672 covers tops and shirts. Providing accurate categories improves visibility in category Shopping searches. Trajekt's rules engine can map your product_type values to correct Google taxonomy IDs automatically.</div></div>
+  </div>
+</div></section>
+
+<section class="section section-alt"><div class="container">
+  <div class="related-box"><h4>Also on Trajekt</h4><div class="related-links"><a href="/chatgpt-product-feed">ChatGPT Product Feed</a><a href="/meta-shopping-feed">Meta Shopping Feed</a><a href="/google-vehicle-ads-feed">Google Vehicle Ads</a><a href="/microsoft-shopping-feed">Microsoft / Bing Shopping</a><a href="/pinterest-product-feed">Pinterest Catalogue</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/shopify-product-feed">Shopify Feed Management</a><a href="/woocommerce-product-feed">WooCommerce Feeds</a><a href="/product-feed-optimisation">Feed Optimisation Guide</a><a href="/feed-disapprovals">Fix Disapprovals</a><a href="/custom-labels-guide">Custom Labels Guide</a><a href="/gtin-mpn-ean-guide">GTIN, MPN &amp; EAN Guide</a></div></div>
+</div></section>
+
+<section class="section"><div class="container">
+  <div class="cta-banner">
+    <h2>Better Google Shopping performance starts with a better feed</h2>
+    <p>Connect your Shopify or WooCommerce store and Trajekt generates your optimised Google Shopping feed in minutes. Rules engine, AI enrichment, and automatic daily updates included.</p>
+    <div class="cta-actions">
+      <a href="https://app.trajekt.co.uk/signup" class="btn btn-green btn-lg">Start free — no credit card needed</a>
+      <a href="/product-feed-optimisation" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Read the optimisation guide</a>
+    </div>
+  </div>
+</div></section>
+
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')})});</script>
+</body></html>

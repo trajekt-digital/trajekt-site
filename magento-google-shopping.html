@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magento Google Shopping — Correct Feed Setup Guide | Trajekt</title>
+<meta name="description" content="Connect Magento 2 to Google Shopping via REST API. Full configurable product variant handling, custom attribute mapping for GTINs, and daily-refreshed feeds. Trajekt supports Magento 2 and Adobe Commerce.">
+<meta name="keywords" content="magento google shopping, magento merchant center, magento 2 google shopping feed, adobe commerce google shopping">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/magento-google-shopping">
+<meta property="og:title" content="Magento Google Shopping — Connect Your Store the Right Way">
+<meta property="og:description" content="Connect Magento 2 to Google Shopping via REST API. Full configurable product variant handling, custom attribute mapping for GTINs, and daily-refreshed feeds. Trajekt supports Magento 2 and Adobe Commerce.">
+<meta property="og:url" content="https://trajekt.co.uk/magento-google-shopping">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-home.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://trajekt.co.uk/magento-google-shopping","name":"Magento Google Shopping — Connect Your Store the Right Way","inLanguage":"en-GB","dateModified":"2026-07-01"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Magento Feeds","item":"https://trajekt.co.uk/magento-product-feed"},{"@type":"ListItem","position":3,"name":"Magento Google Shopping","item":"https://trajekt.co.uk/magento-google-shopping"}]},
+{"@type":"HowTo","name":"How to connect Magento Google Shopping with Trajekt","step":[]},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Trajekt support Magento 2 and Adobe Commerce?","acceptedAnswer":{"@type":"Answer","text":"Yes. Trajekt connects to both Magento 2 (open source) and Adobe Commerce (the enterprise version, formerly Magento Commerce) via the same REST API. The connection process is identical for both — create an integration in Magento Admin, generate OAuth credentials, and paste them into Trajekt."}},{"@type":"Question","name":"How does Trajekt handle Magento configurable products?","acceptedAnswer":{"@type":"Answer","text":"Trajekt pulls child simple products from the Magento REST API rather than parent configurable products. Each child becomes a feed row with its specific attribute values (colour, size, material) and a shared item_group_id matching the parent configurable product. This is the correct structure for Google Shopping variant grouping."}},{"@type":"Question","name":"How do I get Magento custom attributes (GTINs, brand) into my Google Shopping feed?","acceptedAnswer":{"@type":"Answer","text":"Magento custom attributes are accessible via the REST API as part of the product's custom_attributes array. In Trajekt's rules engine, map your GTIN attribute code (e.g. ean or barcode) to the gtin feed field, and your brand attribute to brand. One rule covers every product with that attribute."}},{"@type":"Question","name":"What Magento versions does Trajekt support?","acceptedAnswer":{"@type":"Answer","text":"Trajekt supports Magento 2.3 and above, including all current Magento 2 versions and Adobe Commerce. Magento 1 (EOL since June 2020) uses a different API format and is not supported."}},{"@type":"Question","name":"Can Trajekt handle Magento multi-store views?","acceptedAnswer":{"@type":"Answer","text":"Yes. Trajekt can be configured to pull product data from a specific Magento store view, allowing you to generate feeds for products with the correct language, currency, and store-specific pricing for each target market."}},{"@type":"Question","name":"How long does it take to set up Magento with Trajekt?","acceptedAnswer":{"@type":"Answer","text":"Initial setup takes 20-40 minutes: creating the Magento integration (10 minutes), connecting in Trajekt and first catalogue sync (10-20 minutes depending on catalogue size), and configuring feed rules (5-10 minutes for standard rules). Your first Google Shopping feed is typically live within an hour of starting."}}]}
+]}</script>
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" style="background:linear-gradient(160deg,#0F1A3A 0%,#1A1A18 100%);padding:88px 24px 72px;color:#fff;overflow:hidden;position:relative">
+  <div style="position:absolute;top:-60px;right:-40px;width:380px;height:380px;border-radius:50%;background:rgba(79,107,205,.1);pointer-events:none"></div>
+  <div style="max-width:var(--max);margin:0 auto;position:relative">
+    <div style="font-size:12px;color:var(--t3);margin-bottom:24px"><a href="https://trajekt.co.uk" style="color:var(--t3);text-decoration:none">Home</a> <span style="color:var(--t3)">&#8250;</span> <a href="https://trajekt.co.uk/magento-product-feed" style="color:var(--t3);text-decoration:none">Magento Feeds</a> <span style="color:var(--t3)">&#8250;</span> <span style="color:var(--t2)">Magento Google Shopping</span></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+      <div>
+        <div class="badge badge-green" style="margin-bottom:20px">Magento &#8596; Google Shopping</div>
+        <h1 style="margin-bottom:20px;color:#fff">Connect Magento to Google Shopping — the right way</h1>
+        <p style="font-size:18px;margin-bottom:32px;color:rgba(255,255,255,.75)">Magento&#8217;s native Google integration gets you listed. Trajekt connects via the Magento 2 REST API, accessing your full product data including custom attributes, correct variant handling, and a daily-refreshed Merchant Center feed with optimised titles and custom labels.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Connect Magento free</a>
+          <a href="/magento-product-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Full Magento guide</a>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:24px">
+        <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.07em;margin-bottom:16px">What Trajekt adds over native integration</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:8px"><span style="color:#5DCAA5">&#10003;</span> Full custom attribute access (GTINs, brand, material)</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:8px"><span style="color:#5DCAA5">&#10003;</span> Correct variant grouping via item_group_id</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:8px"><span style="color:#5DCAA5">&#10003;</span> No-code title optimisation rules</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.85);display:flex;gap=8px"><span style="color:#5DCAA5">&#10003;</span> Custom labels for bid management</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:8px"><span style="color:#5DCAA5">&#10003;</span> ChatGPT Shopping from same connection</div>
+          <div style="font-size:14px;color:rgba(255,255,255,.85);display:flex;gap:8px"><span style="color:#5DCAA5">&#10003;</span> All channels from one integration</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:var(--max);margin:0 auto">
+  <h2 style="margin-bottom:40px;text-align:center">Connect Magento to Google Shopping in 5 steps</h2>
+  <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:10px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">1</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Generate Magento API credentials</h3>
+      <p style="font-size:14px">In Magento Admin: System → Integrations → Add Integration. Set Resource Access to Custom and select Catalog → Products (read) and Catalog → Categories (read). Activate the integration and copy the four OAuth credentials — Consumer Key, Consumer Secret, Access Token, and Access Token Secret.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">2</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Connect your store in Trajekt</h3>
+      <p style="font-size:14px">In Trajekt: Add Store &#8594; Magento. Enter your store URL and API credentials. Trajekt pulls your full catalogue including all products, variants, custom attributes, and images via the Magento 2 REST API.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">3</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Map custom attributes and set rules</h3>
+      <p style="font-size:14px">In Trajekt&#8217;s rules engine, map your GTIN/barcode attribute to gtin, your brand to brand, and configure title rules to prepend the brand and append variant attributes. Assign custom labels by price range or category.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">4</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Copy your Trajekt feed URL</h3>
+      <p style="font-size:14px">Trajekt generates a stable feed URL for your Google Shopping output. This URL always returns your latest product data. Copy it from your Trajekt dashboard.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">5</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Add as Scheduled Fetch in Merchant Center</h3>
+      <p style="font-size:14px">In Google Merchant Center Next: Products &#8594; Data sources &#8594; Add data source &#8594; Scheduled fetch. Paste your Trajekt feed URL and set to daily. Your Magento catalogue updates in Merchant Center automatically.</p></div>
+    </div>
+  </div>
+
+  <div style="background:var(--amber-lt);border:1px solid rgba(146,96,10,.15);border-radius:var(--r-lg);padding:18px 22px;margin-top:28px;max-width:700px;margin-left:auto;margin-right:auto">
+    <strong style="color:var(--amber);font-size:14px">Common Magento gotcha:</strong>
+    <span style="color:var(--t2);font-size:14px;margin-left:6px">Magento's configurable product system is the most common source of feed errors. If you export parent products rather than child simple products, each variant appears as a single row with no colour/size data — which means Google Shopping can't filter or segment by those attributes. Trajekt specifically targets child product rows from the Magento REST API to avoid this.</span>
+  </div>
+</div>
+</section>
+
+<section style="background:var(--card);padding:64px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+  <h2 style="margin-bottom:16px">How Magento product variants map to Google Shopping</h2>
+  <p style="font-size:16px;margin-bottom:24px">Magento configurable products generate child simple product rows, each with a unique id (child SKU) and a shared item_group_id (parent SKU). This ensures each size/colour combination appears as a correct feed row without duplicating parent product listings.</p>
+  <div style="background:var(--ink);border-radius:var(--r-lg);padding:20px 24px;font-family:monospace;font-size:12px;color:rgba(255,255,255,.7);line-height:2;max-width:700px">
+    <div style="color:rgba(255,255,255,.35);font-family:Inter,sans-serif;font-size:11px;margin-bottom:8px">Feed output — variant row example</div>
+    <div><span style="color:#B8A9E8">id</span>: <span style="color:#5DCAA5">"magento_variant_67890"</span></div>
+    <div><span style="color:#B8A9E8">item_group_id</span>: <span style="color:#5DCAA5">"magento_parent_12345"</span></div>
+    <div><span style="color:#B8A9E8">title</span>: <span style="color:#5DCAA5">"Brand Product Name &#8212; Navy &#8212; UK 12"</span></div>
+    <div><span style="color:#B8A9E8">color</span>: <span style="color:#5DCAA5">"Navy"</span> &nbsp;<span style="color:#B8A9E8">size</span>: <span style="color:#5DCAA5">"UK 12"</span></div>
+    <div><span style="color:#B8A9E8">price</span>: <span style="color:#5DCAA5">"49.99 GBP"</span> &nbsp;<span style="color:#B8A9E8">availability</span>: <span style="color:#5DCAA5">"in_stock"</span></div>
+  </div>
+</div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:780px;margin:0 auto">
+  <h2 style="margin-bottom:40px">Frequently asked questions</h2>
+  <div class="faq-item open"><button class="faq-q">Does Trajekt support Magento 2 and Adobe Commerce?</button><div class="faq-a">Yes. Trajekt connects to both Magento 2 (open source) and Adobe Commerce (the enterprise version, formerly Magento Commerce) via the same REST API. The connection process is identical for both — create an integration in Magento Admin, generate OAuth credentials, and paste them into Trajekt.</div></div>
+<div class="faq-item"><button class="faq-q">How does Trajekt handle Magento configurable products?</button><div class="faq-a">Trajekt pulls child simple products from the Magento REST API rather than parent configurable products. Each child becomes a feed row with its specific attribute values (colour, size, material) and a shared item_group_id matching the parent configurable product. This is the correct structure for Google Shopping variant grouping.</div></div>
+<div class="faq-item"><button class="faq-q">How do I get Magento custom attributes (GTINs, brand) into my Google Shopping feed?</button><div class="faq-a">Magento custom attributes are accessible via the REST API as part of the product's custom_attributes array. In Trajekt's rules engine, map your GTIN attribute code (e.g. ean or barcode) to the gtin feed field, and your brand attribute to brand. One rule covers every product with that attribute.</div></div>
+<div class="faq-item"><button class="faq-q">What Magento versions does Trajekt support?</button><div class="faq-a">Trajekt supports Magento 2.3 and above, including all current Magento 2 versions and Adobe Commerce. Magento 1 (EOL since June 2020) uses a different API format and is not supported.</div></div>
+<div class="faq-item"><button class="faq-q">Can Trajekt handle Magento multi-store views?</button><div class="faq-a">Yes. Trajekt can be configured to pull product data from a specific Magento store view, allowing you to generate feeds for products with the correct language, currency, and store-specific pricing for each target market.</div></div>
+<div class="faq-item"><button class="faq-q">How long does it take to set up Magento with Trajekt?</button><div class="faq-a">Initial setup takes 20-40 minutes: creating the Magento integration (10 minutes), connecting in Trajekt and first catalogue sync (10-20 minutes depending on catalogue size), and configuring feed rules (5-10 minutes for standard rules). Your first Google Shopping feed is typically live within an hour of starting.</div></div>
+
+</div>
+</section>
+
+<section style="padding:0 24px 80px"><div style="max-width:var(--max);margin:0 auto">
+<div class="cta-banner">
+  <h2>Connect Magento to Google Shopping today</h2>
+  <p>And ChatGPT, Meta, TikTok, Awin, and more from the same connection. Free plan available.</p>
+  <div class="cta-actions">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="/magento-product-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Magento feed guide</a>
+  </div>
+</div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/channable">vs Channable</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog">Blog</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll(".faq-q").forEach(b=>{b.addEventListener("click",()=>{const i=b.parentElement,w=i.classList.contains("open");document.querySelectorAll(".faq-item").forEach(x=>x.classList.remove("open"));if(!w)i.classList.add("open")})});</script>
+</body></html>

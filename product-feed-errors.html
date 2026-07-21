@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Feed Errors — Diagnosis and Fixes for | Trajekt</title>
+<meta name="description" content="The 8 most common Google Shopping product feed errors, what causes each one, and how to fix them. Covers price mismatch, missing GTIN, image disapprovals.">>
+<meta name="keywords" content="product feed errors, google shopping feed errors, merchant center disapprovals, google shopping not showing products">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/product-feed-errors">
+<meta property="og:title" content="Product Feed Errors — Diagnosis and Fixes for Google Shopping | Trajekt"><meta property="og:description" content="The 8 most common Google Shopping product feed errors, what causes each one, and how to fix them. Covers price mismatch, missing GTIN, image disapprovals, policy violations, and more."><meta property="og:url" content="https://trajekt.co.uk/product-feed-errors"><meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-product-feed-errors.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-product-feed-errors.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://trajekt.co.uk/product-feed-errors","name":"Product Feed Errors — Diagnosis and Fixes for Google Shopping | Trajekt","inLanguage":"en-GB"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Feed Disapprovals","item":"https://trajekt.co.uk/feed-disapprovals"},{"@type":"ListItem","position":3,"name":"Product Feed Errors","item":""}]},
+{"@type":"SoftwareApplication","name":"Trajekt","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"provider":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Why are my products not showing on Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"The most common reasons products don't show: (1) they're disapproved in Merchant Center — check the Diagnostics tab for specific error codes, (2) your Shopping campaign is paused or has exhausted its daily budget, (3) products are excluded by a feed filter rule, (4) your Merchant Center account isn't linked to your Google Ads account, (5) the products haven't been processed yet after a recent feed submission — allow 24-72 hours."}},{"@type":"Question","name":"What does 'policy violation' disapproval mean?","acceptedAnswer":{"@type":"Answer","text":"Policy violations are the most serious Merchant Center disapproval type. They indicate your product or website violates Google's Shopping policies — prohibited products, deceptive pricing, inadequate policy pages, or misleading product descriptions. Unlike data quality disapprovals which fix themselves when you correct your feed, policy violations require a formal review request after remediation and can escalate to account suspension if repeated."}},{"@type":"Question","name":"How do I fix price mismatch errors in Google Merchant Center?","acceptedAnswer":{"@type":"Answer","text":"Price mismatch means the price in your feed doesn't match the price on your product page. Fix by: updating your feed more frequently (twice daily for merchants who change prices often), ensuring your feed and website both show VAT-inclusive prices, refreshing your feed immediately after any price change, and checking that sale prices haven't expired in your store but are still in your feed."}},{"@type":"Question","name":"What is a 'missing value' error in Google Merchant Center?","acceptedAnswer":{"@type":"Answer","text":"Missing value errors indicate a required or recommended field is absent in your product's feed data. Required fields (id, title, description, link, image_link, price, availability) must be present for every product. Recommended fields like gtin, brand, and google_product_category generate warnings when absent. Trajekt validates required fields before feed submission and flags missing data before it causes disapprovals."}},{"@type":"Question","name":"Why do some products disappear from Google Shopping after a feed update?","acceptedAnswer":{"@type":"Answer","text":"Products disappear when they fail validation in a new feed submission. Common causes: you changed the product ID (Merchant Center treats it as a new product and the old one is removed), the product URL now returns a 404, the price format changed and is now invalid, or an image URL broke. Check the Merchant Center Diagnostics tab immediately after any feed submission that causes product count changes."}},{"@type":"Question","name":"How do I fix image quality disapprovals?","acceptedAnswer":{"@type":"Answer","text":"Google disapproves images that are: too small (under 100x100px for non-apparel, 250x250px for apparel), contain promotional text overlays ('Sale', 'Free shipping'), have excessive borders, or return 404 errors. Use high-quality product images at 800x800px minimum. For apparel: show on model or mannequin, neutral background. Remove any text from product images."}}]}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" style="background:var(--card);border-bottom:1px solid var(--border);padding:80px 24px 64px">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="font-size:12px;color:var(--t3);margin-bottom:24px"><a href="/" style="color:var(--t3);text-decoration:none">Home</a> <span style="color:var(--t3)">&#8250;</span> <a href="/feed-disapprovals" style="color:var(--t3);text-decoration:none">Feed Disapprovals</a> <span style="color:var(--t3)">&#8250;</span> <span style="color:var(--t2)">Product Feed Errors</span></div>
+  <div style="display:grid;grid-template-columns:3fr 2fr;gap:64px;align-items:start">
+    <div>
+      <div class="badge badge-red" style="margin-bottom:16px">Troubleshooting guide</div>
+      <h1 style="margin-bottom:16px">Product feed errors — diagnosis and fixes</h1>
+      <p style="font-size:18px;margin-bottom:24px">Product feed errors in Google Merchant Center silently cost you impressions, traffic, and revenue. This guide covers the 8 most common error types, what causes each one, and exactly how to fix it.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Prevent errors with Trajekt</a>
+        <a href="/feed-disapprovals" class="btn btn-outline">Full disapprovals guide</a>
+      </div>
+    </div>
+    <div style="background:var(--red-lt);border:1px solid rgba(185,28,28,.15);border-radius:var(--r-lg);padding:20px">
+      <div style="font-size:13px;font-weight:600;color:var(--red);margin-bottom:12px">Where to find your errors</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:14px;color:var(--t2)">1. Log into Google Merchant Center</div>
+        <div style="font-size:14px;color:var(--t2)">2. Click <strong>Products</strong> in the left nav</div>
+        <div style="font-size:14px;color:var(--t2)">3. Click <strong>Diagnostics</strong></div>
+        <div style="font-size:14px;color:var(--t2)">4. Click <strong>Item issues</strong> tab</div>
+        <div style="font-size:14px;color:var(--t2)">5. Filter by <strong>Disapproved</strong></div>
+      </div>
+      <div style="margin-top:14px;background:rgba(185,28,28,.08);border-radius:var(--r);padding:12px;font-size:13px;color:var(--t2)">Read disapprovals top-to-bottom &#8212; account-level issues first, item-level second. Fix account issues before troubleshooting individual products.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:var(--max);margin:0 auto">
+  <h2 style="margin-bottom:32px">The 8 most common product feed errors</h2>
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--amber-lt);border-bottom:1px solid rgba(146,96,10,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#9888;</span><strong style="font-size:15px">Price mismatch</strong></div>
+    <span style="background:var(--amber);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Warning</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">Your feed price differs from your website price. Either VAT inclusive vs exclusive inconsistency or a sale that started/ended between feed refreshes.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Update feeds daily or twice daily. Ensure consistent VAT treatment. Trigger manual feed refresh when changing prices.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--red-lt);border-bottom:1px solid rgba(185,28,28,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#10006;</span><strong style="font-size:15px">Missing required field</strong></div>
+    <span style="background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Critical</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">A required attribute (id, title, description, link, image_link, price, or availability) is absent from one or more product rows.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Map all required fields in your feed configuration. Trajekt validates required fields before submission and flags gaps.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--amber-lt);border-bottom:1px solid rgba(146,96,10,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#9888;</span><strong style="font-size:15px">Image too small</strong></div>
+    <span style="background:var(--amber);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Warning</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">Product images don't meet minimum size requirements: 100x100px for non-apparel, 250x250px for apparel. Recommended: 800x800px+.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Use full-size product images. Many Shopify/WooCommerce thumbnail URLs return small images — map to the full-size image URL.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--red-lt);border-bottom:1px solid rgba(185,28,28,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#10006;</span><strong style="font-size:15px">Unavailable landing page</strong></div>
+    <span style="background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Critical</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">The product URL in your feed returns a 404, 500, or is blocked by your server or CDN.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Ensure product URLs are stable. Update your feed daily so discontinued products are removed before Google crawls them.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--amber-lt);border-bottom:1px solid rgba(146,96,10,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#9888;</span><strong style="font-size:15px">Missing GTIN</strong></div>
+    <span style="background:var(--amber);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Warning</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">Branded products without a GTIN (EAN barcode). Google requires GTINs for branded products that have manufacturer barcodes.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Map your barcode/EAN field to gtin. For genuinely own-brand or custom products: set identifier_exists: no.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--red-lt);border-bottom:1px solid rgba(185,28,28,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#10006;</span><strong style="font-size:15px">Duplicate item ID</strong></div>
+    <span style="background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Critical</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">Two or more products share the same id field value. Every product row must have a unique identifier.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Use your platform's variant-level IDs (Shopify variant ID, WooCommerce variation ID) rather than parent product IDs.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--red-lt);border-bottom:1px solid rgba(185,28,28,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#10006;</span><strong style="font-size:15px">Policy violation</strong></div>
+    <span style="background:var(--red);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Critical</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">Your product or website violates Google Shopping Ads Policies. More serious than data quality issues and requires a formal review request.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">Address the specific policy cited (deceptive pricing, prohibited product, inadequate policies). Submit a review request after fixing.</p></div>
+  </div>
+</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;margin-bottom:12px">
+  <div style="background:var(--amber-lt);border-bottom:1px solid rgba(146,96,10,.15);padding:14px 20px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:flex;align-items:center;gap:10px"><span style="font-size:16px">&#9888;</span><strong style="font-size:15px">Availability mismatch</strong></div>
+    <span style="background:var(--amber);color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Warning</span>
+  </div>
+  <div style="padding:16px 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px">
+    <div><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:6px">Cause</div><p style="font-size:14px">Your feed says 'in stock' but your website says 'out of stock', or vice versa.</p></div>
+    <div><div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;margin-bottom:6px">Fix</div><p style="font-size:14px">More frequent feed refreshes. Daily updates ensure availability is accurate within 24 hours of stock changes.</p></div>
+  </div>
+</div>
+
+  <h2 style="margin-bottom:16px;margin-top:48px">My products disappeared from Google Shopping</h2>
+  <p style="margin-bottom:16px">If you had products showing and they suddenly disappeared, the most likely causes are:</p>
+  <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:32px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 20px;display:flex;gap:12px">
+      <span style="color:var(--amber);flex-shrink:0;font-size:16px">1.</span>
+      <p style="font-size:14px;margin:0"><strong>Feed expired</strong> &#8212; Products expire in Merchant Center if a feed hasn&#8217;t been updated in 30+ days. Set up a scheduled fetch URL rather than manual uploads to prevent this.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 20px;display:flex;gap:12px">
+      <span style="color:var(--amber);flex-shrink:0;font-size:16px">2.</span>
+      <p style="font-size:14px;margin:0"><strong>Campaign budget exhausted</strong> &#8212; Check your Google Ads campaigns aren&#8217;t paused or out of budget. This looks like products disappearing but is actually ads stopping.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 20px;display:flex;gap:12px">
+      <span style="color:var(--amber);flex-shrink:0;font-size:16px">3.</span>
+      <p style="font-size:14px;margin:0"><strong>Account-level suspension</strong> &#8212; Repeated policy violations can trigger account suspension. Check Merchant Center for any account-level notifications.</p>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:14px 20px;display:flex;gap:12px">
+      <span style="color:var(--amber);flex-shrink:0;font-size:16px">4.</span>
+      <p style="font-size:14px;margin:0"><strong>Merchant Center / Google Ads link broken</strong> &#8212; If you changed Google accounts or your Merchant Center was transferred, the Ads link may have broken. Check Merchant Center &#8594; Settings &#8594; Linked accounts.</p>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px;margin-bottom:48px;text-align:center">
+    <h3 style="margin-bottom:8px">Prevent errors before they happen</h3>
+    <p style="font-size:14px;margin-bottom:20px">Trajekt validates your feed against the most common error causes &#8212; price format, required fields, image URL accessibility, URL status &#8212; before every submission to Merchant Center.</p>
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Start free &#8594;</a>
+  </div>
+
+  <h2 style="margin-bottom:32px">Frequently asked questions</h2>
+  <div class="faq-item open"><button class="faq-q">Why are my products not showing on Google Shopping?</button><div class="faq-a">The most common reasons products don't show: (1) they're disapproved in Merchant Center — check the Diagnostics tab for specific error codes, (2) your Shopping campaign is paused or has exhausted its daily budget, (3) products are excluded by a feed filter rule, (4) your Merchant Center account isn't linked to your Google Ads account, (5) the products haven't been processed yet after a recent feed submission — allow 24-72 hours.</div></div>
+<div class="faq-item"><button class="faq-q">What does 'policy violation' disapproval mean?</button><div class="faq-a">Policy violations are the most serious Merchant Center disapproval type. They indicate your product or website violates Google's Shopping policies — prohibited products, deceptive pricing, inadequate policy pages, or misleading product descriptions. Unlike data quality disapprovals which fix themselves when you correct your feed, policy violations require a formal review request after remediation and can escalate to account suspension if repeated.</div></div>
+<div class="faq-item"><button class="faq-q">How do I fix price mismatch errors in Google Merchant Center?</button><div class="faq-a">Price mismatch means the price in your feed doesn't match the price on your product page. Fix by: updating your feed more frequently (twice daily for merchants who change prices often), ensuring your feed and website both show VAT-inclusive prices, refreshing your feed immediately after any price change, and checking that sale prices haven't expired in your store but are still in your feed.</div></div>
+<div class="faq-item"><button class="faq-q">What is a 'missing value' error in Google Merchant Center?</button><div class="faq-a">Missing value errors indicate a required or recommended field is absent in your product's feed data. Required fields (id, title, description, link, image_link, price, availability) must be present for every product. Recommended fields like gtin, brand, and google_product_category generate warnings when absent. Trajekt validates required fields before feed submission and flags missing data before it causes disapprovals.</div></div>
+<div class="faq-item"><button class="faq-q">Why do some products disappear from Google Shopping after a feed update?</button><div class="faq-a">Products disappear when they fail validation in a new feed submission. Common causes: you changed the product ID (Merchant Center treats it as a new product and the old one is removed), the product URL now returns a 404, the price format changed and is now invalid, or an image URL broke. Check the Merchant Center Diagnostics tab immediately after any feed submission that causes product count changes.</div></div>
+<div class="faq-item"><button class="faq-q">How do I fix image quality disapprovals?</button><div class="faq-a">Google disapproves images that are: too small (under 100x100px for non-apparel, 250x250px for apparel), contain promotional text overlays ('Sale', 'Free shipping'), have excessive borders, or return 404 errors. Use high-quality product images at 800x800px minimum. For apparel: show on model or mannequin, neutral background. Remove any text from product images.</div></div>
+<div class="faq-item"><button class="faq-q">What causes 'unavailable landing page' errors?</button><div class="faq-a">This error means the product URL in your feed returns an error (404, 500) or is inaccessible to Google's crawler. Causes: you've deleted or moved a product since your last feed submission, your server temporarily went down, Cloudflare or another WAF is blocking Google's crawler, or the URL format changed. Fix by ensuring product URLs are stable and accessible, and refreshing your feed daily so deleted products are removed promptly.</div></div>
+<div class="faq-item"><button class="faq-q">How often should I check for feed errors?</button><div class="faq-a">Check Google Merchant Center Diagnostics at least weekly if you're actively managing Shopping campaigns. For active campaigns with high spend, check every 2-3 days. Set up Merchant Center email alerts so you're notified immediately when new disapprovals or account-level issues appear. Trajekt sends notifications when feed runs fail, so you can investigate before the next processing cycle.</div></div>
+
+</div>
+</section>
+
+
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Related: <a href="/blog/zero-impression-products-google-shopping" style="color:var(--blue)">Zero-impression products: why they happen and how to fix them</a></div>
+<section style="background:var(--card);padding:56px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div>
+      <h2 style="font-size:22px;margin-bottom:24px">Related guides</h2>
+      <a href="/feed-disapprovals" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Feed disapprovals guide <span style="color:var(--t3)">&#8594;</span></a><a href="/google-merchant-center" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Merchant Center setup <span style="color:var(--t3)">&#8594;</span></a><a href="/google-shopping-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Shopping feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/product-feed-automation" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Automate feed updates <span style="color:var(--t3)">&#8594;</span></a><a href="/gtin-mpn-ean-guide" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">GTIN and EAN guide <span style="color:var(--t3)">&#8594;</span></a><a href="/supplemental-feed" style="display:block;padding:10px 0;font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Supplemental feeds <span style="color:var(--t3)">&#8594;</span></a>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px">
+      <div style="font-size:15px;font-weight:700;margin-bottom:8px;color:var(--ink)">Ready to automate your feeds?</div>
+      <p style="font-size:14px;margin-bottom:20px">Connect your store and generate feeds for every channel automatically. Free plan available &#8212; no credit card needed.</p>
+      <a href="https://app.trajekt.co.uk/signup" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:14px;font-weight:600;text-decoration:none">Start free &#8594;</a>
+    </div>
+  </div>
+</div>
+</section>
+<section style="padding:0 24px 80px"><div style="max-width:var(--max);margin:0 auto">
+<div class="cta-banner">
+  <h2>Stop finding errors after they cost you</h2>
+  <p>Trajekt validates feeds before submission, sends error alerts when runs fail, and keeps prices and availability current with daily updates.</p>
+  <div class="cta-actions">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="/feed-disapprovals" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Disapprovals guide</a>
+  </div>
+</div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll('.faq-q').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('open');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('open'));if(!w)i.classList.add('open')})});</script>
+</body></html>

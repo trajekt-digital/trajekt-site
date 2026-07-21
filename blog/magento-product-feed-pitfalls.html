@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magento product feed management: avoiding the | Trajekt</title>
+<meta name="description" content="Magento's EAV architecture and configurable product structure create specific feed management challenges.">>
+<meta name="keywords" content="Magento product feed UK, Magento Google Shopping feed, Magento feed management, Adobe Commerce feed">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/blog/magento-product-feed-pitfalls">
+<meta property="og:title" content="Magento product feed management: avoiding the common pitfalls"><meta property="og:description" content="Magento's EAV architecture and configurable product structure create specific feed management challenges. The most common Magento-to-Shopping problems and exactly how to solve them."><meta property="og:url" content="https://trajekt.co.uk/blog/magento-product-feed-pitfalls"><meta property="og:type" content="article">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-blog.svg">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-blog.svg"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Magento product feed management: avoiding the common pitfalls","description":"Magento's EAV architecture and configurable product structure create specific feed management challenges. The most common Magento-to-Shopping problems and exactly how to solve them.","datePublished":"2026-04-23T09:30:00+01:00","dateModified":"2026-04-23T09:30:00+01:00","author":{"@type":"Organization","name":"Trajekt"},"publisher":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://trajekt.co.uk/blog/magento-product-feed-pitfalls"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://trajekt.co.uk/blog"},{"@type":"ListItem","position":3,"name":"Article","item":"https://trajekt.co.uk/blog/magento-product-feed-pitfalls"}]}</script>
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+<article>
+<header style="background:var(--card);border-bottom:1px solid var(--border);padding:56px 24px 48px">
+  <div style="max-width:760px;margin:0 auto">
+    <div style="font-size:12px;color:var(--t3);display:flex;gap:6px;margin-bottom:20px"><a href="/" style="color:var(--t3);text-decoration:none">Home</a> <span>&#8250;</span> <a href="/blog" style="color:var(--t3);text-decoration:none">Blog</a> <span>&#8250;</span> Platforms</div>
+    <span style="display:inline-flex;align-items:center;font-size:11px;font-weight:600;padding:3px 10px;border-radius:20px;margin-bottom:16px;background:var(--green-lt);color:var(--green)">Platforms</span>
+    <h1 style="margin-bottom:16px">Magento product feed management: avoiding the common pitfalls</h1>
+    <p style="font-size:17px;color:var(--t2);line-height:1.6;margin-bottom:20px">Magento's EAV architecture and configurable product structure create specific feed management challenges. The most common Magento-to-Shopping problems and exactly how to solve them.</p>
+    <div style="display:flex;align-items:center;gap:16px;font-size:12px;color:var(--t3)"><span>By Trajekt</span><span>&#183;</span><span>15 Apr 2025</span><span>&#183;</span><span>April 23, 2026 &nbsp;&middot;&nbsp; 8 min read</span></div>
+  </div>
+</header>
+<div style="max-width:1140px;margin:0 auto;padding:60px 24px;display:grid;grid-template-columns:1fr 280px;gap:60px;align-items:start">
+  <div class="article-body"><p>Magento (now Adobe Commerce) is powerful and enterprise-grade &#8212; and creates more feed management headaches than any other platform. Understanding why requires a look at Magento's architecture.</p>
+<h2>Why Magento feeds are harder</h2>
+<p>Magento uses an Entity&#8211;Attribute&#8211;Value (EAV) database structure. Product attributes are stored as separate rows in a shared table rather than fixed columns. This means product data is rich and flexible &#8212; but harder to export cleanly. Simple CSV exports often miss attributes, flatten variants incorrectly, or include raw HTML in descriptions.</p>
+<h2>Configurable products: the biggest challenge</h2>
+<p>Magento configurable products (parent + simple product children) need each simple product as a separate feed row with its specific attributes, sharing an <code>item_group_id</code> matching the parent. Magento's native export doesn't do this cleanly. Common problems: only the parent is exported, children don't inherit parent images, price comes from the parent range rather than the specific variant. Trajekt uses Magento's REST API to fetch the parent-child relationship explicitly.</p>
+<h2>Multi-store views</h2>
+<p>Magento's multi-store view architecture lets the same product have different names, descriptions, and prices per store view. For Google Shopping, you need to specify which store view to use per feed. Trajekt allows you to specify the store view ID, ensuring correct language, currency, and locale per target country.</p>
+<h2>Custom attributes: where the good data lives</h2>
+<p>Magento's attribute system means brand, GTIN, material, and specifications are typically stored in custom attributes &#8212; not in a basic Magento export. Trajekt fetches the full attribute set for each product via REST API and makes all attributes available for rules-based mapping without custom development.</p>
+
+<h3 style="font-size:17px;margin-bottom:12px;margin-top:24px">How Magento attribute sets affect feed output</h3>
+<p>Magento's attribute set system means different product types can have completely different sets of attributes. A clothing product might have colour, size, material, and fit attributes; an electronics product might have voltage, wattage, and connector type. This is powerful for product management but creates complexity for feed management — your feed tool needs to handle attribute sets that vary by category.</p>
+<p>The cleanest approach is attribute mapping rules that use conditional logic: IF product_type contains "Clothing" THEN map colour_attribute to color, ELSE IF product_type contains "Electronics" THEN map connector_attribute to [skip]. Trajekt's rules engine handles this with nested conditional rules — one rule per attribute set covers your full catalogue without requiring separate feed configurations per category.</p>
+
+<h3 style="font-size:17px;margin-bottom:12px;margin-top:24px">Magento's REST API pagination and large catalogues</h3>
+<p>Magento's REST API returns products in pages — typically 100 products per request, paginated. For a 50,000-product catalogue, that's 500 API calls per feed run. Poorly implemented feed tools make these calls sequentially, leading to feed runs that take hours. Trajekt implements concurrent pagination — multiple pages requested simultaneously — which reduces run time proportionally. For a 50,000-product Magento catalogue, expect 15–30 minutes for a full fetch.</p>
+<p>Magento also enforces rate limiting on the REST API. If your feed tool makes too many concurrent requests, the API returns 429 errors and the feed run fails. The right balance depends on your Magento hosting environment — managed cloud Magento (Adobe Commerce Cloud) handles more concurrent requests than self-hosted Magento on a shared server.</p>
+
+<h3 style="font-size:17px;margin-bottom:12px;margin-top:24px">Magento stock and availability edge cases</h3>
+<p>Magento's inventory management has more states than "in stock" and "out of stock": products can be disabled, backorderable (available to order but not in stock), or assigned to a specific inventory source in Multi-Source Inventory. Each of these needs to map to the correct Google Shopping availability value. Disabled products should be excluded from the feed entirely. Backorderable products should map to availability: backorder. Multi-Source Inventory requires aggregating stock levels across sources — the total available quantity across all warehouses, not per-source.</p>
+<h2>Magento feed checklist</h2>
+<ul>
+<li>&#9989; Specify correct Magento store view for your target market</li>
+<li>&#9989; Export child simple products, not parent configurable products</li>
+<li>&#9989; Map all custom attributes (brand, GTIN, material) to feed fields</li>
+<li>&#9989; Strip HTML from all text fields before output</li>
+<li>&#9989; Use parent configurable product ID as item_group_id</li>
+<li>&#9989; Verify currency matches your Merchant Center target country</li>
+</ul>
+<div class="cta-inline"><h3>Magento feeds without custom development</h3><p>Trajekt connects to Magento 2 and Adobe Commerce via REST API and handles EAV attributes, configurable products, and multi-store views automatically.</p><a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Start free &#8594;</a></div></div>
+  <aside style="position:sticky;top:80px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;margin-bottom:20px">
+      <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px">Related articles</div>
+<a href="/blog/woocommerce-google-shopping-guide" style="display:block;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px;font-weight:500;color:var(--t1);text-decoration:none">WooCommerce to Google Shopping: the complete guide &#8594;</a><a href="/blog/shopify-feed-management" style="display:block;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px;font-weight:500;color:var(--t1);text-decoration:none">Shopify product feed management: everything to know &#8594;</a><a href="/blog/bigcommerce-feed-management" style="display:block;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px;font-weight:500;color:var(--t1);text-decoration:none">BigCommerce feed management: every channel &#8594;</a><a href="/blog/google-shopping-disapprovals" style="display:block;padding:14px 0;border-bottom:1px solid var(--border);font-size:14px;font-weight:500;color:var(--t1);text-decoration:none">Google Shopping disapprovals: 8 causes and fixes &#8594;</a>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:20px">
+      <div style="font-size:14px;font-weight:600;margin-bottom:8px;color:var(--ink)">Automate your feeds</div>
+      <p style="font-size:13px;margin-bottom:14px">Connect your store and generate feeds for every channel. Free to start.</p>
+      <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue" style="font-size:13px;padding:8px 16px;width:100%;justify-content:center">Start free &#8594;</a>
+    </div>
+    <div style="margin-top:16px"><div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px">Related pages</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px"><a href="/magento-product-feed" style="font-size:12px;color:var(--blue);background:var(--card);border:1px solid var(--blue-mid);border-radius:20px;padding:4px 12px;text-decoration:none">Magento Feeds</a><a href="/google-shopping-feed" style="font-size:12px;color:var(--blue);background:var(--card);border:1px solid var(--blue-mid);border-radius:20px;padding:4px 12px;text-decoration:none">Google Shopping</a><a href="/product-feed-optimisation" style="font-size:12px;color:var(--blue);background:var(--card);border:1px solid var(--blue-mid);border-radius:20px;padding:4px 12px;text-decoration:none">Feed Optimisation</a><a href="/bigcommerce-product-feed" style="font-size:12px;color:var(--blue);background:var(--card);border:1px solid var(--blue-mid);border-radius:20px;padding:4px 12px;text-decoration:none">BigCommerce Feeds</a></div></div>
+  </aside>
+</div>
+</article>
+<div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;gap:20px;align-items:flex-start">
+  <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--purple));display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">&#127758;</div>
+  <div>
+    <div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px">Trajekt Editorial</div>
+    <div style="font-size:13px;color:var(--t3);margin-bottom:8px">Product Feed &amp; Ecommerce Specialists</div>
+    <p style="font-size:14px;color:var(--t2)">Trajekt is a UK-built product feed management platform. Our editorial team covers product feed optimisation, Google Shopping, ChatGPT commerce, and ecommerce channel strategy for UK merchants and digital marketing agencies.</p>
+  </div><div style="display:flex;gap:12px;margin-top:32px;padding-top:24px;border-top:1px solid var(--border)">
+  <span style="font-size:13px;font-weight:600;color:var(--t3);align-self:center">Share:</span>
+  <a id="tw-share" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--ink);color:#fff;border-radius:var(--r);font-size:13px;font-weight:600;text-decoration:none">&#88; / Twitter</a>
+  <a id="li-share" href="#" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#0A66C2;color:#fff;border-radius:var(--r);font-size:13px;font-weight:600;text-decoration:none">LinkedIn</a>
+</div>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title.replace(' | Trajekt',''));
+  document.getElementById('tw-share').href = 'https://twitter.com/intent/tweet?url=' + url + '&text=' + title + '&via=trajektco';
+  document.getElementById('li-share').href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+})();
+</script>
+</div>
+<section id="main-content" style="padding:0 24px 80px"><div style="max-width:760px;margin:0 auto">
+  <div class="cta-banner"><h2>Ready to automate your product feeds?</h2>
+  <p>Trajekt connects your store to every channel &#8212; Google Shopping, ChatGPT, Meta, TikTok, and more. Start free in minutes.</p>
+  <div class="cta-actions"><a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a><a href="/pricing" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">See pricing</a></div>
+  </div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+</body></html>

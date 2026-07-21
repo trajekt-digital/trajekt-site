@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Vehicle Ads Feed — Automotive Inventory Ads | Trajekt</title>
+<meta name="description" content="Set up Meta Automotive Inventory Ads with the correct CSV feed format. Trajekt converts your vehicle inventory for Facebook and Instagram vehicle ads — UK.">>
+<meta name="keywords" content="Meta vehicle ads feed, Facebook automotive inventory ads, Instagram vehicle ads UK, Meta AIA feed CSV, Facebook vehicle catalogue, car dealer Facebook ads">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/meta-vehicle-ads-feed">
+<meta property="og:title" content="Meta Vehicle Ads Feed — Automotive Inventory Ads on Facebook &amp; Instagram | Trajekt">
+<meta property="og:description" content="Convert your vehicle inventory to Meta's CSV format for Facebook and Instagram vehicle ads. Trajekt handles it automatically for UK dealerships.">
+<meta property="og:url" content="https://trajekt.co.uk/meta-vehicle-ads-feed">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-meta-vehicle-ads.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-meta-vehicle-ads.svg">
+<meta name="twitter:title" content="Meta Vehicle Ads Feed | Trajekt">
+<meta name="twitter:description" content="Facebook and Instagram automotive inventory ads for UK dealerships. CSV feed generated automatically by Trajekt.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://trajekt.co.uk/meta-vehicle-ads-feed",
+      "url": "https://trajekt.co.uk/meta-vehicle-ads-feed",
+      "name": "Meta Vehicle Ads Feed — Automotive Inventory Ads on Facebook and Instagram",
+      "description": "Convert your vehicle inventory to Meta's CSV format for Facebook and Instagram Automotive Inventory Ads.",
+      "inLanguage": "en-GB",
+      "breadcrumb": { "@id": "https://trajekt.co.uk/meta-vehicle-ads-feed#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://trajekt.co.uk/meta-vehicle-ads-feed#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trajekt.co.uk" },
+        { "@type": "ListItem", "position": 2, "name": "Channels", "item": "https://trajekt.co.uk/channels" },
+        { "@type": "ListItem", "position": 3, "name": "Meta Vehicle Ads Feed", "item": "https://trajekt.co.uk/meta-vehicle-ads-feed" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What is Meta Automotive Inventory Ads?","acceptedAnswer":{"@type":"Answer","text":"Meta Automotive Inventory Ads (AIA) is a dynamic ad format that automatically generates personalised vehicle ads for Facebook and Instagram using your dealer's vehicle inventory data. When someone has shown interest in specific vehicles — through browsing your website or similar vehicle searches — Meta automatically serves them ads featuring those specific vehicles from your inventory, including make, model, year, price, and images."}},
+        {"@type":"Question","name":"What format does the Meta Vehicle Ads feed use?","acceptedAnswer":{"@type":"Answer","text":"Meta Automotive Inventory Ads use a CSV format uploaded to a Meta Commerce Manager catalogue. Unlike Google Vehicle Ads which use XML, Meta uses comma-separated values with specific column headers. The file should be UTF-8 encoded. Meta also supports TSV, RSS XML, ATOM XML, and Google Sheets for scheduled feeds. Trajekt generates the correct CSV format automatically."}},
+        {"@type":"Question","name":"What required fields does Meta Vehicle Ads need?","acceptedAnswer":{"@type":"Answer","text":"Required fields for Meta Automotive Inventory Ads include: vehicle_id (unique identifier), make, model, year, mileage.value, mileage.unit, body_style, state_of_vehicle (New or Used), price, exterior_color, url (vehicle page), image[0].url (at least one image), availability (AVAILABLE or NOT_AVAILABLE), vin (Vehicle Identification Number), and condition (GOOD, FAIR, EXCELLENT)."}},
+        {"@type":"Question","name":"How is the Meta vehicle feed different from Meta's standard shopping feed?","acceptedAnswer":{"@type":"Answer","text":"Meta's standard shopping catalogue uses fields like title, description, image_link, and link. The Automotive Inventory Ads catalogue uses entirely different vehicle-specific fields: vehicle_id, make, model, year, mileage.value, body_style, state_of_vehicle. The catalogue type must be set to 'vehicles' in Commerce Manager, not 'products'. The two catalogue types are incompatible and cannot be mixed."}},
+        {"@type":"Question","name":"Can I target people who viewed vehicles on my website?","acceptedAnswer":{"@type":"Answer","text":"Yes — this is one of the most powerful features of Meta Automotive Inventory Ads. By implementing the Meta Pixel with vehicle events (ViewContent with vehicle details), you can retarget website visitors who viewed specific vehicles. Meta matches the vehicle_id from your catalogue to the vehicle data in the Pixel events and automatically serves ads for the exact vehicles they viewed."}},
+        {"@type":"Question","name":"How often should I update my Meta vehicle feed?","acceptedAnswer":{"@type":"Answer","text":"Meta recommends daily updates at minimum, with more frequent updates for dealers with fast-moving inventory. You can set up a scheduled feed URL that Meta fetches automatically — daily, every 12 hours, or even hourly. Trajekt supports scheduled feeds that automatically regenerate your Meta Vehicle Ads CSV on any schedule you choose."}},
+        {"@type":"Question","name":"What image requirements does Meta have for vehicle ads?","acceptedAnswer":{"@type":"Answer","text":"Meta requires at least one vehicle image (image[0].url). You can include up to multiple additional images (image[1].url, image[2].url etc). Images should be high quality and show the actual vehicle being advertised. For best performance, include exterior shots from multiple angles. Meta recommends minimum 1080x1080px for square format, or 1200x628px for link ads."}},
+        {"@type":"Question","name":"What is the mileage.unit field and what values does it accept?","acceptedAnswer":{"@type":"Answer","text":"The mileage.unit field specifies the unit of measurement for the vehicle's mileage reading. Accepted values are MI (miles) or KM (kilometres). For UK dealers, use MI. The mileage.value should be a numeric value without the unit — for example mileage.value: 45000, mileage.unit: MI. Including incorrect units can cause display issues in your ads."}},
+        {"@type":"Question","name":"Can I use the Meta vehicle feed for new vehicles as well as used?","acceptedAnswer":{"@type":"Answer","text":"Yes. The state_of_vehicle field accepts both 'New' and 'Used'. New vehicle dealers can use Meta Automotive Inventory Ads to showcase their latest models. For new vehicles, the mileage.value is typically 0. The condition field (GOOD, FAIR, EXCELLENT) is typically not applicable to new vehicles — use your best judgement or leave it as EXCELLENT for new stock."}},
+        {"@type":"Question","name":"What is dealer_id in the Meta vehicle feed?","acceptedAnswer":{"@type":"Answer","text":"The dealer_id field identifies the specific dealership location in your Meta vehicle catalogue. If you operate multiple dealerships, each location has its own dealer_id. This is similar to store_code in Google Vehicle Ads. The dealer_name and address fields help Meta attribute inventory to the correct physical location and can be used in ad copy via template tags like {{dealer_name}}."}},
+        {"@type":"Question","name":"Does Trajekt support both Google and Meta vehicle ads from the same source?","acceptedAnswer":{"@type":"Answer","text":"Yes. Trajekt can generate both Google Vehicle Ads XML and Meta Automotive Inventory Ads CSV from the same vehicle inventory source. Connect your /gvla feed or inventory CSV once, and Trajekt outputs the correctly formatted feed for each platform — with the right field names, formats, and delivery methods for each."}}
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<!-- HERO — distinct Meta blue gradient instead of ink/purple -->
+<section id="main-content" class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb" style="color:rgba(255,255,255,.6)"><a href="/" style="color:rgba(255,255,255,.6)">Home</a> <span>›</span> <a href="/google-shopping-feed" style="color:rgba(255,255,255,.6)">Channels</a> <span>›</span> <span style="color:#fff">Meta Vehicle Ads Feed</span></div>
+    <div style="margin-top:32px;max-width:760px">
+      <span class="badge badge-meta" style="background:rgba(255,255,255,.15);color:#fff">📘 Meta Automotive Inventory Ads</span>
+      <h1>Serve the <em style="-webkit-text-fill-color:#4DFFA8;background:none">right vehicle</em> to the right buyer on Facebook &amp; Instagram</h1>
+      <p class="hero-sub">Meta Automotive Inventory Ads (AIA) automatically matches your vehicle inventory to people who've shown interest. Trajekt converts your vehicle data to Meta's exact CSV format and keeps it refreshed daily.</p>
+      <div class="hero-actions">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-white btn-lg">Start free &#8594;</a>
+        <a href="#field-spec" class="btn btn-outline-white btn-lg">View feed spec</a>
+      </div>
+      <div class="hero-meta">
+        <span>Facebook &amp; Instagram</span>
+        <span>CSV format included</span>
+        <span>Retargeting enabled</span>
+        <span>Daily auto-refresh</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stats-strip">
+  <div class="stats-grid">
+    <div><div class="stat-num"><span class="hi">3.5B</span></div><div class="stat-lbl">daily active users across Meta's family of apps</div></div>
+    <div><div class="stat-num"><span class="hi">2.8×</span></div><div class="stat-lbl">higher CTR for personalised vehicle ads vs generic display</div></div>
+    <div><div class="stat-num"><span class="hi">30%</span></div><div class="stat-lbl">of UK car buyers research on social media before purchase</div></div>
+    <div><div class="stat-num"><span class="hi">Hourly</span></div><div class="stat-lbl">minimum feed refresh rate supported by Meta Commerce Manager</div></div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">From your dealer inventory to Facebook ads</h2>
+    <p class="section-sub">Trajekt connects to your inventory source, maps your vehicle data to Meta's format, and delivers the CSV to your Commerce Manager catalogue automatically.</p>
+    <div class="steps-grid">
+      <div class="step-item"><div class="step-num">Step 1</div><h3>Connect inventory</h3><p>Link your /gvla CSV feed, DMS export URL, or vehicle inventory XML. Trajekt fetches your full vehicle data — make, model, year, images, prices, mileage.</p></div>
+      <div class="step-item"><div class="step-num">Step 2</div><h3>Map to Meta spec</h3><p>Trajekt maps your source fields to Meta's required CSV columns — vehicle_id, make, model, year, mileage.value, state_of_vehicle, price, image[0].url.</p></div>
+      <div class="step-item"><div class="step-num">Step 3</div><h3>Generate CSV</h3><p>A correctly formatted, UTF-8 encoded CSV is generated. The mileage unit is set to MI for UK. VIN, dealer_name and address are included for ad template tags.</p></div>
+      <div class="step-item"><div class="step-num">Step 4</div><h3>Upload to Meta</h3><p>Download the CSV for manual upload to Commerce Manager, or use a scheduled feed URL. Trajekt regenerates your feed on your chosen schedule automatically.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="field-spec">
+  <div class="container">
+    <p class="section-label">Field specification</p>
+    <h2 class="section-title">Meta Automotive Inventory Ads — CSV field reference</h2>
+    <p class="section-sub">Based on the official Meta Automotive Inventory Ads catalogue specification. All required fields must be present. Trajekt maps these automatically from your vehicle inventory source.</p>
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead><tr><th>Field</th><th>Status</th><th>Description</th><th>Format / Values</th><th>Trajekt</th></tr></thead>
+        <tbody>
+          <tr><td><span class="field-name">vehicle_id</span></td><td><span class="req">Required</span></td><td>Unique vehicle identifier. Must be stable across updates.</td><td>String, max 100 chars</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">make</span></td><td><span class="req">Required</span></td><td>Vehicle manufacturer / brand.</td><td>Bailey, Coachman, Ford, BMW</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">model</span></td><td><span class="req">Required</span></td><td>Vehicle model name.</td><td>Discovery, Transit, 3 Series</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">year</span></td><td><span class="req">Required</span></td><td>4-digit model year.</td><td>2024</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">mileage.value</span></td><td><span class="req">Required</span></td><td>Odometer reading — numeric only, no unit.</td><td>45000</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">mileage.unit</span></td><td><span class="req">Required</span></td><td>Unit of odometer reading.</td><td>MI or KM (use MI for UK)</td><td>✓ Auto (MI)</td></tr>
+          <tr><td><span class="field-name">body_style</span></td><td><span class="req">Required</span></td><td>Vehicle body type.</td><td>SEDAN, SUV, COUPE, OTHER, CARAVAN</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">state_of_vehicle</span></td><td><span class="req">Required</span></td><td>Condition — new or pre-owned.</td><td>New or Used</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">price</span></td><td><span class="req">Required</span></td><td>Vehicle price with currency code.</td><td>12999.99 GBP</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">exterior_color</span></td><td><span class="req">Required</span></td><td>Exterior colour of vehicle.</td><td>White, Midnight Blue, Silver</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">url</span></td><td><span class="req">Required</span></td><td>Direct URL of vehicle landing page.</td><td>https://dealer.com/vehicles/ford-transit-2024</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">image[0].url</span></td><td><span class="req">Required</span></td><td>Primary vehicle image URL (HTTPS).</td><td>https://cdn.dealer.com/v/001.jpg</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">availability</span></td><td><span class="req">Required</span></td><td>Current stock status.</td><td>AVAILABLE or NOT_AVAILABLE</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">vin</span></td><td><span class="req">Required</span></td><td>Vehicle Identification Number. Up to 17 chars.</td><td>SAJWA2BZ3EMR68000</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">condition</span></td><td><span class="req">Required</span></td><td>Vehicle condition quality rating.</td><td>EXCELLENT, GOOD, FAIR, POOR</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">title</span></td><td><span class="rec">Recommended</span></td><td>Full vehicle title for display.</td><td>Used 2024 Bailey Alicanto Grande</td><td>✓ Auto-built</td></tr>
+          <tr><td><span class="field-name">description</span></td><td><span class="rec">Recommended</span></td><td>Vehicle description. No HTML.</td><td>Low mileage, full service history...</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">image[1].url</span></td><td><span class="rec">Recommended</span></td><td>Second vehicle image URL.</td><td>https://cdn.dealer.com/v/002.jpg</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">image[2].url</span></td><td><span class="rec">Recommended</span></td><td>Third vehicle image URL.</td><td>https://cdn.dealer.com/v/003.jpg</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">sale_price</span></td><td><span class="opt">Optional</span></td><td>Reduced sale price with currency.</td><td>10999.99 GBP</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">trim</span></td><td><span class="opt">Optional</span></td><td>Trim level or specification grade.</td><td>Sport, Executive, Titanium</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">transmission</span></td><td><span class="opt">Optional</span></td><td>Gearbox type.</td><td>Automatic, Manual</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">fuel_type</span></td><td><span class="opt">Optional</span></td><td>Fuel or energy type.</td><td>Petrol, Diesel, Electric, Hybrid</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">interior_color</span></td><td><span class="opt">Optional</span></td><td>Interior colour or trim colour.</td><td>Black, Cream, Grey</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">dealer_id</span></td><td><span class="opt">Optional</span></td><td>Dealer location identifier (for multi-site dealers).</td><td>DEALER_001</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">dealer_name</span></td><td><span class="opt">Optional</span></td><td>Dealership name (usable in ad copy templates).</td><td>Ropers Leisure</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">address</span></td><td><span class="opt">Optional</span></td><td>Dealership physical address.</td><td>Gatherley Road, Catterick Bridge, DL10 7SL</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">dealer_phone</span></td><td><span class="opt">Optional</span></td><td>Dealer contact phone number.</td><td>01748 823000</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">date_first_on_lot</span></td><td><span class="opt">Optional</span></td><td>Date vehicle arrived at dealership.</td><td>2024-03-15</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">engine</span></td><td><span class="opt">Optional</span></td><td>Engine specification.</td><td>2.0 TDI 150bhp</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">doors</span></td><td><span class="opt">Optional</span></td><td>Number of doors.</td><td>4, 5</td><td>✓ Auto</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--t3);margin-top:12px">Source: <a href="https://developers.facebook.com/docs/marketing-api/catalog/reference/" target="_blank" rel="noopener noreferrer">Meta Catalog Reference for Automotive ↗</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need for Meta vehicle ads</h2>
+    <div class="feat-grid">
+      <div class="feat-card"><div class="feat-icon fi-meta">📘</div><h3>Retargeting enabled</h3><p>By including VIN and vehicle_id in your feed, Meta's Pixel can match website visitors to the exact vehicles they viewed — enabling powerful retargeting campaigns.</p></div>
+      <div class="feat-card"><div class="feat-icon fi-blue">🎯</div><h3>Ad template variables</h3><p>Fields like {{dealer_name}}, {{vehicle.make}}, {{vehicle.model}}, {{vehicle.price}} automatically populate your ad creative. Trajekt ensures all template fields are present.</p></div>
+      <div class="feat-card"><div class="feat-icon fi-purple">🖼️</div><h3>Multiple images</h3><p>Trajekt includes up to 3 vehicle images per listing in your feed — exterior front, side, interior. More images improve Meta's ad creative selection and CTR.</p></div>
+      <div class="feat-card"><div class="feat-icon fi-green">🔄</div><h3>Scheduled updates</h3><p>Set a hosted feed URL in Commerce Manager that Meta fetches automatically. Trajekt regenerates your CSV on your chosen schedule — daily, twice daily, or hourly.</p></div>
+      <div class="feat-card"><div class="feat-icon fi-meta">🚗</div><h3>UK mileage defaults</h3><p>Trajekt automatically sets mileage.unit to MI (miles) for UK feeds. No configuration needed — we know UK dealers measure in miles, not kilometres.</p></div>
+      <div class="feat-card"><div class="feat-icon fi-blue">🏢</div><h3>Multi-dealership</h3><p>Multiple dealer_id values supported for dealer groups. Each location can have its own dealer_name, address, and phone number in the same feed file.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title" style="text-align:center;max-width:600px;margin:0 auto 48px">Frequently asked questions about Meta Vehicle Ads</h2>
+    <div class="faq-list">
+      <div class="faq-item open"><button class="faq-q">What is Meta Automotive Inventory Ads?</button><div class="faq-a">Meta Automotive Inventory Ads (AIA) is a dynamic ad format that automatically generates personalised vehicle ads for Facebook and Instagram using your vehicle inventory data. When someone has shown interest in specific vehicles — through browsing your website or engaging with similar content — Meta automatically serves them ads featuring those specific vehicles from your inventory, including make, model, year, price, and photos.</div></div>
+      <div class="faq-item"><button class="faq-q">What format does the Meta Vehicle Ads feed use?</button><div class="faq-a">Meta Automotive Inventory Ads use a CSV format uploaded to a Meta Commerce Manager catalogue. The catalogue type must be set to 'vehicles' — not the standard 'products' type. Meta also supports TSV, RSS XML, ATOM XML, and Google Sheets for scheduled feeds. All files must be UTF-8 encoded. Trajekt generates the correct CSV format with the right column headers and field values automatically.</div></div>
+      <div class="faq-item"><button class="faq-q">How is Meta vehicle feed different from Meta's standard shopping feed?</button><div class="faq-a">Meta's standard shopping catalogue uses fields like title, description, image_link, and link — similar to Google Shopping. The Automotive Inventory Ads catalogue uses entirely different vehicle-specific fields: vehicle_id, make, model, year, mileage.value, mileage.unit, body_style, state_of_vehicle. The catalogue type must be 'vehicles' not 'products' in Commerce Manager, and the two formats are incompatible.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I target people who viewed vehicles on my website?</button><div class="faq-a">Yes — this is one of the most powerful features of Meta Automotive Inventory Ads. By implementing the Meta Pixel with vehicle events (ViewContent with vehicle_id data), you can retarget website visitors who viewed specific vehicles. Meta matches the vehicle_id from your catalogue to the Pixel events and automatically serves ads for the exact vehicles they viewed — highly relevant and high-converting.</div></div>
+      <div class="faq-item"><button class="faq-q">How often should I update my Meta vehicle feed?</button><div class="faq-a">Meta recommends daily updates as a minimum, with more frequent updates for dealers with fast-moving inventory. You can provide a hosted feed URL that Meta fetches automatically on a schedule — daily, every 12 hours, or hourly. Trajekt supports scheduled feeds that automatically regenerate your Meta Vehicle Ads CSV on any schedule you choose and provides a stable URL for Commerce Manager to fetch from.</div></div>
+      <div class="faq-item"><button class="faq-q">What image requirements does Meta have for vehicle ads?</button><div class="faq-a">Meta requires at least one vehicle image (image[0].url). You can include additional images as image[1].url, image[2].url etc. Images should be high quality showing the actual vehicle being advertised. For carousel and collection ads, include multiple exterior angles and interior shots. Meta recommends minimum 1080×1080px for square format. Trajekt includes up to 3 images per vehicle automatically.</div></div>
+      <div class="faq-item"><button class="faq-q">What is the mileage.unit field and what values does it accept?</button><div class="faq-a">The mileage.unit field specifies the unit of measurement for the vehicle's odometer reading. Accepted values are MI (miles) or KM (kilometres). For UK dealers, always use MI. The mileage.value should be a numeric value only — for example: mileage.value of 45000, mileage.unit of MI. Trajekt automatically sets mileage.unit to MI for all UK feeds.</div></div>
+      <div class="faq-item"><button class="faq-q">Can I use Meta Vehicle Ads for new vehicles?</button><div class="faq-a">Yes. The state_of_vehicle field accepts both 'New' and 'Used'. New vehicle dealers can use Meta Automotive Inventory Ads to showcase their latest models. For new vehicles, set mileage.value to 0 and mileage.unit to MI. The condition field is typically set to EXCELLENT for new vehicles. Trajekt handles both new and used inventory in the same feed.</div></div>
+      <div class="faq-item"><button class="faq-q">What is dealer_id in the Meta vehicle feed?</button><div class="faq-a">The dealer_id identifies the specific dealership location in your Meta vehicle catalogue. If you operate multiple dealerships, each location has its own dealer_id. The dealer_name and address fields provide the dealership details used in ad copy via template tags like {{dealer_name}}. These fields are optional but strongly recommended for dealer group operations.</div></div>
+      <div class="faq-item"><button class="faq-q">Does Trajekt support both Google and Meta vehicle ads?</button><div class="faq-a">Yes. Trajekt can generate both Google Vehicle Ads XML and Meta Automotive Inventory Ads CSV from the same vehicle inventory source. Connect your inventory feed once and Trajekt outputs the correctly formatted file for each platform — with the right field names, column orders, and delivery methods for Google and Meta respectively.</div></div>
+      <div class="faq-item"><button class="faq-q">How do I set up Meta Automotive Inventory Ads?</button><div class="faq-a">The setup process: 1) Create a Meta Business Account if you don't have one, 2) Set up a Catalogue in Commerce Manager with type 'Vehicles', 3) Add your vehicle feed CSV (upload directly or provide a scheduled feed URL), 4) Implement Meta Pixel with ViewContent events on vehicle pages, 5) Create an Automotive Inventory Ads campaign in Ads Manager targeting your vehicle catalogue. Trajekt handles step 3 — generating and hosting your correctly formatted CSV.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="related-box">
+      <h4>Also on Trajekt</h4>
+      <div class="related-links">
+        <a href="/google-vehicle-ads-feed">Google Vehicle Ads</a>
+        <a href="/meta-shopping-feed">Meta Shopping Feed</a>
+        <a href="/instagram-shopping-feed">Instagram Shopping</a>
+        <a href="/google-shopping-feed">Google Shopping</a>
+        <a href="/chatgpt-product-feed">ChatGPT Product Feed</a>
+        <a href="/vehicle-ads-guide">Vehicle Ads Guide</a>
+        <a href="/for-automotive">Trajekt for Automotive</a>
+        <a href="/product-feed-optimisation">Feed Optimisation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Get your vehicles in front of Facebook &amp; Instagram buyers</h2>
+      <p>Connect your inventory feed, and Trajekt generates your Meta Automotive Inventory Ads CSV — correctly formatted, ready to upload to Commerce Manager.</p>
+      <div class="cta-actions">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-white btn-lg">Start free — no credit card</a>
+        <a href="/google-vehicle-ads-feed" class="btn btn-outline-white btn-lg">Also need Google Vehicle Ads?</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+
+<script>document.querySelectorAll('.faq-q').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.parentElement;const wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));if(!wasOpen)item.classList.add('open')})});</script>
+</body>
+</html>

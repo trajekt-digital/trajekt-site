@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<title>OpenAI Ads Explained: What UK Merchants Need to Know | Trajekt</title>
+<meta name="description" content="OpenAI Ads bring sponsored product placements to ChatGPT. Here's how they work, how they differ from Google Shopping, what your JSONL feed needs, and what UK merchants should do right now.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/blog/openai-ads-explained">
+<meta property="og:title" content="OpenAI Ads Explained: What UK Merchants Need to Know">
+<meta property="og:description" content="OpenAI Ads bring sponsored product placements to ChatGPT. Here's how they work, how they differ from Google Shopping, what your JSONL feed needs, and what UK merchants should do right now.">
+<meta property="og:url" content="https://trajekt.co.uk/blog/openai-ads-explained">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-blog.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"OpenAI Ads Explained: What UK Merchants Need to Know","description":"OpenAI Ads bring sponsored product placements to ChatGPT. Here's how they work, how they differ from Google Shopping, what your JSONL feed needs, and what UK merchants should do right now.","datePublished":"2026-07-16T09:30:00+01:00","dateModified":"2026-07-16T09:30:00+01:00","author":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"},"publisher":{"@type":"Organization","name":"Trajekt","logo":{"@type":"ImageObject","url":"https://trajekt.co.uk/images/og-blog.svg"}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://trajekt.co.uk/blog"},{"@type":"ListItem","position":3,"name":"Article","item":"https://trajekt.co.uk/blog/openai-ads-explained"}]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links"><a href="/google-shopping-feed">Google Shopping</a><a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a><a href="/product-feed-management">Feed Management</a><a href="/product-feed-optimisation">Optimisation</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a></div></div></nav>
+
+<article>
+<header style="background:var(--card);border-bottom:1px solid var(--border);padding:64px 24px 48px">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="font-size:12px;color:var(--t3);margin-bottom:20px"><a href="/" style="color:var(--t3)">Home</a> &#8250; <a href="/blog" style="color:var(--t3)">Blog</a> &#8250; <span style="color:var(--t2)">Article</span></div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px"><span style="background:var(--blue-lt);color:var(--blue);font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px">OpenAI Ads</span> <span style="background:var(--blue-lt);color:var(--blue);font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px">ChatGPT Shopping</span> <span style="background:var(--blue-lt);color:var(--blue);font-size:12px;font-weight:600;padding:3px 10px;border-radius:20px">AI Commerce</span></div>
+  <h1>OpenAI Ads Explained: What UK Merchants Need to Know</h1>
+  <div style="font-size:13px;color:var(--t3)">July 16, 2026 &nbsp;&#183;&nbsp; 12 min read</div>
+</div>
+</header>
+<div style="max-width:var(--max);margin:0 auto;padding:48px 24px 0">
+<p>In 2025, OpenAI began testing sponsored product placements within ChatGPT&#8217;s shopping responses. ChatGPT was already processing over 50 million shopping-related queries a day, and a platform at that scale with no paid placement layer was leaving an enormous revenue opportunity untouched. OpenAI Ads are that layer, and they represent the most significant new advertising channel for ecommerce merchants since Google launched paid Shopping placements in 2012.</p>
+
+<h2>What OpenAI Ads actually are</h2>
+
+<p>OpenAI Ads are sponsored product placements that appear within ChatGPT&#8217;s responses to shopping queries. When a user types &#8220;recommend a waterproof jacket under &#163;150 for hiking&#8221; into ChatGPT, the model generates a conversational response that may include both organically-selected products and sponsored listings. Sponsored items are labelled but appear within the natural flow of the AI&#8217;s response &#8212; not in a separate ads block.</p>
+
+<p>This is a fundamentally different ad format from anything that currently exists. Google Shopping ads appear in a dedicated tab or carousel, clearly separated from organic results. OpenAI Ads appear as part of the AI&#8217;s answer. The LLM evaluates sponsored products against the user&#8217;s specific question before including them. An irrelevant sponsored product simply doesn&#8217;t appear, regardless of bid.</p>
+
+<h2>How OpenAI Ads are selected &#8212; the LLM relevance layer</h2>
+
+<p>Placement is not determined by bid alone. The LLM (the same model that generated the user&#8217;s response) evaluates eligible sponsored products against the query and applies a relevance filter before any bid logic runs. Only products the model judges genuinely relevant to the specific query are eligible to enter the paid placement auction. Within the eligible set, bid logic determines priority.</p>
+
+<p>This makes description quality the fundamental prerequisite for OpenAI Ads. Think of it as Google&#8217;s Ad Rank, but the Quality Score is your product description&#8217;s relevance to the user&#8217;s conversational query: Placement Score = LLM Relevance Score &#215; Bid. A product with a high relevance score can achieve strong placement at a lower bid than a product with poor description quality at a high bid.</p>
+
+<h2>OpenAI Ads vs Google Shopping Ads: the key differences</h2>
+
+<p><strong>Query matching:</strong> Google Shopping matches queries to products primarily via title keyword overlap. OpenAI matches via semantic understanding &#8212; the LLM comprehends what the user is actually asking for and evaluates your product description against that intent.</p>
+
+<p><strong>Bid structure:</strong> You set bids at the product or product group level. The system applies them within the set of queries your product is judged relevant for. You don&#8217;t choose which queries to enter; the LLM decides eligibility, and your bid determines priority within eligible queries.</p>
+
+<p><strong>Creative:</strong> Google Shopping shows your product image, title, price, and store name. OpenAI&#8217;s format is conversational &#8212; your product appears as part of a narrative response, with the LLM potentially describing why your product was chosen. Products with clear, accurate descriptions are summarised accurately. Products with vague descriptions may be described inaccurately.</p>
+
+<p><strong>Competition:</strong> Google Shopping is mature and highly competitive &#8212; CPCs in many UK categories run &#163;0.20&#8211;&#163;2.00+. OpenAI Ads are in early beta. Competition is minimal. CPCs will start low. This is the same opportunity window that existed for Google Shopping in 2012&#8211;2013.</p>
+
+<h2>The description quality imperative</h2>
+
+<p>Your product description is your quality score in OpenAI Ads. The LLM reads descriptions and evaluates them for relevance to the specific query &#8212; it doesn&#8217;t skim for keywords.</p>
+
+<ul>
+  <li>Promotional language (&#8220;best&#8221;, &#8220;amazing&#8221;, &#8220;unbeatable&#8221;) is noise &#8212; reduces signal without adding relevance</li>
+  <li>Technical specifications (materials, dimensions, ratings, certifications) are high-signal &#8212; match specific user queries</li>
+  <li>Use-case language (&#8220;suitable for&#8221;, &#8220;designed for&#8221;, &#8220;ideal for&#8221;) directly matches intent-based queries</li>
+  <li>Generic descriptions (&#8220;great product, multiple colours, fast delivery&#8221;) are essentially invisible to the LLM&#8217;s relevance scoring</li>
+</ul>
+
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin:24px 0">
+<div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px">Strong vs weak description &#8212; side by side</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+<div><div style="font-size:12px;color:#B91C1C;font-weight:600;margin-bottom:6px">&#10005; Fails LLM relevance</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px;font-size:13px;color:var(--t2);font-style:italic">&#8220;High quality waterproof jacket. Great for outdoor use. Available in multiple colours. Perfect for any weather.&#8221;</div></div>
+<div><div style="font-size:12px;color:var(--green);font-weight:600;margin-bottom:6px">&#10003; High LLM relevance</div><div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:12px;font-size:13px;color:var(--t2);font-style:italic">&#8220;Lightweight waterproof hiking jacket. 15,000mm HH waterproof rating, fully taped seams, packable to chest pocket. Weight 175g. Designed for mountain hiking and trail running in sustained rain conditions.&#8221;</div></div>
+</div>
+</div>
+
+<p>Trajekt&#8217;s AI enrichment layer rewrites descriptions at scale using Claude, configured specifically for LLM relevance scoring &#8212; factual, specification-led, use-case-oriented, no promotional language. Descriptions are cached per product and only regenerated when source data changes.</p>
+
+<h2>The product feed that powers OpenAI Ads</h2>
+
+<p>OpenAI Ads draw product data from the same JSONL feed used for organic ChatGPT Shopping. You submit a JSONL file to OpenAI&#8217;s merchant programme via SFTP, and that feed populates both your organic Shopping presence and your paid ad eligibility. Getting the feed right is a prerequisite for both channels simultaneously.</p>
+
+<p>Required fields: <code>item_id</code>, <code>title</code>, <code>description</code>, <code>link</code>, <code>image_link</code>, <code>price</code>, <code>availability</code>. High-impact additional fields: <code>brand</code>, <code>gtin</code>, <code>condition</code>, <code>product_type</code>, <code>material</code>, <code>color</code>. The more complete your feed, the more queries your products are eligible for in both organic and paid surfaces. See the <a href="/chatgpt-product-feed">full ChatGPT product feed guide</a> for field-by-field mapping.</p>
+
+<h2>Getting set up: three steps</h2>
+
+<p><strong>Step 1 &#8212; Register as an OpenAI merchant.</strong> Visit chatgpt.com/merchants. Registration is free and gives you SFTP credentials once processed. Early registration means you&#8217;re in the index before UK paid access fully opens.</p>
+
+<p><strong>Step 2 &#8212; Generate your JSONL feed via Trajekt.</strong> Connect your Shopify or WooCommerce store. Trajekt generates a spec-compliant JSONL file from your live product data, validates every row, and makes the file available for automated SFTP delivery. The same connection also generates your Google Shopping, Meta, and TikTok feeds.</p>
+
+<p><strong>Step 3 &#8212; Optimise descriptions for LLM quality.</strong> Enable Trajekt&#8217;s AI enrichment. Your product descriptions are rewritten using Claude for factual accuracy, technical specificity, and use-case clarity &#8212; the exact qualities the LLM uses to evaluate relevance in OpenAI Ads.</p>
+
+<h2>The UK timing opportunity</h2>
+
+<p>As of mid-2026, ChatGPT Shopping and OpenAI Ads are rolling out in the UK. The merchant programme is open for registration. Organic Shopping placements are active for registered merchants. Paid placements are in beta with expansion expected.</p>
+
+<p>When Google launched paid Shopping placements in 2012, merchants with well-optimised feeds already in the index dominated category CPAs for the next two years before competitive pressure normalised the channel. The ChatGPT Ads opportunity follows the same pattern &#8212; being indexed now, with quality feed data and description-optimised products, is the competitive moat that enables rapid deployment when UK paid access scales.</p>
+
+<p>The channel is live. Registration is open. The tooling exists. See the <a href="/openai-ads">OpenAI Ads guide</a> for a complete breakdown, or <a href="https://app.trajekt.co.uk/signup">start free with Trajekt</a> to get your JSONL feed live today.</p>
+<div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;gap:20px;align-items:flex-start">
+  <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#7C5CBF);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">&#127758;</div>
+  <div><div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px">Trajekt Editorial</div><div style="font-size:13px;color:var(--t3);margin-bottom:8px">Product Feed &amp; Ecommerce Specialists</div><p style="font-size:14px">Trajekt is a UK-built product feed management platform covering Google Shopping, ChatGPT Shopping, OpenAI Ads, and AI commerce for UK merchants and agencies.</p></div>
+</div>
+<div style="display:flex;gap:12px;margin-top:28px;padding-top:24px;border-top:1px solid var(--border)">
+  <span style="font-size:13px;font-weight:600;color:var(--t3);align-self:center">Share:</span>
+  <a id="tw-share" href="#" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:var(--ink);color:#fff;border-radius:var(--r);font-size:13px;font-weight:600;text-decoration:none">&#88; / Twitter</a>
+  <a id="li-share" href="#" target="_blank" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#0A66C2;color:#fff;border-radius:var(--r);font-size:13px;font-weight:600;text-decoration:none">LinkedIn</a>
+</div>
+<script>(function(){var u=encodeURIComponent(window.location.href),t=encodeURIComponent(document.title.replace(" | Trajekt",""));document.getElementById("tw-share").href="https://twitter.com/intent/tweet?url="+u+"&text="+t+"&via=trajektco";document.getElementById("li-share").href="https://www.linkedin.com/sharing/share-offsite/?url="+u;})();</script>
+<div style="background:linear-gradient(135deg,var(--blue-lt),#F3EEFF);border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px;margin-top:40px;margin-bottom:64px;text-align:center">
+  <h2 style="font-size:22px;margin-bottom:10px;margin-top:0">Get into OpenAI Ads with Trajekt</h2>
+  <p style="margin-bottom:20px">JSONL feed generation, SFTP delivery, and AI description enrichment. Free plan available.</p>
+  <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Start free &#8594;</a>
+    <a href="/openai-ads" class="btn btn-outline">OpenAI Ads guide</a>
+  </div>
+</div>
+</div>
+</article>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a><p>The product feed platform built for modern commerce.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/openai-ads">OpenAI Ads</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/awin-product-feed">Awin</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog">Blog</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+</body></html>

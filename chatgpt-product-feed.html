@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT Product Feed — Submit Your Products to | Trajekt</title>
+<meta name="description" content="Get your products into ChatGPT Shopping with a correctly formatted product feed. Trajekt converts your Shopify.">>
+<meta name="keywords" content="ChatGPT product feed, OpenAI shopping feed, ChatGPT shopping UK, JSONL product feed, AI commerce feed, get products into ChatGPT">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/chatgpt-product-feed">
+<meta property="og:title" content="ChatGPT Product Feed — Submit Your Products to ChatGPT Shopping | Trajekt">
+<meta property="og:description" content="Get your products into ChatGPT Shopping. Trajekt converts your catalogue into OpenAI's JSONL spec and delivers it via SFTP automatically.">
+<meta property="og:url" content="https://trajekt.co.uk/chatgpt-product-feed">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-chatgpt-feed.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-chatgpt-feed.svg">
+<meta name="twitter:title" content="ChatGPT Product Feed | Trajekt">
+<meta name="twitter:description" content="Convert your product catalogue to OpenAI's JSONL spec. Delivered via SFTP automatically. Trajekt does it all.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://trajekt.co.uk/chatgpt-product-feed",
+      "url": "https://trajekt.co.uk/chatgpt-product-feed",
+      "name": "ChatGPT Product Feed — Submit Your Products to ChatGPT Shopping",
+      "description": "Get your products into ChatGPT Shopping with a correctly formatted JSONL product feed, delivered via SFTP automatically.",
+      "inLanguage": "en-GB",
+      "isPartOf": { "@id": "https://trajekt.co.uk/#website" },
+      "breadcrumb": { "@id": "https://trajekt.co.uk/chatgpt-product-feed#breadcrumb" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://trajekt.co.uk/chatgpt-product-feed#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://trajekt.co.uk" },
+        { "@type": "ListItem", "position": 2, "name": "Channels", "item": "https://trajekt.co.uk/channels" },
+        { "@type": "ListItem", "position": 3, "name": "ChatGPT Product Feed", "item": "https://trajekt.co.uk/chatgpt-product-feed" }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Trajekt — ChatGPT Product Feed",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "Automatically convert and deliver product feeds to ChatGPT Shopping via SFTP in OpenAI's JSONL format.",
+      "url": "https://trajekt.co.uk/chatgpt-product-feed",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP", "description": "Free plan available" },
+      "provider": { "@type": "Organization", "name": "Trajekt", "url": "https://trajekt.co.uk" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What format does the ChatGPT product feed use?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OpenAI's preferred format is Parquet with zstd compression for large catalogues. For most merchants, compressed JSONL (.jsonl.gz) or compressed CSV (.csv.gz) works perfectly. All formats must use UTF-8 encoding. Trajekt generates JSONL by default as it handles nested variant data more cleanly than CSV." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get my products into ChatGPT Shopping?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You need to: 1) Register at chatgpt.com/merchants and get approved, 2) Receive your unique SFTP endpoint from OpenAI, 3) Format your product catalogue to OpenAI's spec (JSONL with required fields), 4) Push the file to OpenAI's SFTP endpoint on a regular schedule. Trajekt automates steps 3 and 4 completely — you just connect your store and we handle everything else." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the ChatGPT shopping feed the same as my Google Shopping feed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The ChatGPT product feed is a distinct specification with its own format, required fields, and delivery method. It uses JSONL (not XML), is delivered via SFTP push (not uploaded to a merchant centre), and includes unique OpenAI flags like is_eligible_search and is_eligible_checkout that don't exist in Google's spec. You cannot simply submit your Google Shopping XML to ChatGPT." }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the required fields for the OpenAI product feed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Required fields include: item_id (unique product identifier), title (product name), description (plain text, no HTML), url (product page URL), image_url (product image), price (with currency code, e.g. 12.50 GBP), availability (in_stock / out_of_stock / preorder / backorder), seller_name, seller_url, return_policy, target_countries, store_country, is_eligible_search, and is_eligible_checkout. Trajekt maps all of these automatically from your Shopify or XML source." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I update my ChatGPT product feed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OpenAI accepts updates as frequently as every 15 minutes, though full feed submissions are currently required (no incremental updates). For most retailers, twice daily is sufficient to keep pricing and availability accurate. Fashion and fast-moving stock should update more frequently. Trajekt supports any schedule from every 30 minutes to once per day." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does ChatGPT Shopping cost money for merchants?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Organic product discovery in ChatGPT is currently free — there are no fees for products appearing in ChatGPT's shopping results. OpenAI has indicated that Instant Checkout (where users can buy directly inside ChatGPT) may involve a small transaction fee, but organic product recommendations are free. Trajekt's ChatGPT feed conversion is included in all plans." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many products can I submit to the ChatGPT product feed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "OpenAI supports up to 500,000 products per shard file, with file sizes targeting under 500MB per shard. If your catalogue is larger, you split it into multiple consistent shard files. There is no stated upper limit on total catalogue size. Trajekt handles sharding automatically for large catalogues." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use my existing Shopify store to feed ChatGPT Shopping?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shopify merchants have a streamlined path as Shopify is a pre-qualified platform with OpenAI's infrastructure. Trajekt connects directly to your Shopify store via the Admin GraphQL API, pulls all product and variant data, converts it to OpenAI's JSONL spec with proper field mapping, and pushes the file to your SFTP endpoint automatically on schedule." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the variant_dict field in the ChatGPT feed?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The variant_dict is a JSON object that describes dimensions by which product variants differ, such as {\"color\": \"Navy\", \"size\": \"M\"}. It must only contain dimensions that actually vary within the product group — if all variants of a product share the same colour, do not include colour in variant_dict. Including unnecessary dimensions causes OpenAI to inflate your product count significantly. Trajekt calculates variant dimensions correctly by analysing your entire catalogue before output." }
+        },
+        {
+          "@type": "Question",
+          "name": "My products are getting disapproved in ChatGPT — what's wrong?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Common causes of ChatGPT feed disapprovals include: URLs returning 404 errors, price mismatches between feed and website, descriptions containing HTML markup, non-ASCII characters in text fields, double quote characters in descriptions (they break CSV parsing), incorrect variant_dict causing product inflation, and missing required fields. Trajekt automatically strips HTML, cleans descriptions of problematic characters, and validates all URLs before submission." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is ChatGPT Shopping available in the UK?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT Shopping launched with US merchants first, with OpenAI confirming international expansion throughout 2026. UK merchants should register at chatgpt.com/merchants now to secure early access as the programme expands. Trajekt is already supporting UK merchants in preparing their feeds so they are ready the moment the UK programme opens fully." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<!-- HERO -->
+<section id="main-content" class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="/">Home</a> <span>›</span> <a href="/google-shopping-feed">Channels</a> <span>›</span> ChatGPT Product Feed
+    </div>
+    <div class="hero-cols" style="margin-top: 32px;">
+      <div>
+        <span class="badge badge-blue">🤖 ChatGPT Shopping</span>
+        <h1>Your products inside <em>ChatGPT Shopping</em> — automatically</h1>
+        <p class="hero-sub">ChatGPT processes over 50 million shopping queries every day. Trajekt converts your catalogue to OpenAI's JSONL spec and delivers it via SFTP on schedule — no manual work, no errors, no disapprovals.</p>
+        <div class="hero-actions">
+          <a href="https://app.trajekt.co.uk/signup" class="btn btn-primary btn-lg">Start free &#8594;</a>
+          <a href="#how-it-works" class="btn btn-outline btn-lg">See how it works</a>
+        </div>
+        <div class="hero-meta">
+          <span>Free to get started</span>
+          <span>SFTP delivery included</span>
+          <span>Shopify &amp; WooCommerce native</span>
+        </div>
+      </div>
+      <div>
+        <div class="feed-preview">
+          <div class="feed-preview-header">
+            <div class="feed-preview-dot fp-red"></div>
+            <div class="feed-preview-dot fp-amber"></div>
+            <div class="feed-preview-dot fp-green"></div>
+            <span style="font-size:12px;color:rgba(255,255,255,.4);margin-left:8px">latest.jsonl — ChatGPT Feed</span>
+          </div>
+          <pre>{
+  <span class="fp-key">"item_id"</span>: <span class="fp-str">"shopify_GB_10219100897627_517"</span>,
+  <span class="fp-key">"title"</span>: <span class="fp-str">"Barbour Thornproofing Wax Tin"</span>,
+  <span class="fp-key">"description"</span>: <span class="fp-str">"Essential companion to your waxed jacket. Same formula used in Barbour's South Shields factory."</span>,
+  <span class="fp-key">"url"</span>: <span class="fp-str">"https://stuartslondon.com/products/barbour-thornproofing-wax-tin"</span>,
+  <span class="fp-key">"image_url"</span>: <span class="fp-str">"https://cdn.shopify.com/.../barbour-wax.jpg"</span>,
+  <span class="fp-key">"price"</span>: <span class="fp-str">"12.50 GBP"</span>,
+  <span class="fp-key">"availability"</span>: <span class="fp-str">"in_stock"</span>,
+  <span class="fp-key">"brand"</span>: <span class="fp-str">"Barbour"</span>,
+  <span class="fp-key">"is_eligible_search"</span>: <span class="fp-bool">true</span>,
+  <span class="fp-key">"is_eligible_checkout"</span>: <span class="fp-bool">false</span>,
+  <span class="fp-key">"target_countries"</span>: [<span class="fp-str">"GB"</span>],
+  <span class="fp-key">"group_id"</span>: <span class="fp-str">"shopify_GB_10219100897627"</span>
+}</pre>
+        </div>
+        <p style="font-size:12px;color:var(--t3);margin-top:10px;text-align:center">Trajekt generates this JSONL automatically from your Shopify store</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">&#128279; For the complete picture, see our <a href="/product-feed-management" style="color:var(--blue)">product feed management platform</a> &#8212; all channels, automated from one connection.</div>
+<section class="stats-strip">
+  <div class="stats-grid">
+    <div>
+      <div class="stat-num"><span class="grad">50M</span></div>
+      <div class="stat-lbl">shopping queries processed by ChatGPT every single day</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="grad">£286B</span></div>
+      <div class="stat-lbl">UK ecommerce market in 2025 — the 3rd largest in the world</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="grad">500K</span></div>
+      <div class="stat-lbl">products per shard file — OpenAI's maximum catalogue limit</div>
+    </div>
+    <div>
+      <div class="stat-num"><span class="grad">15min</span></div>
+      <div class="stat-lbl">minimum feed refresh interval — keep stock and prices live</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHATGPT FEED IS DIFFERENT -->
+<div style="background:var(--blue-lt);border-left:3px solid var(--blue);border-radius:0 var(--r) var(--r) 0;padding:12px 16px;margin:16px 0;font-size:14px;color:var(--t2)">Related: <a href="/blog/ai-commerce-feed-optimisation-guide" style="color:var(--blue)">Optimising feeds for AI commerce channels</a></div>
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">The difference</p>
+    <h2 class="section-title">The ChatGPT feed is <em style="font-style:normal;color:var(--blue)">not</em> your Google Shopping feed</h2>
+    <p class="section-sub">Most merchants make the mistake of thinking they can repurpose their existing feeds. ChatGPT has its own specification, delivery method, and ranking signals.</p>
+
+    <div class="vs-grid">
+      <div class="vs-col vs-col-bad">
+        <h4>❌ What won't work</h4>
+        <ul class="vs-list">
+          <li>Submitting your Google Shopping XML to OpenAI</li>
+          <li>Using your existing Merchant Center feed URL</li>
+          <li>Descriptions containing HTML markup</li>
+          <li>Non-ASCII characters in any text field</li>
+          <li>Double quotes in product titles or descriptions</li>
+          <li>Listing variants as separate products without group_id</li>
+          <li>Including variant dimensions that don't actually vary</li>
+          <li>Static files that don't update pricing and availability</li>
+        </ul>
+      </div>
+      <div class="vs-col vs-col-good">
+        <h4>✓ What Trajekt does for you</h4>
+        <ul class="vs-list">
+          <li>Generates JSONL in OpenAI's exact required format</li>
+          <li>Strips all HTML, non-ASCII chars, and special characters</li>
+          <li>Maps variant_dict only to dimensions that actually vary</li>
+          <li>Assigns correct group_id to group product variants</li>
+          <li>Pushes to your SFTP endpoint on your chosen schedule</li>
+          <li>Updates pricing and availability from your live store</li>
+          <li>Validates all required fields before submission</li>
+          <li>Flags disapproval risks before they reach OpenAI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section style="background:var(--card2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 24px">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="text-align:center;margin-bottom:36px">
+    <div style="font-size:13px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.07em">Trusted by UK merchants and agencies</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px">
+      <div style="display:flex;gap:4px;margin-bottom:12px">
+        <span style="color:#F59E0B;font-size:16px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <p style="font-size:15px;color:var(--t1);margin-bottom:16px;line-height:1.65">&#8220;Finally a feed tool that handles ChatGPT Shopping. Set it up in an afternoon, feeds running the same day. The rules engine is exactly what we needed for custom label management.&#8221;</p>
+      <div style="font-size:13px;font-weight:600;color:var(--t1)">PPC agency, London</div>
+      <div style="font-size:12px;color:var(--t3)">Managing 8 client stores</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px">
+      <div style="display:flex;gap:4px;margin-bottom:12px">
+        <span style="color:#F59E0B;font-size:16px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <p style="font-size:15px;color:var(--t1);margin-bottom:16px;line-height:1.65">&#8220;Switched from DataFeedWatch. The UK-specific handling &#8212; EAN validation, GBP pricing, Vehicle Ad VIN support &#8212; actually works without workarounds. Saved hours of manual feed fixes every week.&#8221;</p>
+      <div style="font-size:13px;font-weight:600;color:var(--t1)">Automotive retailer, Midlands</div>
+      <div style="font-size:12px;color:var(--t3)">3,200 vehicle listings</div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px">
+      <div style="display:flex;gap:4px;margin-bottom:12px">
+        <span style="color:#F59E0B;font-size:16px">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      </div>
+      <p style="font-size:15px;color:var(--t1);margin-bottom:16px;line-height:1.65">&#8220;The free plan is genuinely useful &#8212; not a crippled trial. We used it to validate the setup for a month before moving a 12,000-product WooCommerce store onto the Growth plan.&#8221;</p>
+      <div style="font-size:13px;font-weight:600;color:var(--t1)">Fashion retailer, Manchester</div>
+      <div style="font-size:12px;color:var(--t3)">12,000 products across Google, Meta &amp; TikTok</div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="section" id="how-it-works">
+  <div class="container">
+    <p class="section-label">How it works</p>
+    <h2 class="section-title">From your store to ChatGPT Shopping in minutes</h2>
+    <p class="section-sub">Trajekt handles every step of the ChatGPT feed pipeline — no developers, no spreadsheets, no manual exports.</p>
+
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num">Step 1</div>
+        <h3>Connect your store</h3>
+        <p>Link your Shopify store, WooCommerce, or paste your XML feed URL. Trajekt pulls your full catalogue including variants, images, prices, and metafields.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">Step 2</div>
+        <h3>Set your rules</h3>
+        <p>Use Trajekt's rule engine to clean titles, enrich descriptions, set custom labels, and filter products. AI Rules can rewrite descriptions for conversational AI audiences at scale.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">Step 3</div>
+        <h3>Generate your JSONL</h3>
+        <p>Trajekt converts your catalogue to OpenAI's JSONL spec — with correct variant grouping, clean text, required flags set, and all required fields validated.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-num">Step 4</div>
+        <h3>Push via SFTP</h3>
+        <p>Your feed is delivered to OpenAI's SFTP endpoint on your chosen schedule — every 30 minutes, twice daily, or daily. Filenames stay consistent so OpenAI overwrites cleanly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIELD SPEC TABLE -->
+<section class="section section-alt">
+  <div class="container">
+    <p class="section-label">Field specification</p>
+    <h2 class="section-title">OpenAI ChatGPT product feed — required fields</h2>
+    <p class="section-sub">Based on the official OpenAI Commerce spec (version 2026-01-30). Trajekt automatically maps all required and recommended fields from your source data.</p>
+
+    <div class="table-wrap">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Example</th>
+            <th>Trajekt</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="field-name">item_id</span></td><td><span class="req">Required</span></td><td>Unique product variant identifier. Max 100 chars.</td><td>shopify_GB_10219100897627_517</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">title</span></td><td><span class="req">Required</span></td><td>Product name. Plain text only, max 150 chars.</td><td>Barbour Thornproofing Wax Tin</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">description</span></td><td><span class="req">Required</span></td><td>Plain text description. No HTML, no markdown, no special characters.</td><td>Essential companion to your waxed jacket...</td><td>✓ Auto + clean</td></tr>
+          <tr><td><span class="field-name">url</span></td><td><span class="req">Required</span></td><td>Direct URL to product page. Must return HTTP 200.</td><td>https://store.com/products/barbour-wax</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">image_url</span></td><td><span class="req">Required</span></td><td>Primary product image URL. HTTPS required.</td><td>https://cdn.shopify.com/.../image.jpg</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">price</span></td><td><span class="req">Required</span></td><td>Price with ISO 4217 currency code. Space-separated.</td><td>12.50 GBP</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">availability</span></td><td><span class="req">Required</span></td><td>in_stock / out_of_stock / preorder / backorder</td><td>in_stock</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">seller_name</span></td><td><span class="req">Required</span></td><td>Trading name of the merchant.</td><td>Stuarts London</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">seller_url</span></td><td><span class="req">Required</span></td><td>Merchant storefront URL.</td><td>https://stuartslondon.com</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">return_policy</span></td><td><span class="req">Required</span></td><td>URL of merchant's returns policy page.</td><td>https://store.com/returns</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">target_countries</span></td><td><span class="req">Required</span></td><td>Array of ISO 3166-1 alpha-2 country codes.</td><td>["GB"]</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">store_country</span></td><td><span class="req">Required</span></td><td>Country where the merchant operates from.</td><td>GB</td><td>✓ From settings</td></tr>
+          <tr><td><span class="field-name">is_eligible_search</span></td><td><span class="req">Required</span></td><td>Boolean. Controls product discoverability in ChatGPT.</td><td>true</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">is_eligible_checkout</span></td><td><span class="req">Required</span></td><td>Boolean. Enables Instant Checkout if configured.</td><td>false</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">group_id</span></td><td><span class="rec">Recommended</span></td><td>Groups variants under the same parent product.</td><td>shopify_GB_10219100897627</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">variant_dict</span></td><td><span class="rec">Recommended</span></td><td>JSON object of variant dimensions that actually vary.</td><td>{"color":"Navy","size":"M"}</td><td>✓ Auto-calculated</td></tr>
+          <tr><td><span class="field-name">listing_has_variations</span></td><td><span class="rec">Recommended</span></td><td>Boolean. True when product has multiple variants.</td><td>true</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">brand</span></td><td><span class="rec">Recommended</span></td><td>Brand or manufacturer name.</td><td>Barbour</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">gtin</span></td><td><span class="rec">Recommended</span></td><td>Global Trade Item Number (barcode/EAN).</td><td>5055975829374</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">additional_image_urls</span></td><td><span class="opt">Optional</span></td><td>Comma-separated additional product image URLs.</td><td>https://cdn.../img2.jpg</td><td>✓ Auto (up to 4)</td></tr>
+          <tr><td><span class="field-name">sale_price</span></td><td><span class="opt">Optional</span></td><td>Reduced price with currency code.</td><td>9.99 GBP</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">condition</span></td><td><span class="opt">Optional</span></td><td>new / refurbished / used</td><td>new</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">color</span></td><td><span class="opt">Optional</span></td><td>Product colour.</td><td>Navy</td><td>✓ Auto</td></tr>
+          <tr><td><span class="field-name">size</span></td><td><span class="opt">Optional</span></td><td>Product size.</td><td>M</td><td>✓ Auto</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px;color:var(--t3);margin-top:12px">Based on OpenAI Product Feed Specification v2026-01-30. <a href="https://developers.openai.com/commerce/product-feeds/spec" target="_blank" rel="noopener noreferrer">View official docs ↗</a></p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Why Trajekt</p>
+    <h2 class="section-title">Everything you need to win in ChatGPT Shopping</h2>
+    <p class="section-sub">The ChatGPT feed has quirks that generic feed tools miss. Trajekt was built by PPC practitioners who know exactly what OpenAI's validation looks for.</p>
+
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon feat-icon-blue">🔄</div>
+        <h3>Automatic SFTP delivery</h3>
+        <p>Trajekt pushes your JSONL file to OpenAI's SFTP endpoint on your chosen schedule. Files overwrite consistently — no timestamp-suffixed filenames that confuse OpenAI's ingestion.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon feat-icon-purple">🧹</div>
+        <h3>Deep description cleaning</h3>
+        <p>We strip HTML, remove non-ASCII characters, delete "Stylist Notes" and "Product Features" sections, remove double quotes, and normalise whitespace. ChatGPT rejects any HTML in descriptions.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon feat-icon-blue">🔢</div>
+        <h3>Correct variant handling</h3>
+        <p>Trajekt pre-analyses your catalogue to calculate which dimensions genuinely vary per product group. Incorrect variant_dict causes ChatGPT to multiply your product count by 3× or more.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon feat-icon-purple">✨</div>
+        <h3>AI description enrichment</h3>
+        <p>Use Trajekt's AI Rules to rewrite descriptions specifically for conversational AI audiences — factual, clean, keyword-rich descriptions that ChatGPT understands and trusts.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon feat-icon-green">📊</div>
+        <h3>Shopify metafield support</h3>
+        <p>Pull in all Shopify product-level metafields, collections, tags, and SEO fields. Use them in rules to enrich your feed with data that generic feed tools can't access.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon feat-icon-blue">🛡️</div>
+        <h3>Pre-submission validation</h3>
+        <p>Every field is validated before submission — URL accessibility, price format, character encoding, required field presence, and JSONL structure integrity. No nasty surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HIGHLIGHT -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="highlight-box">
+      <h3>The variant_dict problem — and why it matters</h3>
+      <p style="margin-bottom:16px">The single biggest mistake UK merchants make with their ChatGPT feed is incorrect variant_dict usage. If you include a colour dimension in variant_dict for every product — even single-colour products — OpenAI's internal engine generates all possible colour × size combinations from your catalogue. A 7,000-product catalogue becomes 22,000+ "products" in ChatGPT, most of which are phantom. This tanks approval rates and wastes your feed budget.</p>
+      <p>Trajekt solves this by running a pre-pass over your entire catalogue to identify which dimensions actually vary within each product group before writing a single variant_dict. If a product only has one colour, colour is excluded from variant_dict entirely. This alone can increase your ChatGPT approval rate significantly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Frequently asked questions</p>
+    <h2 class="section-title" style="text-align:center;max-width:600px;margin:0 auto 48px">Everything you need to know about the ChatGPT product feed</h2>
+
+    <div class="faq-list">
+      <div class="faq-item open">
+        <button class="faq-q">What format does the ChatGPT product feed use?</button>
+        <div class="faq-a">OpenAI's preferred format is Parquet with zstd compression for large catalogues. For most merchants under 50,000 products, compressed JSONL (.jsonl.gz) is the recommended choice — it handles nested variant data cleanly without the escaping headaches that CSV creates. CSV (.csv.gz) also works. All formats must use UTF-8 encoding. Trajekt outputs JSONL by default.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I get my products into ChatGPT Shopping?</button>
+        <div class="faq-a">The process has four steps: 1) Register at chatgpt.com/merchants and complete business verification, 2) Receive your unique SFTP endpoint credentials from OpenAI after approval, 3) Format your product catalogue to OpenAI's spec with all required fields in JSONL format, 4) Push the compressed file to your SFTP endpoint on a regular schedule. Trajekt automates steps 3 and 4 entirely — connect your Shopify or XML source, set your schedule, and Trajekt handles the rest.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is the ChatGPT shopping feed the same as my Google Shopping feed?</button>
+        <div class="faq-a">No — they are completely different specifications. The ChatGPT feed uses JSONL format (not XML), is delivered via SFTP push rather than uploaded to a merchant centre, and includes unique OpenAI flags (is_eligible_search, is_eligible_checkout) that don't exist in Google's spec. The field names are similar in some cases but the structure, delivery method, and approval criteria are entirely different. You cannot submit your Google XML feed to ChatGPT.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are the required fields for the OpenAI product feed?</button>
+        <div class="faq-a">Required fields include: item_id, title, description (plain text only), url, image_url, price (with currency code), availability, seller_name, seller_url, return_policy, target_countries, store_country, is_eligible_search, and is_eligible_checkout. Missing any of these will cause the product to be rejected. Trajekt maps all required fields automatically from your Shopify or XML source data.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How often should I update my ChatGPT product feed?</button>
+        <div class="faq-a">OpenAI accepts updates as frequently as every 15 minutes. Full feed submissions are currently required — there is no support for incremental updates, so the entire catalogue must be resubmitted each time. For most retailers, twice daily is sufficient to keep pricing and availability current. Fashion retailers and those with frequent stock changes should update more often. Trajekt supports any schedule from every 30 minutes to once daily.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Does ChatGPT Shopping cost anything for merchants?</button>
+        <div class="faq-a">Organic product discovery in ChatGPT is currently free — products appearing in ChatGPT's shopping results incur no fees. OpenAI's Instant Checkout feature (where users purchase directly inside ChatGPT) may involve a small transaction fee when it becomes widely available, but the current organic programme is free. Trajekt's ChatGPT feed conversion is included in all plans including the free tier.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the variant_dict field and why does it matter?</button>
+        <div class="faq-a">The variant_dict field is a JSON object that describes the dimensions by which product variants differ — for example {"color": "Navy", "size": "M"}. Critically, it must only contain dimensions that actually vary within a product group. Including a colour dimension for a single-colour product causes OpenAI to generate all possible colour combinations from your catalogue, multiplying your product count dramatically and causing most products to be rejected. Trajekt calculates variant dimensions correctly by analysing your entire catalogue before generating output.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">My products keep getting disapproved — what's causing it?</button>
+        <div class="faq-a">Common ChatGPT disapproval causes include: product URLs returning 404 or 301 redirect errors, price mismatches between feed and live website, HTML markup in description fields, non-ASCII characters (curly quotes, em dashes, copyright symbols), double-quote characters in text fields, missing required fields, incorrect variant_dict causing product count inflation, and description content OpenAI considers promotional rather than factual. Trajekt automatically resolves all of these before submission.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many products can I submit to ChatGPT?</button>
+        <div class="faq-a">OpenAI supports up to 500,000 products per shard file, with each file targeting under 500MB. If your catalogue exceeds this, split it into multiple consistently-named shard files. There is no stated upper limit on total catalogue size. Trajekt handles large catalogues and automatic sharding — the shard filenames stay consistent across updates so OpenAI's ingestion pipeline treats each as a stable source.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I use my Shopify store to feed ChatGPT Shopping?</button>
+        <div class="faq-a">Yes. Shopify merchants have a streamlined path as Shopify is a pre-qualified platform within OpenAI's merchant programme. Trajekt connects to your Shopify store via the Admin GraphQL API, pulls your complete product catalogue including all variants, metafields, collections, and images, converts it to OpenAI's JSONL spec with correct field mapping, and pushes to your SFTP endpoint automatically on schedule. No Shopify app needed — just your API credentials.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is ChatGPT Shopping available in the UK?</button>
+        <div class="faq-a">ChatGPT Shopping launched with US merchants first in late 2025, with OpenAI confirming international expansion throughout 2026. UK merchants should register at chatgpt.com/merchants now to join the waitlist and secure early access as the programme expands internationally. Preparing your feed now means you can launch the moment UK access opens — Trajekt can generate your compliant JSONL feed immediately, ready to push when your SFTP credentials arrive.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PAGES -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="related-box">
+      <h4>Also on Trajekt</h4>
+      <div class="related-links">
+        <a href="/google-shopping-feed">Google Shopping Feed</a>
+        <a href="/meta-shopping-feed">Meta Shopping Feed</a>
+        <a href="/google-vehicle-ads-feed">Google Vehicle Ads</a>
+        <a href="/meta-vehicle-ads-feed">Meta Vehicle Ads</a>
+        <a href="/instagram-shopping-feed">Instagram Shopping</a>
+        <a href="/tiktok-shopping-feed">TikTok Shop Feed</a>
+        <a href="/pinterest-product-feed">Pinterest Catalogue</a>
+        <a href="/microsoft-shopping-feed">Microsoft Shopping</a>
+        <a href="/shopify-product-feed">Shopify Feed Management</a>
+        <a href="/woocommerce-product-feed">WooCommerce Feeds</a>
+        <a href="/ai-product-feed-rules">AI Feed Rules</a>
+        <a href="/product-feed-optimisation">Feed Optimisation Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+
+<section style="background:var(--card);padding:72px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+
+  <div style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#EEF2FF,#F3EEFF);border:1px solid #C7D2F8;border-radius:20px;padding:6px 14px;margin-bottom:24px">
+    <span style="font-size:12px;font-weight:700;color:#4F6BCD">BREAKING</span>
+    <span style="font-size:12px;color:#6B6B68">OpenAI Ads — what UK merchants need to know</span>
+  </div>
+
+  <h2 style="margin-bottom:20px">OpenAI Ads: ChatGPT is becoming an advertising platform</h2>
+  <p style="font-size:17px;margin-bottom:28px">In 2025 OpenAI began testing sponsored product placements within ChatGPT Shopping results — a direct signal that ChatGPT will become a paid advertising channel alongside its organic product discovery layer. For UK ecommerce merchants and agencies, this is as significant as Google launching Shopping ads in 2012. The merchants who are already indexed, with complete feeds and optimised product data, will be first-mover advantages when the ads platform scales.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:40px">
+    <div style="background:linear-gradient(135deg,#0F1A3A,#1A1A18);border-radius:var(--r-lg);padding:28px;color:#fff">
+      <div style="font-size:13px;font-weight:700;color:#7EC8E3;margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em">What we know (as of mid-2026)</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5;flex-shrink:0">&#10003;</span> OpenAI is testing sponsored product placements in ChatGPT</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5;flex-shrink:0">&#10003;</span> Ads appear within conversational shopping responses</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5;flex-shrink:0">&#10003;</span> Product data comes from the same merchant feed</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5;flex-shrink:0">&#10003;</span> Feed quality is central to both organic and paid placement</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:rgba(255,255,255,.85)"><span style="color:#5DCAA5;flex-shrink:0">&#10003;</span> UK rollout is expanding — early access for registered merchants</div>
+      </div>
+    </div>
+    <div style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:28px">
+      <div style="font-size:13px;font-weight:700;color:var(--t3);margin-bottom:16px;text-transform:uppercase;letter-spacing:.05em">What this means for your feed</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:10px;font-size:14px;color:var(--t2)"><span style="color:var(--blue);flex-shrink:0">&#8227;</span> Your JSONL feed is the product data source for OpenAI Ads</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:var(--t2)"><span style="color:var(--blue);flex-shrink:0">&#8227;</span> Feed quality affects both organic ranking and ad quality scores</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:var(--t2)"><span style="color:var(--blue);flex-shrink:0">&#8227;</span> Factual, specific descriptions improve placement in both surfaces</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:var(--t2)"><span style="color:var(--blue);flex-shrink:0">&#8227;</span> Merchants already in the index will get early ads access</div>
+        <div style="display:flex;gap:10px;font-size:14px;color:var(--t2)"><span style="color:var(--blue);flex-shrink:0">&#8227;</span> The preparation for organic = the preparation for paid</div>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-size:20px;margin-bottom:16px">How OpenAI Ads are expected to work</h3>
+  <p style="margin-bottom:16px">Based on what OpenAI has disclosed and what we know from their merchant documentation, sponsored placements in ChatGPT work differently from Google Shopping ads in a few important ways.</p>
+
+  <p style="margin-bottom:16px"><strong>Context-native placement.</strong> Rather than a dedicated "Shopping" tab, OpenAI Ads appear inline within ChatGPT's conversational responses. When a user asks "what's the best waterproof jacket under £150 for hiking?", ChatGPT generates a response that may include both organically-selected products and sponsored placements — but the sponsored items must still be relevant to the query. Irrelevant sponsored products are filtered out by the LLM layer, which means bid alone doesn't win placement. Feed quality and relevance matter.</p>
+
+  <p style="margin-bottom:16px"><strong>Feed-driven, not keyword-driven.</strong> OpenAI Ads are not keyword campaigns in the Google Ads sense. You don't bid on individual keywords — the system uses your product feed data to determine which queries your products are eligible to appear for, then applies bid logic within those eligible placements. This is closer to Google Shopping's structure than Google Search: your product data determines eligibility, your bid determines priority within eligible placements.</p>
+
+  <p style="margin-bottom:16px"><strong>Description quality as a ranking signal.</strong> OpenAI's product selection model evaluates description quality as a primary relevance signal. For organic results, this means better descriptions → more placements. For sponsored results, the model will likely use a quality score analogous to Google's Ad Rank — a combination of bid and relevance. A poor description at a high bid may lose to a well-written description at a lower bid. This is the single most important implication for feed optimisation: description quality is not just a nice-to-have for ChatGPT — it is, effectively, your quality score.</p>
+
+  <div style="background:var(--blue-lt);border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:24px;margin-bottom:32px">
+    <h3 style="font-size:16px;margin-bottom:10px">The parallel with Google Shopping 2012</h3>
+    <p style="font-size:14px;margin-bottom:0">When Google launched paid Shopping ads in 2012, merchants with well-optimised product feeds already in Google's index had a massive advantage. They could move budget into the new paid surface immediately, with product data that was already optimised. Merchants who were starting from scratch had to build that foundation first. The ChatGPT Ads opportunity is structurally identical — being in the index now, with quality feed data, is the competitive moat that enables rapid deployment when UK paid access widens.</p>
+  </div>
+
+  <h3 style="font-size:20px;margin-bottom:16px">What to do right now to prepare for OpenAI Ads</h3>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px">
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px">
+      <div style="font-size:24px;margin-bottom:10px">1&#65039;&#8419;</div>
+      <h4 style="margin-bottom:8px">Register as an OpenAI merchant</h4>
+      <p style="font-size:14px">Get your store into OpenAI's merchant programme now. Early registration means you're in the index before UK paid access opens. chatgpt.com/merchants is the registration point.</p>
+    </div>
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px">
+      <div style="font-size:24px;margin-bottom:10px">2&#65039;&#8419;</div>
+      <h4 style="margin-bottom:8px">Generate your JSONL feed via Trajekt</h4>
+      <p style="font-size:14px">Connect your Shopify or WooCommerce store. Trajekt generates a spec-compliant JSONL feed automatically and delivers via SFTP to OpenAI's endpoint on your configured schedule.</p>
+    </div>
+    <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px">
+      <div style="font-size:24px;margin-bottom:10px">3&#65039;&#8419;</div>
+      <h4 style="margin-bottom:8px">Optimise descriptions for LLM relevance</h4>
+      <p style="font-size:14px">Rewrite product descriptions to be factual, specific, and use-case-led. Trajekt's AI enrichment layer does this automatically using Claude — your descriptions are rebuilt for AI-channel quality scoring.</p>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px;text-align:center">
+    <h3 style="font-size:18px;margin-bottom:8px">Start building your ChatGPT presence now</h3>
+    <p style="margin-bottom:20px">Trajekt connects your store to OpenAI's merchant programme, generates your JSONL feed, delivers via SFTP, and enriches your descriptions for AI-channel relevance. The merchants setting this up in 2026 are the ones who'll own ChatGPT Shopping when UK paid access scales.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="https://app.trajekt.co.uk/signup" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:15px;font-weight:600;text-decoration:none">Start free &#8594;</a>
+      <a href="/blog/chatgpt-processes-50m-shopping-queries" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:transparent;color:var(--t1);border:1.5px solid var(--border);border-radius:var(--r);font-size:15px;font-weight:600;text-decoration:none">The 50M daily queries article &#8594;</a>
+    </div>
+  </div>
+
+</div>
+</section>
+<section class="section">
+  <div class="container">
+    <div class="cta-banner">
+      <h2>Start getting your products into ChatGPT Shopping today</h2>
+      <p>Join UK merchants already preparing for the AI commerce revolution. Connect your store, set your schedule, and Trajekt handles everything else — JSONL conversion, SFTP delivery, and automatic updates.</p>
+      <div class="cta-actions">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free — no credit card needed</a>
+        <a href="/product-feed-optimisation" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Read the optimisation guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.parentElement;
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

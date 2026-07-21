@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<link rel="dns-prefetch" href="//app.trajekt.co.uk">
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+<meta name="google-site-verification" content="mYo0kZVYjmc0syCSaVZJQ_J5CDAWYcdjkKAEsZ6JhR0"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WooCommerce Google Shopping — Connect Your Store | Trajekt</title>
+<meta name="description" content="Connect WooCommerce to Google Shopping with full custom attribute access, correct variable product handling, and title optimisation rules.">>
+<meta name="keywords" content="woocommerce google shopping, woocommerce merchant center, woocommerce google shopping feed, connect woocommerce google shopping">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://trajekt.co.uk/woocommerce-google-shopping">
+<meta property="og:title" content="WooCommerce Google Shopping — Connect Your Store the Right Way">
+<meta property="og:description" content="Connect WooCommerce to Google Shopping with full custom attribute access, correct variable product handling, and title optimisation rules. Trajekt uses WooCommerce REST API for a more complete feed than any plugin.">
+<meta property="og:url" content="https://trajekt.co.uk/woocommerce-google-shopping">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://trajekt.co.uk/images/og-woocommerce-google-shopping.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://trajekt.co.uk/images/og-woocommerce-google-shopping.svg">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","url":"https://trajekt.co.uk/woocommerce-google-shopping","name":"WooCommerce Google Shopping — Connect Your Store the Right Way","inLanguage":"en-GB"},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://trajekt.co.uk"},{"@type":"ListItem","position":2,"name":"WooCommerce Feeds","item":"https://trajekt.co.uk/woocommerce-product-feed"},{"@type":"ListItem","position":3,"name":"WooCommerce Google Shopping","item":""}]},
+{"@type":"SoftwareApplication","name":"Trajekt","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP"},"provider":{"@type":"Organization","name":"Trajekt","url":"https://trajekt.co.uk"}},
+{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I connect WooCommerce to Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"Set up a Google Merchant Center account, verify your domain, then connect WooCommerce via a feed management tool. Trajekt uses the WooCommerce REST API to pull your full product catalogue — including variations, custom attributes, and gallery images — and generates a Google Shopping XML feed that Merchant Center fetches daily."}},{"@type":"Question","name":"Why doesn't WooCommerce's native Google integration work well?","acceptedAnswer":{"@type":"Answer","text":"WooCommerce's built-in Google Listings & Ads plugin syncs basic product data but doesn't access custom attributes (where most stores put GTINs and brand data), has no rules engine for title optimisation, doesn't support custom labels, and handles variable products inconsistently. For any catalogue over a few hundred products or more than two channels, a dedicated feed tool gives significantly more control."}},{"@type":"Question","name":"How does Trajekt pull WooCommerce product data?","acceptedAnswer":{"@type":"Answer","text":"Trajekt connects via WooCommerce's REST API using Consumer Key and Consumer Secret credentials you generate in WooCommerce > Settings > Advanced > REST API. Trajekt reads: products and variations, custom attributes (brand, GTIN, material), gallery images, categories, stock status, prices (regular and sale), and tags."}},{"@type":"Question","name":"What's the most common WooCommerce Google Shopping disapproval?","acceptedAnswer":{"@type":"Answer","text":"Price mismatch — WooCommerce sale prices with an expiry date that the feed hasn't reflected yet. The second most common is missing GTINs: WooCommerce doesn't have a native barcode field, so most stores add GTINs via a custom attribute that doesn't flow through to basic feed exports. Trajekt maps custom attributes to the gtin field directly."}},{"@type":"Question","name":"How do I handle WooCommerce variable products in Google Shopping?","acceptedAnswer":{"@type":"Answer","text":"Each variation needs its own feed row with a unique id (the variation SKU or ID), the specific colour and size for that variation, and a shared item_group_id matching the parent product ID. Trajekt pulls WooCommerce variations via the REST API and outputs them correctly structured — each as a separate row with the right grouping."}},{"@type":"Question","name":"Can Trajekt send my WooCommerce products to ChatGPT Shopping as well?","acceptedAnswer":{"@type":"Answer","text":"Yes. The same WooCommerce REST API connection generates both Google Shopping XML and ChatGPT Shopping JSONL (delivered via SFTP to OpenAI). WooCommerce HTML descriptions are stripped automatically for the ChatGPT feed, which rejects any HTML markup."}}]}
+]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WCT2PCQT');</script>
+<!-- End Google Tag Manager -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Connect WooCommerce to Google Shopping with Trajekt","description":"Five steps to connect WooCommerce to Google Shopping via the REST API, with custom attribute mapping and correct variable product handling.","step":[{"@type":"HowToStep","name":"Create WooCommerce REST API credentials","text":"Go to WooCommerce > Settings > Advanced > REST API > Add Key. Set Permissions to Read. Copy the Consumer Key and Consumer Secret — shown once only."},{"@type":"HowToStep","name":"Connect your store in Trajekt","text":"In Trajekt click Add Store > WooCommerce. Enter your store URL, Consumer Key, and Consumer Secret. Trajekt pulls your full catalogue including custom attributes."},{"@type":"HowToStep","name":"Map your custom attributes","text":"In Trajekt's rules engine, map your GTIN/EAN custom attribute to the gtin feed field and your Brand attribute to the brand field."},{"@type":"HowToStep","name":"Set up title rules","text":"Create a rule that prepends your Brand attribute and appends colour and size variation values to each Shopping title without changing your WooCommerce product names."},{"@type":"HowToStep","name":"Add your feed URL to Merchant Center","text":"Copy your Trajekt feed URL and add it as a Scheduled Fetch data source in Google Merchant Center. Set to daily. No manual uploads ever needed."}]}</script>
+<link rel="preload" href="/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<a id="skip-to-content" href="#main-content">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<nav class="nav"><div class="nav-inner">
+<a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div></div></nav>
+
+<section id="main-content" style="background:var(--card);border-bottom:1px solid var(--border);padding:80px 24px 64px">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="font-size:12px;color:var(--t3);margin-bottom:24px"><a href="/" style="color:var(--t3);text-decoration:none">Home</a> <span style="color:var(--t3)">&#8250;</span> <a href="/woocommerce-product-feed" style="color:var(--t3);text-decoration:none">WooCommerce Feeds</a> <span style="color:var(--t3)">&#8250;</span> <span style="color:var(--t2)">WooCommerce Google Shopping</span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+    <div>
+      <div class="badge badge-green" style="margin-bottom:16px">WooCommerce &#8596; Google Shopping</div>
+      <h1 style="margin-bottom:16px">Connect WooCommerce to Google Shopping — the complete guide</h1>
+      <p style="font-size:18px;margin-bottom:28px">WooCommerce's native Google integration misses GTINs, custom attributes, and proper variable product handling. Trajekt pulls your complete WooCommerce catalogue via REST API and generates an optimised Shopping feed Merchant Center actually rewards.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Connect WooCommerce free</a>
+        <a href="/woocommerce-product-feed" class="btn btn-outline btn-lg">Full WooCommerce guide</a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px">
+        <div style="font-size:11px;font-weight:600;color:var(--t3);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px">What WooCommerce's native Google plugin misses</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">&#10007;</span> Custom attribute GTINs/EANs not exported</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">&#10007;</span> No title optimisation rules engine</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">&#10007;</span> Variable products handled inconsistently</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">&#10007;</span> No custom labels for bid management</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--red);flex-shrink:0">&#10007;</span> Google only — no TikTok, Awin, ChatGPT</div>
+        </div>
+      </div>
+      <div style="background:var(--green-lt);border:1px solid rgba(26,122,74,.15);border-radius:var(--r-lg);padding:20px">
+        <div style="font-size:11px;font-weight:600;color:var(--green);text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px">What Trajekt adds via REST API</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--green);flex-shrink:0">&#10003;</span> All custom attributes — GTIN, brand, material</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--green);flex-shrink:0">&#10003;</span> Rules engine — title, labels, filters</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--green);flex-shrink:0">&#10003;</span> Correct variable product grouping</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--green);flex-shrink:0">&#10003;</span> Custom labels set by price/category rules</div>
+          <div style="font-size:14px;color:var(--t2);display:flex;gap:8px"><span style="color:var(--green);flex-shrink:0">&#10003;</span> All channels from one connection</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="padding:72px 24px">
+<div style="max-width:var(--max);margin:0 auto">
+  <h2 style="margin-bottom:12px;text-align:center">How to connect WooCommerce to Google Shopping with Trajekt</h2>
+  <p style="font-size:16px;text-align:center;max-width:520px;margin:0 auto 48px">Five steps from zero to a live, daily-refreshed Google Shopping feed from your WooCommerce store.</p>
+  <div style="max-width:700px;margin:0 auto;display:flex;flex-direction:column;gap:10px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">1</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Create WooCommerce REST API credentials</h3>
+      <p style="font-size:14px">WooCommerce &#8594; Settings &#8594; Advanced &#8594; REST API &#8594; Add Key. Set Permissions to <strong>Read</strong>. Copy the Consumer Key and Consumer Secret shown on screen — these are displayed once.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">2</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Connect your store in Trajekt</h3>
+      <p style="font-size:14px">In Trajekt: Add Store &#8594; WooCommerce. Enter your store URL, Consumer Key, and Consumer Secret. Trajekt pulls your full catalogue immediately — products, variations, custom attributes, and images.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">3</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Map your custom attributes</h3>
+      <p style="font-size:14px">In Trajekt's rules engine, map your WooCommerce custom attributes to feed fields: your GTIN/EAN attribute to <code style="background:var(--bg);padding:1px 5px;border-radius:3px">gtin</code>, your Brand attribute to <code style="background:var(--bg);padding:1px 5px;border-radius:3px">brand</code>. This is the step WooCommerce's native plugin skips entirely.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">4</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Set up title rules</h3>
+      <p style="font-size:14px">Create a rule that prepends your Brand attribute and appends colour and size variation values to each product title. Your WooCommerce product names stay unchanged on-site; Shopping gets optimised titles automatically.</p></div>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;display:flex;gap:18px">
+      <div class="step-num">5</div>
+      <div><h3 style="font-size:16px;margin-bottom:6px">Add your feed URL to Merchant Center</h3>
+      <p style="font-size:14px">Copy your Trajekt feed URL and paste it into Google Merchant Center as a Scheduled Fetch data source. Set to daily. Merchant Center pulls your latest WooCommerce data automatically — no manual uploads ever needed.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section style="background:var(--card);padding:72px 24px;border-top:1px solid var(--border)">
+<div style="max-width:780px;margin:0 auto">
+  <h2 style="margin-bottom:40px">Frequently asked questions</h2>
+  <div class="faq-item open"><button class="faq-q">How do I connect WooCommerce to Google Shopping?</button><div class="faq-a">Set up a Google Merchant Center account, verify your domain, then connect WooCommerce via a feed management tool. Trajekt uses the WooCommerce REST API to pull your full product catalogue — including variations, custom attributes, and gallery images — and generates a Google Shopping XML feed that Merchant Center fetches daily.</div></div>
+<div class="faq-item"><button class="faq-q">Why doesn't WooCommerce's native Google integration work well?</button><div class="faq-a">WooCommerce's built-in Google Listings & Ads plugin syncs basic product data but doesn't access custom attributes (where most stores put GTINs and brand data), has no rules engine for title optimisation, doesn't support custom labels, and handles variable products inconsistently. For any catalogue over a few hundred products or more than two channels, a dedicated feed tool gives significantly more control.</div></div>
+<div class="faq-item"><button class="faq-q">How does Trajekt pull WooCommerce product data?</button><div class="faq-a">Trajekt connects via WooCommerce's REST API using Consumer Key and Consumer Secret credentials you generate in WooCommerce > Settings > Advanced > REST API. Trajekt reads: products and variations, custom attributes (brand, GTIN, material), gallery images, categories, stock status, prices (regular and sale), and tags.</div></div>
+<div class="faq-item"><button class="faq-q">What's the most common WooCommerce Google Shopping disapproval?</button><div class="faq-a">Price mismatch — WooCommerce sale prices with an expiry date that the feed hasn't reflected yet. The second most common is missing GTINs: WooCommerce doesn't have a native barcode field, so most stores add GTINs via a custom attribute that doesn't flow through to basic feed exports. Trajekt maps custom attributes to the gtin field directly.</div></div>
+<div class="faq-item"><button class="faq-q">How do I handle WooCommerce variable products in Google Shopping?</button><div class="faq-a">Each variation needs its own feed row with a unique id (the variation SKU or ID), the specific colour and size for that variation, and a shared item_group_id matching the parent product ID. Trajekt pulls WooCommerce variations via the REST API and outputs them correctly structured — each as a separate row with the right grouping.</div></div>
+<div class="faq-item"><button class="faq-q">Can Trajekt send my WooCommerce products to ChatGPT Shopping as well?</button><div class="faq-a">Yes. The same WooCommerce REST API connection generates both Google Shopping XML and ChatGPT Shopping JSONL (delivered via SFTP to OpenAI). WooCommerce HTML descriptions are stripped automatically for the ChatGPT feed, which rejects any HTML markup.</div></div>
+<div class="faq-item"><button class="faq-q">Does Trajekt require installing a WooCommerce plugin?</button><div class="faq-a">No plugin installation needed. Trajekt uses WooCommerce's built-in REST API — you generate API credentials in your WordPress dashboard and paste them into Trajekt. No plugin, no code changes to your site.</div></div>
+<div class="faq-item"><button class="faq-q">How often should I update my WooCommerce Google Shopping feed?</button><div class="faq-a">Daily minimum. Twice daily is recommended for stores that change prices or run promotions frequently. WooCommerce sale price schedules (start and end dates) are one of the most common sources of price mismatches — twice-daily refreshes ensure your feed reflects price changes within 12 hours.</div></div>
+
+</div>
+</section>
+
+
+<section style="background:var(--card);padding:56px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div>
+      <h2 style="font-size:22px;margin-bottom:24px">Related guides</h2>
+      <a href="/woocommerce-product-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Full WooCommerce feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/google-merchant-center" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Merchant Center setup <span style="color:var(--t3)">&#8594;</span></a><a href="/google-shopping-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Shopping feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/product-feed-errors" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Fix feed errors <span style="color:var(--t3)">&#8594;</span></a><a href="/gtin-mpn-ean-guide" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">GTIN and EAN for WooCommerce <span style="color:var(--t3)">&#8594;</span></a><a href="/chatgpt-product-feed" style="display:block;padding:10px 0;font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">ChatGPT Shopping feed <span style="color:var(--t3)">&#8594;</span></a>
+    </div>
+    <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px">
+      <div style="font-size:15px;font-weight:700;margin-bottom:8px;color:var(--ink)">Ready to automate your feeds?</div>
+      <p style="font-size:14px;margin-bottom:20px">Connect your store and generate feeds for every channel automatically. Free plan available &#8212; no credit card needed.</p>
+      <a href="https://app.trajekt.co.uk/signup" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:14px;font-weight:600;text-decoration:none">Start free &#8594;</a>
+    </div>
+  </div>
+</div>
+</section>
+<section style="padding:72px 24px 80px"><div style="max-width:var(--max);margin:0 auto">
+<div class="cta-banner">
+  <h2>Connect WooCommerce to Google Shopping today</h2>
+  <p>And ChatGPT, Meta, TikTok, Awin, and 9 more channels from the same REST API connection. Free plan available.</p>
+  <div class="cta-actions">
+    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="/woocommerce-product-feed" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Full WooCommerce guide</a>
+  </div>
+</div>
+</div></section>
+<footer class="footer"><div class="footer-grid">
+<div class="footer-brand"><a href="/" class="footer-logo"><div style="width:26px;height:26px;background:#7EC8E3;border-radius:6px;display:flex;align-items:center;justify-content:center;"><svg viewBox="0 0 22 22" width="15" height="15" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#1A1A18" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
+<p>The product feed platform built for modern commerce &#8212; Google Shopping, ChatGPT, Meta, TikTok and more.</p></div>
+<div class="footer-col"><h4>AI &amp; New Channels</h4><a href="/chatgpt-product-feed">ChatGPT Shopping</a><a href="/perplexity-product-feed">Perplexity AI</a><a href="/google-ai-mode-feed">Google AI Mode</a><a href="/ai-product-feed-rules">AI Feed Rules</a></div>
+<div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
+<div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
+<div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+</div><div class="footer-bottom"><span>&#169; 2025 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+<script>document.querySelectorAll(".faq-q").forEach(b=>{b.addEventListener("click",()=>{const i=b.parentElement,w=i.classList.contains("open");document.querySelectorAll(".faq-item").forEach(x=>x.classList.remove("open"));if(!w)i.classList.add("open")})});</script>
+</body></html>

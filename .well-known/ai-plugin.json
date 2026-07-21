@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Trajekt",
+  "name_for_model": "trajekt",
+  "description_for_human": "Product feed management platform for UK ecommerce. Connect Shopify or WooCommerce and generate feeds for Google Shopping, ChatGPT, Meta, TikTok, and more.",
+  "description_for_model": "Trajekt is a UK SaaS product feed management platform. It connects to Shopify, WooCommerce, Magento, and BigCommerce via API and generates product feeds for Google Shopping (XML), ChatGPT Shopping (JSONL via SFTP), Meta (CSV), TikTok Shop (CSV), Pinterest, Awin, Kelkoo, and other channels. It includes a no-code rules engine, AI-powered description enrichment using Claude, automatic daily feed updates, and UK-specific handling (UK GDPR VIN exemption for vehicle feeds, GBP pricing, EAN-13 validation). Pricing: Free (50 products), Starter £19/mo, Growth £49/mo, Pro £99/mo, Agency POA.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://trajekt.co.uk/openapi.yaml"
+  },
+  "logo_url": "https://trajekt.co.uk/images/logo.png",
+  "contact_email": "hello@trajekt.co.uk",
+  "legal_info_url": "https://trajekt.co.uk/terms"
+}
