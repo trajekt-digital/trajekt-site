@@ -54,7 +54,21 @@
 <a href="/pricing">Pricing</a>
 <a href="/blog">Blog</a>
 <a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
-</div></div></nav>
+</div>
+<button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+<span></span><span></span><span></span>
+</button>
+</div></nav>
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Mobile navigation">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a>
+<a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div>
 
 <!-- HERO -->
 <section id="main-content" class="hero">
@@ -70,7 +84,7 @@
       <p style="font-size:20px;color:var(--t2);margin-bottom:12px;line-height:1.6">Sponsored product placements inside ChatGPT conversations. 50 million daily shopping queries. A platform that selects products by relevance and description quality, not just bid. For UK ecommerce merchants, this is the most significant new advertising channel since Google Shopping launched paid placements in 2012.</p>
       <p style="font-size:16px;color:var(--t2);margin-bottom:36px">Trajekt connects your Shopify or WooCommerce store to OpenAI's merchant programme &#8212; generating your JSONL feed, delivering via SFTP, enriching descriptions for LLM quality scoring, and keeping everything updated automatically.</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Get into ChatGPT free &#8594;</a>
+        <a href="https://app.trajekt.co.uk" class="btn btn-blue btn-lg">Get into ChatGPT free &#8594;</a>
         <a href="/chatgpt-product-feed" class="btn btn-lg" style="background:var(--blue-lt);color:var(--ink);border:1px solid rgba(255,255,255,.2)">Full ChatGPT feed guide</a>
       </div>
     </div>
@@ -375,7 +389,7 @@
   <h2 style="color:#fff;margin-bottom:12px">Get into OpenAI Ads before your competitors do</h2>
   <p style="color:rgba(255,255,255,.72);max-width:520px;margin:0 auto 28px;font-size:17px">Connect your store, generate your JSONL feed, and let Trajekt handle SFTP delivery automatically. Free plan available &#8212; no credit card needed.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue btn-lg">Start free &#8594;</a>
+    <a href="https://app.trajekt.co.uk" class="btn btn-blue btn-lg">Start free &#8594;</a>
     <a href="/chatgpt-product-feed" class="btn btn-lg" style="background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.2)">Full ChatGPT feed guide</a>
   </div>
 </div>
@@ -392,4 +406,37 @@
 </div><div class="footer-bottom"><span>&#169; 2026 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
 
 <script>document.querySelectorAll(".faq-q").forEach(b=>{b.addEventListener("click",()=>{const i=b.parentElement,w=i.classList.contains("open");document.querySelectorAll(".faq-item").forEach(x=>x.classList.remove("open"));if(!w)i.classList.add("open")})});</script>
+
+<script>
+(function(){
+  var burger = document.getElementById('nav-burger');
+  var drawer = document.getElementById('nav-drawer');
+  if(!burger || !drawer) return;
+  burger.addEventListener('click', function(){
+    var open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  // Close on link click
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    if(!burger.contains(e.target) && !drawer.contains(e.target)){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
+
 </body></html>

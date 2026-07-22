@@ -31,7 +31,29 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WCT2PCQT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="nav"><div class="nav-inner">
 <a href="/" class="nav-logo"><div class="nav-logo-mark"><svg viewBox="0 0 22 22" fill="none"><line x1="11" y1="18" x2="11" y2="5" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/><line x1="5" y1="9" x2="17" y2="9" stroke="#7EC8E3" stroke-width="2.5" stroke-linecap="round"/></svg></div>trajekt</a>
-<div class="nav-links"><a href="/google-shopping-feed">Google Shopping</a><a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a><a href="/product-feed-management">Feed Management</a><a href="/product-feed-optimisation">Optimisation</a><a href="/pricing">Pricing</a><a href="/blog">Blog</a><a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a></div></div></nav>
+<div class="nav-links">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a><a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div>
+<button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+<span></span><span></span><span></span>
+</button>
+</div></nav>
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Mobile navigation">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a>
+<a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div>
 
 <article>
 <header style="background:var(--card);border-bottom:1px solid var(--border);padding:64px 24px 48px">
@@ -108,7 +130,7 @@
 
 <p>When Google launched paid Shopping placements in 2012, merchants with well-optimised feeds already in the index dominated category CPAs for the next two years before competitive pressure normalised the channel. The ChatGPT Ads opportunity follows the same pattern &#8212; being indexed now, with quality feed data and description-optimised products, is the competitive moat that enables rapid deployment when UK paid access scales.</p>
 
-<p>The channel is live. Registration is open. The tooling exists. See the <a href="/openai-ads">OpenAI Ads guide</a> for a complete breakdown, or <a href="https://app.trajekt.co.uk/signup">start free with Trajekt</a> to get your JSONL feed live today.</p>
+<p>The channel is live. Registration is open. The tooling exists. See the <a href="/openai-ads">OpenAI Ads guide</a> for a complete breakdown, or <a href="https://app.trajekt.co.uk">start free with Trajekt</a> to get your JSONL feed live today.</p>
 <div style="margin-top:48px;padding-top:32px;border-top:1px solid var(--border);display:flex;gap:20px;align-items:flex-start">
   <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--blue),#7C5CBF);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0">&#127758;</div>
   <div><div style="font-size:14px;font-weight:700;color:var(--t1);margin-bottom:4px">Trajekt Editorial</div><div style="font-size:13px;color:var(--t3);margin-bottom:8px">Product Feed &amp; Ecommerce Specialists</div><p style="font-size:14px">Trajekt is a UK-built product feed management platform covering Google Shopping, ChatGPT Shopping, OpenAI Ads, and AI commerce for UK merchants and agencies.</p></div>
@@ -123,7 +145,7 @@
   <h2 style="font-size:22px;margin-bottom:10px;margin-top:0">Get into OpenAI Ads with Trajekt</h2>
   <p style="margin-bottom:20px">JSONL feed generation, SFTP delivery, and AI description enrichment. Free plan available.</p>
   <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-    <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Start free &#8594;</a>
+    <a href="https://app.trajekt.co.uk" class="btn btn-blue">Start free &#8594;</a>
     <a href="/openai-ads" class="btn btn-outline">OpenAI Ads guide</a>
   </div>
 </div>
@@ -136,4 +158,37 @@
 <div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a></div>
 <div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/blog">Blog</a></div>
 </div><div class="footer-bottom"><span>&#169; 2026 Trajekt. Built in the UK.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
+
+<script>
+(function(){
+  var burger = document.getElementById('nav-burger');
+  var drawer = document.getElementById('nav-drawer');
+  if(!burger || !drawer) return;
+  burger.addEventListener('click', function(){
+    var open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  // Close on link click
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    if(!burger.contains(e.target) && !drawer.contains(e.target)){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
+
 </body></html>

@@ -50,7 +50,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a href="/pricing">Pricing</a>
 <a href="/blog">Blog</a>
 <a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
-</div></div></nav>
+</div>
+<button class="nav-burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+<span></span><span></span><span></span>
+</button>
+</div></nav>
+<div class="nav-drawer" id="nav-drawer" role="dialog" aria-label="Mobile navigation">
+<a href="/google-shopping-feed">Google Shopping</a>
+<a href="/chatgpt-product-feed">ChatGPT Feed</a>
+<a href="/openai-ads">OpenAI Ads</a>
+<a href="/product-feed-management">Feed Management</a>
+<a href="/product-feed-optimisation">Optimisation</a>
+<a href="/pricing">Pricing</a>
+<a href="/blog">Blog</a>
+<a href="https://app.trajekt.co.uk" class="nav-cta">Get started free</a>
+</div>
 <section id="main-content" class="hero"><div class="hero-inner">
   <div class="breadcrumb"><a href="/">Home</a> <span>›</span> <a href="/google-shopping-feed">Channels</a> <span>›</span> Magento Product Feed</div>
   <div style="margin-top:32px;max-width:780px">
@@ -58,7 +72,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h1>Magento feeds that <em>update automatically</em> — without developer time</h1>
     <p class="hero-sub">Magento's product catalogue is often large, complex, and rich with custom attributes. Trajekt connects to Magento's REST API to pull your complete catalogue and generate correctly-formatted feeds for Google Shopping, ChatGPT, Meta, and more — without custom development for each channel.</p>
     <div class="hero-actions">
-      <a href="https://app.trajekt.co.uk/signup" class="btn btn-primary btn-lg">Start free &#8594;</a>
+      <a href="https://app.trajekt.co.uk" class="btn btn-primary btn-lg">Start free &#8594;</a>
       <a href="#faq" class="btn btn-outline btn-lg">See FAQ</a>
     </div>
     <div class="hero-meta" style="display:flex;gap:20px;flex-wrap:wrap;margin-top:28px"><span style="color:var(--t3);font-size:13px">✓ Magento 2 & Adobe Commerce</span><span style="color:var(--t3);font-size:13px">✓ REST API connection</span><span style="color:var(--t3);font-size:13px">✓ Custom attributes supported</span><span style="color:var(--t3);font-size:13px">✓ Large catalogue handling</span></div>
@@ -141,7 +155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2>Connect your Magento or Adobe Commerce store to every channel</h2>
     <p>Trajekt connects to Magento's REST API and generates all your channel feeds — no custom development, no ongoing maintenance.</p>
     <div class="cta-actions">
-      <a href="https://app.trajekt.co.uk/signup" class="btn btn-primary btn-lg">Start free — no credit card needed</a>
+      <a href="https://app.trajekt.co.uk" class="btn btn-primary btn-lg">Start free — no credit card needed</a>
       <a href="/product-feed-optimisation" class="btn btn-outline btn-lg" style="color:#fff;border-color:rgba(255,255,255,.3)">Optimisation guide</a>
     </div>
   </div>
@@ -153,7 +167,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="footer-col"><h4>Ad Channels</h4><a href="/google-shopping-feed">Google Shopping</a><a href="/meta-shopping-feed">Meta / Facebook</a><a href="/tiktok-shopping-feed">TikTok Shop</a><a href="/pinterest-product-feed">Pinterest</a><a href="/microsoft-shopping-feed">Microsoft / Bing</a><a href="/awin-product-feed">Awin</a><a href="/google-vehicle-ads-feed">Vehicle Ads</a></div>
 <div class="footer-col"><h4>Platforms</h4><a href="/shopify-product-feed">Shopify</a><a href="/woocommerce-product-feed">WooCommerce</a><a href="/magento-product-feed">Magento</a><a href="/bigcommerce-product-feed">BigCommerce</a><a href="/prestashop-product-feed">PrestaShop</a></div>
 <div class="footer-col"><h4>Compare</h4><a href="/vs/datafeedwatch">vs DataFeedWatch</a><a href="/vs/shoptimised">vs Shoptimised</a><a href="/vs/channable">vs Channable</a><a href="/vs/feedonomics">vs Feedonomics</a><a href="/vs/feedoptimise">vs Feedoptimise</a><a href="/vs/simprosys">vs Simprosys</a><a href="/vs/channeladvisor">vs ChannelAdvisor</a><a href="/vs/feedseo">vs FeedSEO</a></div>
-<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk/signup">Sign up free</a></div>
+<div class="footer-col"><h4>Company</h4><a href="/pricing">Pricing</a><a href="/for-agencies">Agencies</a><a href="/for-automotive">Automotive</a><a href="/product-feed-optimisation">Optimisation</a><a href="/free-product-feed-tool">Free plan</a><a href="/blog">Blog</a><a href="/about">About</a><a href="/contact">Contact</a><a href="https://app.trajekt.co.uk">Sign up free</a></div>
 </div><div class="footer-bottom"><span>&#169; 2026 Trajekt. Built in the UK for UK merchants.</span><div style="display:flex;gap:16px"><a href="/privacy">Privacy</a><a href="/terms">Terms</a></div></div></footer>
 <script>document.querySelectorAll(".faq-q").forEach(btn=>{btn.addEventListener("click",()=>{const item=btn.parentElement;const wasOpen=item.classList.contains("open");document.querySelectorAll(".faq-item").forEach(i=>i.classList.remove("open"));if(!wasOpen)item.classList.add("open")})});</script>
+
+<script>
+(function(){
+  var burger = document.getElementById('nav-burger');
+  var drawer = document.getElementById('nav-drawer');
+  if(!burger || !drawer) return;
+  burger.addEventListener('click', function(){
+    var open = drawer.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+  // Close on link click
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+  // Close on outside click
+  document.addEventListener('click', function(e){
+    if(!burger.contains(e.target) && !drawer.contains(e.target)){
+      drawer.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
+
 </body></html>
