@@ -76,7 +76,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span> Must be present on every product</span>
     <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span> Strongly impacts performance</span>
     <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Conditional</span> Required when applicable</span>
-    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--green-lt);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span> Improves targeting and segmentation</span>
+    <span style="display:inline-flex;align-items:center;gap:6px;font-size:12px"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span> Improves targeting and segmentation</span>
   </div>
 
   <div style="background:var(--card);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden;overflow-x:auto;margin-bottom:48px">
@@ -88,102 +88,102 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">id</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Your unique product or variant identifier. For variable products, use the variant-level ID (Shopify variant ID, WooCommerce variation ID) not the parent product ID. Max 50 characters. Must be stable — changing a product's id creates a new listing and deletes the old one.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">shopify_GB_12345_67890</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">shopify_GB_12345_67890</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">item_group_id</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required for variants</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Groups product variants together. All sizes and colours of the same product share this value. Typically the parent product ID. Without this, variants appear as separate products instead of a grouped listing.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">shopify_GB_12345</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">shopify_GB_12345</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">title</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product title — primary Shopping query matching signal. Max 150 chars. Include brand, product name, and key variant attributes (colour, size). First 70 chars visible on mobile before truncation.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Barbour Beaufort Jacket Men Navy XL</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">Barbour Beaufort Jacket Men Navy XL</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">description</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Plain text product description. No HTML. Max 5,000 chars. For ChatGPT, must also be free of non-ASCII characters (curly quotes, em dashes). Google: keyword-rich. ChatGPT: factual and specific.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Heavyweight waxed cotton jacket. 100% waxed cotton outer. Corduroy collar. Zip-out inner lining...</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">Heavyweight waxed cotton jacket. 100% waxed cotton outer. Corduroy collar. Zip-out inner lining...</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">link</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product page URL. Must return HTTP 200. Must exactly match the canonical URL on your website. Redirects (301) are followed but flagged.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">https://example.com/products/barbour-beaufort</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">https://example.com/products/barbour-beaufort</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">image_link</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Primary product image URL. HTTPS only. Minimum 100x100px (250x250 for apparel). Recommended 800x800px. No promotional overlays, watermarks, or borders.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">https://cdn.example.com/images/barbour-beaufort-navy.jpg</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">https://cdn.example.com/images/barbour-beaufort-navy.jpg</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">price</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">VAT-inclusive selling price for UK merchants. Format: numeric value + space + GBP. Never use £ symbol.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">279.00 GBP</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">279.00 GBP</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">sale_price</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--green-lt);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Active sale price when lower than regular price. Same format as price. Must match website sale price exactly.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">209.00 GBP</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">209.00 GBP</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">availability</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">in_stock / out_of_stock / preorder / backorder. Must match website availability. Most common disapproval cause after price mismatch.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">in_stock</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">in_stock</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">brand</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (branded)</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Manufacturer or brand name. Required for all branded products. Set identifier_exists: no and omit brand only for genuinely unbranded products.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Barbour</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">Barbour</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">gtin</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">EAN-13 barcode (13 digits) for UK products. UPC-A (12 digits) also accepted. ISBN-13 for books. Required for branded products. Use identifier_exists: no for own-brand.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">5055329871234</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">5055329871234</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">google_product_category</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Google's product taxonomy ID or text path. Use most specific applicable category. Numeric IDs are preferred (more stable across taxonomy updates).</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">5697</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">5697</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">product_type</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--amber-lt);color:var(--amber);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Recommended</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Your own category hierarchy. Pipe-separated levels. Used for Shopping campaign product group segmentation.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Mens > Jackets > Waxed Jackets</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">Mens > Jackets > Waxed Jackets</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">color</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product colour. Must exactly match colour shown on product page. Each colour variant = separate feed row with unique id sharing item_group_id.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">Navy</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">Navy</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">size</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Product size in UK notation. Include size_type and size_system for best results.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">UK 12</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">UK 12</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">gender</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">male / female / unisex</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">male</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">male</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">age_group</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--red-lt);color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Required (apparel)</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">adult / kids / infant / toddler / newborn</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">adult</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">adult</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">custom_label_0</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--green-lt);color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span></td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Optional</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Free-format label for Shopping campaign segmentation. Five available (0-4). Set via feed rules in Trajekt.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">high-margin</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">high-margin</td>
 </tr><tr>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);white-space:nowrap;vertical-align:top">identifier_exists</td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);vertical-align:top"><span style="background:var(--blue-lt);color:var(--blue);font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px">Conditional</span></td>
   <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-size:13px;color:var(--t2);vertical-align:top">Set to 'no' for products with no GTIN, MPN, or brand. Required when these identifiers genuinely don't exist (handmade, custom, vintage). Never use for branded products.</td>
-  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--green);vertical-align:top;white-space:nowrap">no</td>
+  <td style="padding:12px 16px;border-bottom:1px solid var(--border);font-family:monospace;font-size:12px;color:var(--blue);vertical-align:top;white-space:nowrap">no</td>
 </tr>
     </table>
   </div>
 
-  <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px;margin-bottom:48px;text-align:center">
+  <div style="background:var(--card2);border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px;margin-bottom:48px;text-align:center">
     <h3 style="margin-bottom:8px">Map these fields automatically with Trajekt</h3>
     <p style="font-size:14px;margin-bottom:20px">Trajekt maps your Shopify or WooCommerce data to all these fields via a visual rules interface &#8212; no code, no manual mapping spreadsheets.</p>
     <a href="https://app.trajekt.co.uk/signup" class="btn btn-blue">Start free &#8594;</a>
@@ -210,7 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <h2 style="font-size:22px;margin-bottom:24px">Related guides</h2>
       <a href="/google-shopping-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google Shopping feed guide <span style="color:var(--t3)">&#8594;</span></a><a href="/google-product-category" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Google product category mapping <span style="color:var(--t3)">&#8594;</span></a><a href="/product-feed-optimisation" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Feed optimisation <span style="color:var(--t3)">&#8594;</span></a><a href="/supplemental-feed" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Supplemental feeds <span style="color:var(--t3)">&#8594;</span></a><a href="/gtin-mpn-ean-guide" style="display:block;padding:10px 0;border-bottom:1px solid var(--border);font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">GTIN and EAN guide <span style="color:var(--t3)">&#8594;</span></a><a href="/custom-labels-guide" style="display:block;padding:10px 0;font-size:14px;color:var(--t1);text-decoration:none;display:flex;align-items:center;justify-content:space-between">Custom labels guide <span style="color:var(--t3)">&#8594;</span></a>
     </div>
-    <div style="background:linear-gradient(135deg,var(--blue-lt),var(--purple-lt));border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px">
+    <div style="background:var(--card2);border:1px solid var(--blue-mid);border-radius:var(--r-lg);padding:28px">
       <div style="font-size:15px;font-weight:700;margin-bottom:8px;color:var(--ink)">Ready to automate your feeds?</div>
       <p style="font-size:14px;margin-bottom:20px">Connect your store and generate feeds for every channel automatically. Free plan available &#8212; no credit card needed.</p>
       <a href="https://app.trajekt.co.uk/signup" style="display:inline-flex;align-items:center;gap:8px;padding:12px 20px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:14px;font-weight:600;text-decoration:none">Start free &#8594;</a>
