@@ -15,11 +15,13 @@ Trajekt handles the technical complexity of product feed management: different c
 
 ## Pricing
 
-- Free: up to 50 products, 1 store, 2 feeds — permanent free plan, no trial
-- Starter: £19/month — up to 500 products, 1 store, all channels
+- Free: up to 50 products, 1 store, 2 feeds — permanent free plan, no trial. Includes the full rules engine and AI enrichment.
+- Starter: £19/month — up to 2,000 products, 1 store, all channels, AI enrichment
 - Growth: £49/month — up to 25,000 products, 3 stores, all channels (most popular)
-- Pro: £99/month — up to 75,000 products, 5 stores, all channels
-- Agency: POA (contact hello@trajekt.co.uk) — unlimited products, unlimited stores
+- Pro: £99/month — up to 100,000 products, unlimited stores, all channels
+- Agency: £149/month — unlimited products, unlimited stores, white-label, sub-accounts
+
+AI enrichment is included on every plan, including Free, and is billed from pay-as-you-go credits (usage only).
 
 ## Supported channels (feed outputs)
 
@@ -114,7 +116,7 @@ A: Yes. Permanent free plan with up to 50 products, 1 store, and 2 feeds. No cre
 
 ## Contact and sign-up
 
-- Website: https://trajekt.co.uk
+- Website: https://www.trajekt.co.uk
 - Sign up: https://app.trajekt.co.uk/signup
 - Agency/Enterprise enquiries: hello@trajekt.co.uk
 - Built in the UK for UK merchants
